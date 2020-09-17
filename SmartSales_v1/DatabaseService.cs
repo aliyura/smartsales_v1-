@@ -10,13 +10,13 @@ namespace SmartSales_v1
 
         SqlConnection connection;
         App app = new App();
-        string currentDate = DateTime.Now.ToString("yyyy.MM.dd");
+        string currentDate = DateTime.Now.ToString("yyyy.MM.dd");//automate date setting
 
         public  DatabaseService()
         {
-            this.connection= new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");
+            this.connection= new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
         }
-        public int execute(SqlCommand cmd)
+        public int execute(SqlCommand cmd)//implementation of the sql command exwecution
         {
             try
             {
@@ -26,9 +26,9 @@ namespace SmartSales_v1
                     using (cmd)
                     {
                         if (connection != null)
-                            return cmd.ExecuteNonQuery();
+                            return cmd.ExecuteNonQuery();//If connection is open, execute query...
                         else
-                            return -1;
+                            return -1;//...else return error
 
                     }
                 }
@@ -49,6 +49,7 @@ namespace SmartSales_v1
         {
             string query = "INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
             SqlCommand command = new SqlCommand(query,connection);
+            //below lines assign the entered data to the fields created in the model class
             command.Parameters.AddWithValue("@name", user.name);
             command.Parameters.AddWithValue("@username", user.username);
             command.Parameters.AddWithValue("@password", user.password);

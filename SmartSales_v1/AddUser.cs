@@ -7,7 +7,7 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service; 
+        DatabaseService service;
 
         public AddUser()
         {
@@ -65,8 +65,8 @@ namespace SmartSales_v1
                 password = passwordfield.Text,
             };
 
-            if (user.name == "" || user.name=="Name")
-                app.notifyTo(statusLabel, "Enter name of the User","warning");
+            if (user.name == "" || user.name == "Name")
+                app.notifyTo(statusLabel, "Enter name of the User", "warning");
             if (user.mobile_number == "" || user.mobile_number == "Mobile Number")
                 app.notifyTo(statusLabel, "Enter mobile number of the User", "warning");
             if (user.username == "" || user.username == "Username")
@@ -75,7 +75,7 @@ namespace SmartSales_v1
                 app.notifyTo(statusLabel, "Enter password of the User", "warning");
 
 
-            if(user.name!="" && user.name!="Name" && user.mobile_number!="" && user.username!="" && user.password != "")
+            if (user.name != "" && user.name != "Name" && user.mobile_number != "" && user.username != "" && user.password != "")
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
                 int status = service.addUser(user);
@@ -94,11 +94,11 @@ namespace SmartSales_v1
                 app.notifyTo(statusLabel, "All fields are required!", "warning");
             }
 
-           
+
 
         }
-          
 
-     
+
+
     }
 }

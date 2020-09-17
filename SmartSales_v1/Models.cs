@@ -12,6 +12,18 @@
 
     class Product
     {
+        public string productName { get; set; }
+        public int quantity { get; set; }
+        public int price { get; set; }
+        public int cost { get; set; }
+        public int reorderLevel { get; set; }
+    }
+    class Stock
+    {
+        public string stockName { get; set; }
+        public string location { get; set; }
+        public int quantity { get; set; }
+        public string description { get; set; }
 
     }
 }
