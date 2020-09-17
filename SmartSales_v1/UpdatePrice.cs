@@ -83,6 +83,7 @@ namespace SmartSales_v1
 
         private void update_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //if ()
             //{
 
@@ -95,6 +96,9 @@ namespace SmartSales_v1
             newpricefield.Text = "";
             currentcostfield.Text = "";
             newcostfield.Text = "";
+=======
+
+>>>>>>> c785065503b865b3de4a664064350a1e319ec88f
         }
     }
 }

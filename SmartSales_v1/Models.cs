@@ -1,4 +1,6 @@
-﻿namespace SmartSales_v1
+﻿using System.Drawing.Printing;
+
+namespace SmartSales_v1
 {
     class User
     {
@@ -12,15 +14,15 @@
 
     class Product
     {
-        public string productName { get; set; }
+        public string product_Name { get; set; }
         public int quantity { get; set; }
         public int price { get; set; }
         public int cost { get; set; }
-        public int reorderLevel { get; set; }
+        public int reorder_Level { get; set; }
     }
     class Stock
     {
-        public string stockName { get; set; }
+        public string stock_Name { get; set; }
         public string location { get; set; }
         public int quantity { get; set; }
         public string description { get; set; }
@@ -30,5 +32,18 @@
         public string storeName { get; set; }
         public string storeType { get; set; }
 
+    }
+    class Bank
+    {
+        public string bank_name { get; set; }
+    }
+    class Customer
+    {
+        public string customer_name { get; set; }
+        public string address { get; set; }
+        public string phone_number { get; set; }
+        public string altphone_number { get; set; }
+        public string credit_limit { get; set; }
+        public string customer_group { get; set; }
     }
 }
