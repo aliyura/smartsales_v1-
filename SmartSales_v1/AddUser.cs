@@ -71,10 +71,8 @@ namespace SmartSales_v1
                 app.notifyTo(statusLabel, "Enter mobile number of the User", "warning");
             if (user.username == "")
                 app.notifyTo(statusLabel, "Enter username of the User", "warning");
-            if (user.username == "")
-                app.notifyTo(statusLabel, "Enter name of the User", "warning");
             if (user.password == "")
-                app.notifyTo(statusLabel, "Enter name of the User", "warning");
+                app.notifyTo(statusLabel, "Enter password of the User", "warning");
 
 
             if(user.name!="" && user.name!="Name" && user.mobile_number!="" && user.username!="" && user.password != "")
