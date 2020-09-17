@@ -26,4 +26,8 @@
         public string description { get; set; }
 
     }
+    class Bank
+    {
+        public string bankname { get; set; }
+    }
 }
