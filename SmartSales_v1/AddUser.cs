@@ -22,7 +22,7 @@ namespace SmartSales_v1
 
         private void namefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(namefield, 0, "name");
+            h.manageHint(namefield, 0, "");
         }
 
         private void namefield_MouseLeave(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace SmartSales_v1
 
         private void mobilenumberfield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(mobilenumberfield, 0, "Mobile Numnber");
+            h.manageHint(mobilenumberfield, 0, "");
         }
 
         private void mobilenumberfield_MouseLeave(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace SmartSales_v1
 
         private void usernamefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(usernamefield, 0, "username");
+            h.manageHint(usernamefield, 0, "");
         }
 
         private void usernamefield_MouseLeave(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace SmartSales_v1
 
         private void passwordfield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(passwordfield, 0, "Password");
+            h.manageHint(passwordfield, 0, "");
         }
 
         private void addbutton_Click(object sender, EventArgs e)

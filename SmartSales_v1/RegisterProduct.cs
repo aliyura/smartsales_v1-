@@ -63,7 +63,7 @@ namespace SmartSales_v1
             if (product.productName != "" && product.productName != "Product name" && product.cost != int.Parse("") && product.cost != int.Parse("Cost") && product.price != int.Parse("") && product.price != int.Parse("Price") && product.reorderLevel !=int.Parse("Re-order Level") && product.reorderLevel != int.Parse(""))
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
-                int status = service.registerproduct(product);
+               int status = service.registerproduct(product);
                 if (status != -1)
                 {
                     app.notifyTo(statusLabel, "User Created Successfully", "success");

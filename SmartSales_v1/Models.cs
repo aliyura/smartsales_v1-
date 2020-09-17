@@ -1,4 +1,6 @@
-﻿namespace SmartSales_v1
+﻿using System.Drawing.Printing;
+
+namespace SmartSales_v1
 {
     class User
     {
@@ -29,5 +31,14 @@
     class Bank
     {
         public string bankname { get; set; }
+    }
+    class Customer
+    {
+        public string customername { get; set; }
+        public string address { get; set; }
+        public string phonenumber { get; set; }
+        public string altphonenumber { get; set; }
+        public string creditlimit { get; set; }
+        public string customergroup { get; set; }
     }
 }

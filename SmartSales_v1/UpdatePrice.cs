@@ -80,5 +80,10 @@ namespace SmartSales_v1
         {
             h.manageHint(newcostfield, 1, "New Cost");
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
