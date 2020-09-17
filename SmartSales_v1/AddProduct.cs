@@ -10,12 +10,20 @@ using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
-    public partial class UpdateStock : Form
+    public partial class AddProduct : Form
     {
         Hint h = new Hint();
-        public UpdateStock()
+        public string productnamefield;
+        public AddProduct()
         {
             InitializeComponent();
+        }
+
+        public void pnfield(string pfn)
+        {
+
+            pfn = productnamefield;//store the value of product field here
+
         }
 
         private void productnamedropdown_MouseEnter(object sender, EventArgs e)
@@ -63,10 +71,18 @@ namespace SmartSales_v1
         {
             h.manageHint(descriptionfield, 1, "Description");
         }
-
         private void quantityfield_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void addbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnfield(productnamedropdown.Text);//store the selected text in the given parameter 
         }
     }
 }

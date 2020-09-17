@@ -51,3 +51,5 @@ C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.RegisterProduct.
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Sales.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateStock.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddStock.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources

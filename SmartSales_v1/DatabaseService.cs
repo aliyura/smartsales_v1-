@@ -19,10 +19,16 @@ namespace SmartSales_v1
             return connection;
         }
 
+<<<<<<< HEAD
         public SqlDataReader read(SqlDataReader r)
         {
             reader = r;
             return reader;
+=======
+        public DatabaseService()
+        {
+            this.connection = new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
+>>>>>>> refs/remotes/origin/master
         }
         public int add(SqlCommand cmd)//implementation of the sql command exwecution
         {
@@ -52,7 +58,15 @@ namespace SmartSales_v1
                 app.showError(ex.Message);
                 return -1;
             }
+<<<<<<< HEAD
            
+=======
+            finally
+            {
+                connection.Close();
+            }
+
+>>>>>>> refs/remotes/origin/master
         }
         public DataTable get(string query)//implementation of the sql command exwecution
         {
@@ -86,6 +100,7 @@ namespace SmartSales_v1
         }
         public User getUserByMobileNumber(string number)
         {
+<<<<<<< HEAD
             User user=new User();
             try
             {
@@ -102,6 +117,17 @@ namespace SmartSales_v1
                         role = row.Field<string>("role"),
                         login_date = row.Field<DateTime>("login_date"),
                         created_date = row.Field<DateTime>("created_date"),
+=======
+            string query = "INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
+            SqlCommand command = new SqlCommand(query, connection);
+            //below lines assign the entered data to the fields created in the model class
+            command.Parameters.AddWithValue("@name", user.name);
+            command.Parameters.AddWithValue("@username", user.username);
+            command.Parameters.AddWithValue("@password", user.password);
+            command.Parameters.AddWithValue("@mobile_number", user.mobile_number);
+            command.Parameters.AddWithValue("@login_date", currentDate);
+            command.Parameters.AddWithValue("@created_date", currentDate);
+>>>>>>> refs/remotes/origin/master
 
                     };
                 }
@@ -196,6 +222,5 @@ namespace SmartSales_v1
                 return -1;
             }
         }
-
     }
 }

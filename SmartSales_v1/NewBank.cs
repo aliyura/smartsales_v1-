@@ -13,6 +13,8 @@ namespace SmartSales_v1
     public partial class NewBank : Form
     {
         Hint h = new Hint();
+        App app = new App();
+        DatabaseService service;
         public NewBank()
         {
             InitializeComponent();
@@ -20,12 +22,40 @@ namespace SmartSales_v1
 
         private void currentpricefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(currentpricefield, 0, "Bank Name");
+            h.manageHint(banknamefield, 0, "Bank Name");
         }
 
         private void currentpricefield_MouseLeave(object sender, EventArgs e)
         {
-            h.manageHint(currentpricefield, 1, "Bank Name");
+            h.manageHint(banknamefield, 1, "Bank Name");
+        }
+
+        private void addbutton_Click(object sender, EventArgs e)
+        {
+            Bank bank = new Bank
+            {
+                bank_name = banknamefield.Text,
+            };
+            if (bank.bank_name == "" || bank.bank_name == "Bank Name")
+                app.notifyTo(statusLabel, "Enter bank name of the Bank", "warning");
+
+            if(bank.bank_name != "" && bank.bank_name != "")
+            {
+                app.notifyTo(statusLabel, "Processing...", "success");
+                int status = service.registerproduct(bank);
+                if (status != -1)
+                {
+                    app.notifyTo(statusLabel, "User Created Successfully", "success");
+                }
+                else
+                {
+                    app.notifyTo(statusLabel, "Failed to create the User", "success");
+                }
+            }
+            else
+            {
+                app.notifyTo(statusLabel, "All fields are required!", "warning");
+            }
         }
     }
 }

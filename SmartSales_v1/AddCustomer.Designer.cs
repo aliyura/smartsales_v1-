@@ -36,20 +36,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.productnamefield = new System.Windows.Forms.TextBox();
+            this.customernamefield = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addressfield = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.phonenumberfield = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.altphonenumberfield = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.creditlimitfield = new System.Windows.Forms.TextBox();
+            this.customergroupfield = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.addbutton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,6 +103,7 @@
             this.button2.Size = new System.Drawing.Size(41, 34);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -115,142 +117,144 @@
             this.button1.Size = new System.Drawing.Size(41, 34);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.productnamefield);
+            this.panel4.Controls.Add(this.customernamefield);
             this.panel4.Location = new System.Drawing.Point(16, 80);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(274, 38);
             this.panel4.TabIndex = 6;
             // 
-            // productnamefield
+            // customernamefield
             // 
-            this.productnamefield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.productnamefield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.productnamefield.BackColor = System.Drawing.Color.White;
-            this.productnamefield.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productnamefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productnamefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productnamefield.Location = new System.Drawing.Point(22, 8);
-            this.productnamefield.Margin = new System.Windows.Forms.Padding(2);
-            this.productnamefield.Name = "productnamefield";
-            this.productnamefield.Size = new System.Drawing.Size(217, 21);
-            this.productnamefield.TabIndex = 1;
-            this.productnamefield.Text = "Customer Name";
+            this.customernamefield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.customernamefield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.customernamefield.BackColor = System.Drawing.Color.White;
+            this.customernamefield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customernamefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customernamefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customernamefield.Location = new System.Drawing.Point(22, 8);
+            this.customernamefield.Margin = new System.Windows.Forms.Padding(2);
+            this.customernamefield.Name = "customernamefield";
+            this.customernamefield.Size = new System.Drawing.Size(217, 21);
+            this.customernamefield.TabIndex = 1;
+            this.customernamefield.Text = "Customer Name";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.addressfield);
             this.panel2.Location = new System.Drawing.Point(16, 143);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 38);
             this.panel2.TabIndex = 7;
             // 
-            // textBox1
+            // addressfield
             // 
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(22, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 21);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Address";
+            this.addressfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.addressfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.addressfield.BackColor = System.Drawing.Color.White;
+            this.addressfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addressfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.addressfield.Location = new System.Drawing.Point(22, 8);
+            this.addressfield.Margin = new System.Windows.Forms.Padding(2);
+            this.addressfield.Name = "addressfield";
+            this.addressfield.Size = new System.Drawing.Size(217, 21);
+            this.addressfield.TabIndex = 1;
+            this.addressfield.Text = "Address";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.phonenumberfield);
             this.panel3.Location = new System.Drawing.Point(16, 204);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(274, 38);
             this.panel3.TabIndex = 8;
             // 
-            // textBox2
+            // phonenumberfield
             // 
-            this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(22, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 21);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Phone Number";
+            this.phonenumberfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.phonenumberfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.phonenumberfield.BackColor = System.Drawing.Color.White;
+            this.phonenumberfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.phonenumberfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phonenumberfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.phonenumberfield.Location = new System.Drawing.Point(22, 8);
+            this.phonenumberfield.Margin = new System.Windows.Forms.Padding(2);
+            this.phonenumberfield.MaxLength = 11;
+            this.phonenumberfield.Name = "phonenumberfield";
+            this.phonenumberfield.Size = new System.Drawing.Size(217, 21);
+            this.phonenumberfield.TabIndex = 1;
+            this.phonenumberfield.Text = "Phone Number";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.altphonenumberfield);
             this.panel5.Location = new System.Drawing.Point(16, 267);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(274, 38);
             this.panel5.TabIndex = 9;
             // 
-            // textBox3
+            // altphonenumberfield
             // 
-            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(22, 8);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 21);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "Alternate Phone Number";
+            this.altphonenumberfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.altphonenumberfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.altphonenumberfield.BackColor = System.Drawing.Color.White;
+            this.altphonenumberfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.altphonenumberfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altphonenumberfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.altphonenumberfield.Location = new System.Drawing.Point(22, 8);
+            this.altphonenumberfield.Margin = new System.Windows.Forms.Padding(2);
+            this.altphonenumberfield.Name = "altphonenumberfield";
+            this.altphonenumberfield.Size = new System.Drawing.Size(217, 21);
+            this.altphonenumberfield.TabIndex = 1;
+            this.altphonenumberfield.Text = "Alternate Phone Number";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.creditlimitfield);
             this.panel6.Location = new System.Drawing.Point(16, 330);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(274, 38);
             this.panel6.TabIndex = 10;
             // 
-            // textBox4
+            // creditlimitfield
             // 
-            this.textBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(22, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 21);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "Credit Limit";
+            this.creditlimitfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.creditlimitfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.creditlimitfield.BackColor = System.Drawing.Color.White;
+            this.creditlimitfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.creditlimitfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditlimitfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.creditlimitfield.Location = new System.Drawing.Point(22, 8);
+            this.creditlimitfield.Margin = new System.Windows.Forms.Padding(2);
+            this.creditlimitfield.Name = "creditlimitfield";
+            this.creditlimitfield.Size = new System.Drawing.Size(217, 21);
+            this.creditlimitfield.TabIndex = 1;
+            this.creditlimitfield.Text = "Credit Limit";
             // 
-            // comboBox1
+            // customergroupfield
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(38, 394);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 28);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.Text = "Customer Group";
+            this.customergroupfield.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.customergroupfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customergroupfield.FormattingEnabled = true;
+            this.customergroupfield.Location = new System.Drawing.Point(38, 394);
+            this.customergroupfield.Name = "customergroupfield";
+            this.customergroupfield.Size = new System.Drawing.Size(215, 28);
+            this.customergroupfield.TabIndex = 12;
+            this.customergroupfield.Text = "Customer Group";
             // 
             // panel7
             // 
@@ -300,14 +304,23 @@
             this.button3.Text = "Deactivate";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(19, 516);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 13);
+            this.statusLabel.TabIndex = 16;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 516);
+            this.ClientSize = new System.Drawing.Size(310, 536);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.addbutton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.customergroupfield);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -334,6 +347,7 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -345,19 +359,20 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox productnamefield;
+        private System.Windows.Forms.TextBox customernamefield;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox addressfield;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox phonenumberfield;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox altphonenumberfield;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox creditlimitfield;
+        private System.Windows.Forms.ComboBox customergroupfield;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label statusLabel;
     }
 }

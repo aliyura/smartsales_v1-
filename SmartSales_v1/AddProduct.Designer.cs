@@ -1,6 +1,6 @@
 ﻿namespace SmartSales_v1
 {
-    partial class UpdateStock
+    partial class AddProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateStock));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.productnamedropdown = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@
             this.addbutton = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(475, 46);
             this.panel1.TabIndex = 3;
@@ -74,7 +74,7 @@
             this.button4.ImageIndex = 1;
             this.button4.ImageList = this.imageList1;
             this.button4.Location = new System.Drawing.Point(413, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(55, 42);
             this.button4.TabIndex = 3;
@@ -96,9 +96,9 @@
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Update Stock";
+            this.label1.Text = "Add Product";
             // 
             // button2
             // 
@@ -108,29 +108,29 @@
             this.button2.ImageIndex = 0;
             this.button2.ImageList = this.imageList1;
             this.button2.Location = new System.Drawing.Point(340, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 42);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // panel
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.productnamedropdown);
-            this.panel3.Location = new System.Drawing.Point(31, 121);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(401, 47);
-            this.panel3.TabIndex = 10;
+            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.Controls.Add(this.button1);
+            this.panel.Controls.Add(this.productnamedropdown);
+            this.panel.Location = new System.Drawing.Point(31, 121);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(401, 47);
+            this.panel.TabIndex = 10;
             // 
             // button1
             // 
             this.button1.ImageIndex = 2;
             this.button1.ImageList = this.imageList1;
             this.button1.Location = new System.Drawing.Point(357, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 34);
             this.button1.TabIndex = 11;
@@ -142,7 +142,7 @@
             this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productnamedropdown.FormattingEnabled = true;
             this.productnamedropdown.Location = new System.Drawing.Point(33, 6);
-            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4);
             this.productnamedropdown.Name = "productnamedropdown";
             this.productnamedropdown.Size = new System.Drawing.Size(308, 33);
             this.productnamedropdown.TabIndex = 10;
@@ -166,7 +166,7 @@
             this.locationdropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationdropdown.FormattingEnabled = true;
             this.locationdropdown.Location = new System.Drawing.Point(33, 6);
-            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4);
             this.locationdropdown.Name = "locationdropdown";
             this.locationdropdown.Size = new System.Drawing.Size(339, 33);
             this.locationdropdown.TabIndex = 11;
@@ -241,7 +241,7 @@
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(401, 58);
             this.addbutton.TabIndex = 14;
-            this.addbutton.Text = "Update Stock";
+            this.addbutton.Text = "Add Product";
             this.addbutton.UseVisualStyleBackColor = false;
             // 
             // textBox13
@@ -260,7 +260,7 @@
             this.textBox13.TabIndex = 35;
             this.textBox13.Text = "Bar Code";
             // 
-            // UpdateStock
+            // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,16 +270,16 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UpdateStock";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateStock";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.ComboBox productnamedropdown;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox locationdropdown;

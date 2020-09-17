@@ -1,4 +1,6 @@
-﻿using System;
+
+using System;
+﻿using System.Drawing.Printing;
 
 namespace SmartSales_v1
 {
@@ -15,7 +17,7 @@ namespace SmartSales_v1
     }
 
 
-    class Product
+    class Stock
     {
         public string name { get; set; }
         public int price { get; set; }
@@ -23,13 +25,37 @@ namespace SmartSales_v1
         public int reorder_level { get; set; }
         public int barqr_code { get; set; }
         public DateTime created_date { get; set; }
+
     }
-    class Stock
+    class Product
     {
-        public string stockName { get; set; }
+        public string name { get; set; }
         public string location { get; set; }
         public int quantity { get; set; }
         public string description { get; set; }
+        public DateTime created_date { get; set; }
+    }
+    class Stores
+    {
+        public string name { get; set; }
+        public string type { get; set; }
+        public DateTime created_date { get; set; }
 
+    }
+    class Bank
+    {
+        public string name { get; set; }
+        public DateTime created_date { get; set; }
+    }
+    class Customer
+    {
+        public string name { get; set; }
+        public string address { get; set; }
+        public string phone_number { get; set; }
+        public string altphone_number { get; set; }
+        public string credit_limit { get; set; }
+        public string customer_group { get; set; }
+
+        public DateTime created_date { get; set; }
     }
 }

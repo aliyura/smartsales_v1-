@@ -1,6 +1,6 @@
 ﻿namespace SmartSales_v1
 {
-    partial class RegisterProduct
+    partial class AddStock
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStock));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.reorderlevelfield = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,7 +61,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 46);
             this.panel1.TabIndex = 0;
@@ -73,9 +74,9 @@
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Register Product";
+            this.label1.Text = "Add Stuck";
             // 
             // button2
             // 
@@ -85,7 +86,7 @@
             this.button2.ImageIndex = 0;
             this.button2.ImageList = this.imageList1;
             this.button2.Location = new System.Drawing.Point(353, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 42);
             this.button2.TabIndex = 1;
@@ -107,7 +108,7 @@
             this.button1.ImageIndex = 1;
             this.button1.ImageList = this.imageList1;
             this.button1.Location = new System.Drawing.Point(420, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 42);
             this.button1.TabIndex = 0;
@@ -177,9 +178,8 @@
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(416, 58);
             this.addbutton.TabIndex = 8;
-            this.addbutton.Text = "Add Product";
+            this.addbutton.Text = "Register Stock";
             this.addbutton.UseVisualStyleBackColor = false;
-            this.addbutton.Click += new System.EventHandler(this.savebutton_Click);
             // 
             // panel2
             // 
@@ -247,7 +247,17 @@
             this.textBox13.TabIndex = 36;
             this.textBox13.Text = "Bar Code";
             // 
-            // RegisterProduct
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.Location = new System.Drawing.Point(30, 456);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 20);
+            this.statusLabel.TabIndex = 37;
+            // 
+            // addStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,8 +270,8 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "RegisterProduct";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "addStock";
             this.Text = "RegisterProduct";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -295,5 +305,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox reorderlevelfield;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label statusLabel;
     }
 }
