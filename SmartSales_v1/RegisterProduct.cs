@@ -43,12 +43,12 @@ namespace SmartSales_v1
         {
             Product product = new Product
             {
-                productName = productnamefield.Text,
+                product_Name = productnamefield.Text,
                 price = int.Parse(pricefield.Text),
                 cost = int.Parse(costfield.Text),
-                reorderLevel = int.Parse(reorderlevelfield.Text)
+                reorder_Level = int.Parse(reorderlevelfield.Text)
             };
-            if (product.productName == "" || product.productName == "Product name")
+            if (product.product_Name == "" || product.product_Name == "Product name")
                 app.notifyTo(statusLabel, "Enter Product name of the Product", "warning");
 
             if (product.price == int.Parse("") || product.price == int.Parse("Price"))
@@ -57,10 +57,10 @@ namespace SmartSales_v1
             if (product.cost == int.Parse("") || product.cost == int.Parse("Cost"))
                 app.notifyTo(statusLabel, "Enter Cost of the Product", "warning");
 
-            if (product.reorderLevel == int.Parse("") || product.reorderLevel == int.Parse("Re-oder Level"))
+            if (product.reorder_Level == int.Parse("") || product.reorder_Level == int.Parse("Re-oder Level"))
                 app.notifyTo(statusLabel, "Enter Re-order Level of the Product", "warning");
 
-            if (product.productName != "" && product.productName != "Product name" && product.cost != int.Parse("") && product.cost != int.Parse("Cost") && product.price != int.Parse("") && product.price != int.Parse("Price") && product.reorderLevel !=int.Parse("Re-order Level") && product.reorderLevel != int.Parse(""))
+            if (product.product_Name != "" && product.product_Name != "Product name" && product.cost != int.Parse("") && product.cost != int.Parse("Cost") && product.price != int.Parse("") && product.price != int.Parse("Price") && product.reorder_Level !=int.Parse("Re-order Level") && product.reorder_Level != int.Parse(""))
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
                int status = service.registerproduct(product);

@@ -34,12 +34,12 @@ namespace SmartSales_v1
         {
             Bank bank = new Bank
             {
-                bankname = banknamefield.Text,
+                bank_name = banknamefield.Text,
             };
-            if (bank.bankname == "" || bank.bankname == "Bank Name")
+            if (bank.bank_name == "" || bank.bank_name == "Bank Name")
                 app.notifyTo(statusLabel, "Enter bank name of the Bank", "warning");
 
-            if(bank.bankname != "" && bank.bankname != "")
+            if(bank.bank_name != "" && bank.bank_name != "")
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
                 int status = service.registerproduct(bank);

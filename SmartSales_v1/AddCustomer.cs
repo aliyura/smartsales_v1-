@@ -29,33 +29,33 @@ namespace SmartSales_v1
         {
             Customer customer = new Customer
             {
-                customername = customergroupfield.Text,
-                phonenumber = phonenumberfield.Text,
-                altphonenumber = altphonenumberfield.Text,
+                customer_name = customergroupfield.Text,
+                phone_number = phonenumberfield.Text,
+                altphone_number = altphonenumberfield.Text,
                 address = addressfield.Text,
-                creditlimit = creditlimitfield.Text,
-                customergroup = customergroupfield.Text,
+                credit_limit = creditlimitfield.Text,
+                customer_group = customergroupfield.Text,
             };
 
-            if(customer.customername == "" || customer.customername == "Customer Name" )
+            if(customer.customer_name == "" || customer.customer_name == "Customer Name" )
                 app.notifyTo(statusLabel, "Enter the Customer name ", "warning");
 
-            if (customer.phonenumber == "" || customer.phonenumber == "Phone Number")
+            if (customer.phone_number == "" || customer.phone_number == "Phone Number")
                 app.notifyTo(statusLabel, "Enter the Customer Phone Number","warning");
 
-            if (customer.altphonenumber == "" || customer.altphonenumber == "Alternate Phone Number")
+            if (customer.altphone_number == "" || customer.altphone_number == "Alternate Phone Number")
                 app.notifyTo(statusLabel, "Enter the Customer Alternative Phone Number", "warning");
 
             if (customer.address == "" || customer.address == "Address")
                 app.notifyTo(statusLabel, "Enter The Customer Address", "warning");
 
-            if (customer.creditlimit == "" || customer.creditlimit == "Credit Limit")
+            if (customer.credit_limit == "" || customer.credit_limit == "Credit Limit")
                 app.notifyTo(statusLabel, "Enter Customer Credit Limit","warning");
 
-            if (customer.customergroup == "" || customer.customergroup == "Customer Group")
+            if (customer.customer_group == "" || customer.customer_group == "Customer Group")
                 app.notifyTo(statusLabel, "Enter the Customer of the The Customer registration", "warning");
 
-            if (customer.customername !="" && customer.customername !="Customer Name" && customer.phonenumber !="" && customer.phonenumber != "Phone Number" && customer.altphonenumber != "Alternate Phone Number" && customer.altphonenumber !="" && customer.address !="" && customer.address != "Address" && customer.creditlimit !="" && customer.creditlimit != "Credit Limit" && customer.customergroup != "Customer Group" && customer.customergroup !="")
+            if (customer.customer_name !="" && customer.customer_name !="Customer Name" && customer.phone_number !="" && customer.phone_number != "Phone Number" && customer.altphone_number != "Alternate Phone Number" && customer.altphone_number !="" && customer.address !="" && customer.address != "Address" && customer.credit_limit !="" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group" && customer.customer_group !="")
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
                 int status = service.registerproduct(customer);
