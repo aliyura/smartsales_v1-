@@ -13,9 +13,17 @@ namespace SmartSales_v1
     public partial class UpdateStock : Form
     {
         Hint h = new Hint();
+        public string productnamefield;
         public UpdateStock()
         {
             InitializeComponent();
+        }
+
+        public void pnfield(string pfn)
+        {
+
+            pfn = productnamefield;//store the value of product field here
+
         }
 
         private void productnamedropdown_MouseEnter(object sender, EventArgs e)
@@ -62,6 +70,16 @@ namespace SmartSales_v1
         private void descriptionfield_MouseLeave(object sender, EventArgs e)
         {
             h.manageHint(descriptionfield, 1, "Description");
+        }
+
+        private void addbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnfield(productnamedropdown.Text);
         }
     }
 }

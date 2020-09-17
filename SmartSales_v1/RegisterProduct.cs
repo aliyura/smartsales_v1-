@@ -37,11 +37,6 @@ namespace SmartSales_v1
             h.manageHint(productnamefield, 1, "Product Name");
         }
 
-        private void savebutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void productnamefield_MouseEnter(object sender, EventArgs e)
         {
            

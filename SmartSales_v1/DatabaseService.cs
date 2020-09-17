@@ -12,9 +12,9 @@ namespace SmartSales_v1
         App app = new App();
         string currentDate = DateTime.Now.ToString("yyyy.MM.dd");//automate date setting
 
-        public  DatabaseService()
+        public DatabaseService()
         {
-            this.connection= new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
+            this.connection = new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
         }
         public int execute(SqlCommand cmd)//implementation of the sql command exwecution
         {
@@ -42,13 +42,13 @@ namespace SmartSales_v1
             {
                 connection.Close();
             }
-           
+
         }
 
         public int addUser(User user)
         {
             string query = "INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
-            SqlCommand command = new SqlCommand(query,connection);
+            SqlCommand command = new SqlCommand(query, connection);
             //below lines assign the entered data to the fields created in the model class
             command.Parameters.AddWithValue("@name", user.name);
             command.Parameters.AddWithValue("@username", user.username);
@@ -61,6 +61,20 @@ namespace SmartSales_v1
             int response = this.execute(command);
             return response;
 
+        }
+        public string updateStock(Stock stock)
+        {
+            UpdateStock ust = new UpdateStock();
+            string query = "UPDATE  SET location = @location, quantity = @quantity, description = @description WHERE product_name '=='" + ust.productnamefield 
+            +"VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@location", stock.location);
+            command.Parameters.AddWithValue("@username", stock.quantity);
+            command.Parameters.AddWithValue("@password", stock.description);
+            
+            string response = this.execute(command).ToString();
+            return response;
         }
 
     }

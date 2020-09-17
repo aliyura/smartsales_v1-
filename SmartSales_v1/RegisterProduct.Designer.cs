@@ -175,7 +175,6 @@
             this.addbutton.TabIndex = 8;
             this.addbutton.Text = "Add Product";
             this.addbutton.UseVisualStyleBackColor = false;
-            this.addbutton.Click += new System.EventHandler(this.savebutton_Click);
             // 
             // panel2
             // 
