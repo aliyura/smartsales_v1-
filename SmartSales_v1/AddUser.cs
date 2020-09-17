@@ -81,11 +81,11 @@ namespace SmartSales_v1
                 int status = service.addUser(user);
                 if (status != -1)
                 {
-                    app.notifyTo(statusLabel, "Created", "success");
+                    app.notifyTo(statusLabel, "User Created Successfully", "success");
                 }
                 else
                 {
-                    app.notifyTo(statusLabel, "Failed", "success");
+                    app.notifyTo(statusLabel, "Failed to create the User", "success");
                 }
 
             }
