@@ -45,6 +45,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.reorderlevelfield = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -242,11 +243,22 @@
             this.textBox13.TabIndex = 36;
             this.textBox13.Text = "Bar Code";
             // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.Location = new System.Drawing.Point(30, 456);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 20);
+            this.statusLabel.TabIndex = 37;
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 460);
+            this.ClientSize = new System.Drawing.Size(362, 483);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
@@ -289,5 +301,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox reorderlevelfield;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label statusLabel;
     }
 }

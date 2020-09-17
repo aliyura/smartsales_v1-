@@ -80,5 +80,21 @@ namespace SmartSales_v1
         {
             h.manageHint(newcostfield, 1, "New Cost");
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            //if ()
+            //{
+
+            //}
+        }
+
+        private void productnamedropdown_TextChanged(object sender, EventArgs e)
+        {
+            currentpricefield.Text = "";
+            newpricefield.Text = "";
+            currentcostfield.Text = "";
+            newcostfield.Text = "";
+        }
     }
 }

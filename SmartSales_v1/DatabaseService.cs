@@ -62,20 +62,5 @@ namespace SmartSales_v1
             return response;
 
         }
-        public string updateStock(Stock stock)
-        {
-            UpdateStock ust = new UpdateStock();
-            string query = "UPDATE  SET location = @location, quantity = @quantity, description = @description WHERE product_name '=='" + ust.productnamefield 
-            +"VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@location", stock.location);
-            command.Parameters.AddWithValue("@username", stock.quantity);
-            command.Parameters.AddWithValue("@password", stock.description);
-            
-            string response = this.execute(command).ToString();
-            return response;
-        }
-
     }
 }

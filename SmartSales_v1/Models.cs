@@ -25,4 +25,10 @@
         public int quantity { get; set; }
         public string description { get; set; }
     }
+    class Stores
+    {
+        public string storeName { get; set; }
+        public string storeType { get; set; }
+
+    }
 }

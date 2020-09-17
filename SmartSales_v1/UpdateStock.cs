@@ -79,7 +79,7 @@ namespace SmartSales_v1
 
         private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pnfield(productnamedropdown.Text);
+            pnfield(productnamedropdown.Text);//store the selected text in the given parameter 
         }
     }
 }
