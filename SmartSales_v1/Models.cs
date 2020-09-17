@@ -1,4 +1,6 @@
-﻿namespace SmartSales_v1
+﻿using System;
+
+namespace SmartSales_v1
 {
     class User
     {
@@ -7,16 +9,20 @@
         public string password { get; set; }
         public string mobile_number { get; set; }
         public string role { get; set; }
+        public DateTime login_date { get; set; }
+        public DateTime created_date { get; set; }
 
     }
 
+
     class Product
     {
-        public string productName { get; set; }
-        public int quantity { get; set; }
+        public string name { get; set; }
         public int price { get; set; }
         public int cost { get; set; }
-        public int reorderLevel { get; set; }
+        public int reorder_level { get; set; }
+        public int barqr_code { get; set; }
+        public DateTime created_date { get; set; }
     }
     class Stock
     {

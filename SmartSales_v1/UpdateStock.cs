@@ -63,5 +63,10 @@ namespace SmartSales_v1
         {
             h.manageHint(descriptionfield, 1, "Description");
         }
+
+        private void quantityfield_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

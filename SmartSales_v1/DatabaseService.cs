@@ -1,66 +1,200 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace SmartSales_v1
 {
     class DatabaseService
     {
 
-        SqlConnection connection;
         App app = new App();
-        string currentDate = DateTime.Now.ToString("yyyy.MM.dd");//automate date setting
+        SqlConnection connection;
+        DateTime currentDate = DateTime.Now;//automate date setting
+        SqlDataReader reader;
 
-        public  DatabaseService()
+        public SqlConnection refreshConnection()
         {
-            this.connection= new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
+            connection= new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
+            return connection;
         }
-        public int execute(SqlCommand cmd)//implementation of the sql command exwecution
+
+        public SqlDataReader read(SqlDataReader r)
+        {
+            reader = r;
+            return reader;
+        }
+        public int add(SqlCommand cmd)//implementation of the sql command exwecution
         {
             try
             {
                 using (connection)
                 {
-                    connection.Open();
                     using (cmd)
                     {
                         if (connection != null)
-                            return cmd.ExecuteNonQuery();//If connection is open, execute query...
+                        {
+                            connection.Open();
+                            int response= cmd.ExecuteNonQuery();
+                            connection.Close();
+                            return response;
+                        }
                         else
+                        {
                             return -1;//...else return error
+                        }
 
                     }
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 app.showError(ex.Message);
                 return -1;
             }
-            finally
-            {
-                connection.Close();
-            }
            
         }
+        public DataTable get(string query)//implementation of the sql command exwecution
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                this.refreshConnection();
+                using (connection)
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
 
+                            connection.Open();
+                            da.Fill(dataTable);
+                            connection.Close();
+                            da.Dispose();
+                            return dataTable;
+                        }
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return null;
+            }
+
+
+        }
+        public User getUserByMobileNumber(string number)
+        {
+            User user=new User();
+            try
+            {
+                DataTable data = this.get("SELECT  top 1 * FROM ss_users WHERE mobile_number='" + number + "' order by created_date desc");
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row= data.Rows[0];
+                    user = new User()
+                    {   
+                        name=row.Field<string>("name"),
+                        mobile_number = row.Field<string>("mobile_number"),
+                        username = row.Field<string>("username"),
+                        password= row.Field<string>("password"),
+                        role = row.Field<string>("role"),
+                        login_date = row.Field<DateTime>("login_date"),
+                        created_date = row.Field<DateTime>("created_date"),
+
+                    };
+                }
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return user;
+            }
+        }
+        public User getUserByUsername(string username)
+        {
+            User user = new User();
+            try
+            {
+                DataTable data = this.get("SELECT  top 1 * FROM ss_users WHERE username='" + username + "' order by created_date desc");
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    user = new User()
+                    {
+                        name = row.Field<string>("name"),
+                        mobile_number = row.Field<string>("mobile_number"),
+                        username = row.Field<string>("username"),
+                        password = row.Field<string>("password"),
+                        role = row.Field<string>("role"),
+                        login_date = row.Field<DateTime>("login_date"),
+                        created_date = row.Field<DateTime>("created_date"),
+
+                    };
+                }
+                return user;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return user;
+            }
+        }
+        public DataTable getUsers()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                 data = this.get("SELECT* FROM ss_users WHERE 1=1 order by created_date desc");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return data;
+            }
+        }
+        public DataTable getProducts()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                data = this.get("SELECT* FROM ss_products WHERE 1=1 order by created_date desc");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return data;
+            }
+        }
         public int addUser(User user)
         {
-            string query = "INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
-            SqlCommand command = new SqlCommand(query,connection);
-            //below lines assign the entered data to the fields created in the model class
-            command.Parameters.AddWithValue("@name", user.name);
-            command.Parameters.AddWithValue("@username", user.username);
-            command.Parameters.AddWithValue("@password", user.password);
-            command.Parameters.AddWithValue("@mobile_number", user.mobile_number);
-            command.Parameters.AddWithValue("@login_date", currentDate);
-            command.Parameters.AddWithValue("@created_date", currentDate);
+            User existingUser = this.getUserByMobileNumber(user.mobile_number);
+            if (existingUser.mobile_number==null)
+            {
+                this.refreshConnection();
+                using (SqlCommand command = new SqlCommand("INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)", connection))
+                {
+                    command.Parameters.AddWithValue("@name", user.name);
+                    command.Parameters.AddWithValue("@username", user.username);
+                    command.Parameters.AddWithValue("@password", user.password);
+                    command.Parameters.AddWithValue("@mobile_number", user.mobile_number);
+                    command.Parameters.AddWithValue("@login_date", currentDate);
+                    command.Parameters.AddWithValue("@created_date", currentDate);
+                    int response = this.add(command);
+                    return response;
 
-
-            int response = this.execute(command);
-            return response;
-
+                }
+            }
+            else
+            {
+                app.showWarning("User already exist");
+                return -1;
+            }
         }
 
     }
