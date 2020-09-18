@@ -33,8 +33,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.minimizedbutton = new System.Windows.Forms.Button();
+            this.closedbutton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.customernamefield = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,13 +72,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(55)))), ((int)(((byte)(155)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.minimizedbutton);
+            this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 37);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label1
             // 
@@ -91,33 +92,33 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer";
             // 
-            // button2
+            // minimizedbutton
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageIndex = 0;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(212, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 34);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.minimizedbutton.FlatAppearance.BorderSize = 0;
+            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizedbutton.ImageIndex = 0;
+            this.minimizedbutton.ImageList = this.imageList1;
+            this.minimizedbutton.Location = new System.Drawing.Point(212, 2);
+            this.minimizedbutton.Name = "minimizedbutton";
+            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
+            this.minimizedbutton.TabIndex = 1;
+            this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
-            // button1
+            // closedbutton
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageIndex = 1;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(262, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 34);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.closedbutton.FlatAppearance.BorderSize = 0;
+            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedbutton.ImageIndex = 1;
+            this.closedbutton.ImageList = this.imageList1;
+            this.closedbutton.Location = new System.Drawing.Point(262, 2);
+            this.closedbutton.Name = "closedbutton";
+            this.closedbutton.Size = new System.Drawing.Size(41, 34);
+            this.closedbutton.TabIndex = 0;
+            this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
             // 
             // panel4
             // 
@@ -356,8 +357,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button minimizedbutton;
+        private System.Windows.Forms.Button closedbutton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox customernamefield;
         private System.Windows.Forms.Panel panel2;

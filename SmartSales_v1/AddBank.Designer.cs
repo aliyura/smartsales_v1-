@@ -33,10 +33,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.banknamefield = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.closedbutton = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.minimizedbutton = new System.Windows.Forms.Button();
             this.addbutton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
@@ -73,27 +73,29 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(55)))), ((int)(((byte)(155)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.minimizedbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 37);
             this.panel1.TabIndex = 14;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // button4
+            // closedbutton
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageIndex = 1;
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(416, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(41, 34);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.closedbutton.FlatAppearance.BorderSize = 0;
+            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedbutton.ImageIndex = 1;
+            this.closedbutton.ImageList = this.imageList1;
+            this.closedbutton.Location = new System.Drawing.Point(416, 3);
+            this.closedbutton.Name = "closedbutton";
+            this.closedbutton.Size = new System.Drawing.Size(41, 34);
+            this.closedbutton.TabIndex = 3;
+            this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
             // 
             // imageList1
             // 
@@ -113,18 +115,19 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Add Bank";
             // 
-            // button2
+            // minimizedbutton
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageIndex = 0;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(355, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 34);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.minimizedbutton.FlatAppearance.BorderSize = 0;
+            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizedbutton.ImageIndex = 0;
+            this.minimizedbutton.ImageList = this.imageList1;
+            this.minimizedbutton.Location = new System.Drawing.Point(355, 3);
+            this.minimizedbutton.Name = "minimizedbutton";
+            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
+            this.minimizedbutton.TabIndex = 1;
+            this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
             // addbutton
             // 
@@ -149,7 +152,7 @@
             this.statusLabel.Size = new System.Drawing.Size(0, 13);
             this.statusLabel.TabIndex = 17;
             // 
-            // NewBank
+            // AddBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +162,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NewBank";
+            this.Name = "AddBank";
             this.Text = "NewBank";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -175,9 +178,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox banknamefield;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button closedbutton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button minimizedbutton;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.Label statusLabel;
