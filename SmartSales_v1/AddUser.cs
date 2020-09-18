@@ -7,11 +7,11 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service; 
+        SSAddService addService= new SSAddService();
 
         public AddUser()
-        {
-            service = new DatabaseService();
+        {         
+            
             InitializeComponent();
         }
 
@@ -65,36 +65,7 @@ namespace SmartSales_v1
                 password = passwordfield.Text,
             };
 
-            service.addUser(user);
-
-            //if (user.name == "" || user.name=="Name")
-            //    app.notifyTo(statusLabel, "Enter name of the User","warning");
-            //if (user.mobile_number == "" || user.mobile_number == "Mobile Number")
-            //    app.notifyTo(statusLabel, "Enter mobile number of the User", "warning");
-            //if (user.username == "" || user.username == "Username")
-            //    app.notifyTo(statusLabel, "Enter username of the User", "warning");
-            //if (user.password == "" || user.password == "Password")
-            //    app.notifyTo(statusLabel, "Enter password of the User", "warning");
-
-
-            //if(user.name!="" && user.name!="Name" && user.mobile_number!="" && user.username!="" && user.password != "")
-            //{
-            //    app.notifyTo(statusLabel, "Processing...", "success");
-            //    int status = service.addUser(user);
-            //    if (status != -1)
-            //    {
-            //        app.notifyTo(statusLabel, "User Created Successfully", "success");
-            //    }
-            //    else
-            //    {
-            //        app.notifyTo(statusLabel, "Failed to create the User", "success");
-            //    }
-
-            //}
-            //else
-            //{
-            //    app.notifyTo(statusLabel, "All fields are required!", "warning");
-            //}
+            
 
            
 

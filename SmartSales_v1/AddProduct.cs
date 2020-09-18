@@ -14,7 +14,8 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service = new DatabaseService();
+        SSAddService addService = new SSAddService();
+
         public string productnamefield;
         public AddProduct()
         {
@@ -99,48 +100,11 @@ namespace SmartSales_v1
                 location = locationdropdown.Text
             };
 
-            AddLocation addL=new AddLocation();
-            for (int i = 0; i < int.Parse(service.getProducts().Rows[i].ToString()); i++)
-            {
-                if (productnamedropdown.SelectedItem.ToString() == service.getProducts().Columns[i].ToString())
-                {
+           
 
-                    locationdropdown.SelectedItem = "Location";
-                    quantityfield.Text = "quantity";
 
-                    //if (product.quantity == int.Parse("") || product.quantity == int.Parse("Price"))
-                    //    app.notifyTo(statusLabel, "Enter Price of the Product", "warning");
 
-                    //if (product.location == "" || product.location == ""))
-                    //app.notifyTo(statusLabel, "Enter Cost of the Product", "warning");
 
-                    //if (product.description == "" || product.description == "Re-oder Level")
-                    //    app.notifyTo(statusLabel, "Enter Re-order Level of the Product", "warning");
-
-                    //if (product.created_date != DateTime.Now && product.name != "Product name" && product.created_date != DateTime.Now && product.cost != int.Parse("Cost") && product.price != int.Parse("") && product.price != int.Parse("Price") && product.reorder_Level != int.Parse("Re-order Level") && product.reorder_Level != int.Parse(""))
-                    //{
-                    //    app.notifyTo(statusLabel, "Processing...", "success");
-
-                    //    int status = 0;
-                    //    //service.registerproduct(product);
-                    //    int status = service.registerproduct(product);
-
-                    //    if (status != -1)
-                    //    {
-                    //        app.notifyTo(statusLabel, "User Created Successfully", "success");
-                    //    }
-                    //    else
-                    //    {
-                    //        app.notifyTo(statusLabel, "Failed to create the User", "success");
-                    //    }
-
-                    //}
-                    //else
-                    //{
-                    //    app.notifyTo(statusLabel, "All fields are required!", "warning");
-                    //}
-                }
-            }
         }
     }
 }

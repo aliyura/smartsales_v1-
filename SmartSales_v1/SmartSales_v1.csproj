@@ -71,6 +71,7 @@
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
+    <Compile Include="SSGetService.cs" />
     <Compile Include="HintManager.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -78,13 +79,13 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseService.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="SSService.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="AddBank.cs">
       <SubType>Form</SubType>
@@ -92,6 +93,7 @@
     <Compile Include="AddBank.Designer.cs">
       <DependentUpon>AddBank.cs</DependentUpon>
     </Compile>
+    <Compile Include="SSAddService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddStock.cs">

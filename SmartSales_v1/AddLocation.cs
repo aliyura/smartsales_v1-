@@ -6,6 +6,9 @@ namespace SmartSales_v1
     public partial class AddLocation : Form
     {
         Hint h = new Hint();
+        App app = new App();
+        SSAddService addService = new SSAddService();
+
         public AddLocation()
         {
             InitializeComponent();
@@ -13,53 +16,66 @@ namespace SmartSales_v1
 
         private void currentpricefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(storenamefield, 0, "Store Name");
+            h.manageHint(locationName, 0, "Location Name");
         }
 
         private void currentpricefield_MouseLeave(object sender, EventArgs e)
         {
-            h.manageHint(storenamefield, 1, "Store Name");
+            h.manageHint(locationName, 1, "Location Name");
         }
 
         private void storetypredropdown_MouseEnter(object sender, EventArgs e)
         {
-            // h.manageHint(storetypredropdown, 0, "Store Type");
-            storetypredropdown.Text = "";
+            locationType.Text = "";
         }
 
         private void storetypredropdown_MouseLeave(object sender, EventArgs e)
         {
-            if (storetypredropdown.Text == "")
+            if (locationType.Text == "")
             {
-                storetypredropdown.Text = "Store Type";
+                locationType.Text = "Location Type";
             }
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            Stores store = new Stores()
+            Location location = new Location()
             {
-                name = storenamefield.Text,
-                type = storetypredropdown.Text,
+                name = locationName.Text,
+                type = locationType.Text,
             };
-            if (storenamefield.Text != null || panel4.Text != "Store Name")
+
+            if (location.name == "Location Name" || location.name == "")
             {
-                if (storetypredropdown.SelectedItem.ToString() == " Virtual Store")
-                {
-                    MessageBox.Show(storenamefield.Text + " Virtual Store Added");
-                }
-                if (storetypredropdown.SelectedItem.ToString() == " Mega Store")
-                {
-                    MessageBox.Show(storenamefield.Text + " Mega Store Added");
-                }
-                if (storetypredropdown.SelectedItem.ToString() == "Mini Store")
-                {
-                    MessageBox.Show(storenamefield.Text + " Mini Store Added");
-                }
+                app.notifyTo(statusLabel, "Location name is required", "warning");
+            }
+            else if (location.type == "Location Type" || location.type == "")
+            {
+                app.notifyTo(statusLabel, "Location type is required", "warning");
             }
             else
             {
-                MessageBox.Show("Enter a Valid Store Name Please");
+
+                if (location.name != "" && location.type != "" && location.name != "Location Name" && location.name != "Location Type")
+                {
+
+                    int response = 1; //addService.addLocation(location);
+                    if (response != -1)
+                    {
+                        locationName.Text = "";
+                        locationType.Text = "";
+                        app.notifyTo(statusLabel, "Location Added Successfully", "success");
+                    }
+                    else
+                    {
+                        app.notifyTo(statusLabel, "Success", "Unable to add this Location");
+                    }
+
+                }
+                else
+                {
+                    app.notifyTo(statusLabel, "All fields are required", "warning");
+                }
             }
 
         }

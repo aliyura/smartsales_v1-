@@ -38,7 +38,7 @@ namespace SmartSales_v1
         public string description { get; set; }
         public DateTime created_date { get; set; }
     }
-    class Stores
+    class Location
     {
         public int id { get; set; }
         public string name { get; set; }
