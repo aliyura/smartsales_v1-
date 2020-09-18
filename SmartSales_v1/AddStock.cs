@@ -13,7 +13,7 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service;
+       
         public AddStock()
         {
             InitializeComponent();
@@ -40,55 +40,7 @@ namespace SmartSales_v1
         }
         private void savebutton_Click(object sender, EventArgs e)
         {
-            Product product = new Product
-            {
-                name = productnamefield.Text,
-                price = int.Parse(pricefield.Text),
-                cost = int.Parse(costfield.Text),
-                reorder_Level = int.Parse(reorderlevelfield.Text)
-            };
-<<<<<<< HEAD
-
-            if (product.productName == "" || product.productName == "Product name")
-=======
-            if (product.product_Name == "" || product.product_Name == "Product name")
->>>>>>> c785065503b865b3de4a664064350a1e319ec88f
-                app.notifyTo(statusLabel, "Enter Product name of the Product", "warning");
-
-            if (product.price == int.Parse("") || product.price == int.Parse("Price"))
-                app.notifyTo(statusLabel, "Enter Price of the Product", "warning");
-
-            if (product.cost == int.Parse("") || product.cost == int.Parse("Cost"))
-                app.notifyTo(statusLabel, "Enter Cost of the Product", "warning");
-
-            if (product.reorder_Level == int.Parse("") || product.reorder_Level == int.Parse("Re-oder Level"))
-                app.notifyTo(statusLabel, "Enter Re-order Level of the Product", "warning");
-
-            if (product.product_Name != "" && product.product_Name != "Product name" && product.cost != int.Parse("") && product.cost != int.Parse("Cost") && product.price != int.Parse("") && product.price != int.Parse("Price") && product.reorder_Level !=int.Parse("Re-order Level") && product.reorder_Level != int.Parse(""))
-            {
-                app.notifyTo(statusLabel, "Processing...", "success");
-
-                int status = 0;
-                //service.registerproduct(product);
-               int status = service.registerproduct(product);
-
-                if (status != -1)
-                {
-                    app.notifyTo(statusLabel, "User Created Successfully", "success");
-                }
-                else
-                {
-                    app.notifyTo(statusLabel, "Failed to create the User", "success");
-                }
-
-            }
-            else
-            {
-                app.notifyTo(statusLabel, "All fields are required!", "warning");
-            }
-
-
-
+            
         }
  
 
@@ -128,9 +80,9 @@ namespace SmartSales_v1
             h.manageHint(costfield, 1, "Cost");
         }
 
-        //private void costfield_TextChanged(object sender, EventArgs e)
-        //{
+        private void addbutton_Click(object sender, EventArgs e)
+        {
 
-        //}
+        }
     }
 }

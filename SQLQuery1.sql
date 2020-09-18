@@ -1,6 +1,0 @@
-﻿
-
-
-SELECT * FROM ss_users
-
-080000000

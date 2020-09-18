@@ -31,5 +31,10 @@ namespace SmartSales_v1
         {
             this.Close();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

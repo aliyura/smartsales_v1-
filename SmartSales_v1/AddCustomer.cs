@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
@@ -14,7 +7,7 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service;
+      
         public AddCustomer()
         {
             InitializeComponent();
@@ -29,7 +22,7 @@ namespace SmartSales_v1
         {
             Customer customer = new Customer
             {
-                customer_name = customergroupfield.Text,
+                name = customergroupfield.Text,
                 phone_number = phonenumberfield.Text,
                 altphone_number = altphonenumberfield.Text,
                 address = addressfield.Text,
@@ -37,7 +30,7 @@ namespace SmartSales_v1
                 customer_group = customergroupfield.Text,
             };
 
-            if(customer.customer_name == "" || customer.customer_name == "Customer Name" )
+            if(customer.name == "" || customer.name == "Customer Name" )
                 app.notifyTo(statusLabel, "Enter the Customer name ", "warning");
 
             if (customer.phone_number == "" || customer.phone_number == "Phone Number")
@@ -55,18 +48,18 @@ namespace SmartSales_v1
             if (customer.customer_group == "" || customer.customer_group == "Customer Group")
                 app.notifyTo(statusLabel, "Enter the Customer of the The Customer registration", "warning");
 
-            if (customer.customer_name !="" && customer.customer_name !="Customer Name" && customer.phone_number !="" && customer.phone_number != "Phone Number" && customer.altphone_number != "Alternate Phone Number" && customer.altphone_number !="" && customer.address !="" && customer.address != "Address" && customer.credit_limit !="" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group" && customer.customer_group !="")
+            if (customer.name !="" && customer.name !="Customer Name" && customer.phone_number !="" && customer.phone_number != "Phone Number" && customer.altphone_number != "Alternate Phone Number" && customer.altphone_number !="" && customer.address !="" && customer.address != "Address" && customer.credit_limit !="" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group" && customer.customer_group !="")
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
-                int status = service.registerproduct(customer);
-                if (status != -1)
-                {
-                    app.notifyTo(statusLabel, "User Created Successfully", "success");
-                }
-                else
-                {
-                    app.notifyTo(statusLabel, "Failed to create the User", "success");
-                }
+                //int status = service.registerproduct(customer);
+                //if (status != -1)
+                //{
+                //    app.notifyTo(statusLabel, "User Created Successfully", "success");
+                //}
+                //else
+                //{
+                //    app.notifyTo(statusLabel, "Failed to create the User", "success");
+                //}
             }
             else
             {

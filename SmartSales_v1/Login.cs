@@ -17,8 +17,7 @@ namespace SmartSales_v1
             InitializeComponent();
         }
 
-        DatabaseService service;
-
+    
         private void manageHint(TextBox textbox, int eventType,string defaultText)
         {
             string text = textbox.Text;

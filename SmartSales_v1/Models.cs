@@ -6,6 +6,7 @@ namespace SmartSales_v1
 {
     class User
     {
+        public int id { get; set; }
         public string name { get; set; }
         public string username { get; set; }
         public string password { get; set; }
@@ -19,6 +20,7 @@ namespace SmartSales_v1
 
     class Stock
     {
+        public int id { get; set; }
         public string name { get; set; }
         public int price { get; set; }
         public int cost { get; set; }
@@ -29,6 +31,7 @@ namespace SmartSales_v1
     }
     class Product
     {
+        public int id { get; set; }
         public string name { get; set; }
         public string location { get; set; }
         public int quantity { get; set; }
@@ -37,6 +40,7 @@ namespace SmartSales_v1
     }
     class Stores
     {
+        public int id { get; set; }
         public string name { get; set; }
         public string type { get; set; }
         public DateTime created_date { get; set; }
@@ -44,18 +48,19 @@ namespace SmartSales_v1
     }
     class Bank
     {
+        public int id { get; set; }
         public string name { get; set; }
         public DateTime created_date { get; set; }
     }
     class Customer
     {
+        public int id { get; set; }
         public string name { get; set; }
         public string address { get; set; }
         public string phone_number { get; set; }
         public string altphone_number { get; set; }
         public string credit_limit { get; set; }
         public string customer_group { get; set; }
-
         public DateTime created_date { get; set; }
     }
 }

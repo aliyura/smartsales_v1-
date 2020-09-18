@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
-    public partial class AddStore : Form
+    public partial class AddLocation : Form
     {
         Hint h = new Hint();
-        public AddStore()
+        public AddLocation()
         {
             InitializeComponent();
         }
@@ -46,8 +39,8 @@ namespace SmartSales_v1
         {
             Stores store = new Stores()
             {
-                storeName = storenamefield.Text,
-                storeType = storetypredropdown.Text,
+                name = storenamefield.Text,
+                type = storetypredropdown.Text,
             };
             if (storenamefield.Text != null || panel4.Text != "Store Name")
             {

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
-    public partial class NewBank : Form
+    public partial class AddBank : Form
     {
         Hint h = new Hint();
         App app = new App();
-        DatabaseService service;
-        public NewBank()
+      
+        public AddBank()
         {
             InitializeComponent();
         }
@@ -34,23 +34,15 @@ namespace SmartSales_v1
         {
             Bank bank = new Bank
             {
-                bank_name = banknamefield.Text,
+                name = banknamefield.Text,
             };
-            if (bank.bank_name == "" || bank.bank_name == "Bank Name")
+            if (bank.name == "" || bank.name == "Bank Name")
                 app.notifyTo(statusLabel, "Enter bank name of the Bank", "warning");
 
-            if(bank.bank_name != "" && bank.bank_name != "")
+            if(bank.name != "" && bank.name != "")
             {
                 app.notifyTo(statusLabel, "Processing...", "success");
-                int status = service.registerproduct(bank);
-                if (status != -1)
-                {
-                    app.notifyTo(statusLabel, "User Created Successfully", "success");
-                }
-                else
-                {
-                    app.notifyTo(statusLabel, "Failed to create the User", "success");
-                }
+               
             }
             else
             {

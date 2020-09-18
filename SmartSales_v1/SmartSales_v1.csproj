@@ -58,11 +58,11 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStore.cs">
+    <Compile Include="AddLocation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStore.Designer.cs">
-      <DependentUpon>AddStore.cs</DependentUpon>
+    <Compile Include="AddLocation.Designer.cs">
+      <DependentUpon>AddLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
@@ -71,7 +71,7 @@
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="HintManager.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +79,6 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseService.cs" />
-    <Compile Include="DataClasses2.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +86,11 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models.cs" />
-    <Compile Include="NewBank.cs">
+    <Compile Include="AddBank.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewBank.Designer.cs">
-      <DependentUpon>NewBank.cs</DependentUpon>
+    <Compile Include="AddBank.Designer.cs">
+      <DependentUpon>AddBank.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,8 +121,8 @@
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStore.resx">
-      <DependentUpon>AddStore.cs</DependentUpon>
+    <EmbeddedResource Include="AddLocation.resx">
+      <DependentUpon>AddLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
@@ -138,8 +133,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewBank.resx">
-      <DependentUpon>NewBank.cs</DependentUpon>
+    <EmbeddedResource Include="AddBank.resx">
+      <DependentUpon>AddBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,14 +158,6 @@
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataClasses2.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataClasses2.dbml.layout">
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -211,9 +198,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NewFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

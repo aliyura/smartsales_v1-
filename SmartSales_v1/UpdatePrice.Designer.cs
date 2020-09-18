@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 46);
             this.panel1.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.button4.ImageIndex = 1;
             this.button4.ImageList = this.imageList1;
             this.button4.Location = new System.Drawing.Point(403, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(55, 42);
             this.button4.TabIndex = 3;
@@ -109,7 +109,7 @@
             this.button2.ImageIndex = 0;
             this.button2.ImageList = this.imageList1;
             this.button2.Location = new System.Drawing.Point(340, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 42);
             this.button2.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productnamedropdown.FormattingEnabled = true;
             this.productnamedropdown.Location = new System.Drawing.Point(33, 6);
-            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4);
             this.productnamedropdown.Name = "productnamedropdown";
             this.productnamedropdown.Size = new System.Drawing.Size(325, 33);
             this.productnamedropdown.TabIndex = 10;
@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 583);
+            this.ClientSize = new System.Drawing.Size(469, 608);
             this.Controls.Add(this.update);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -277,7 +277,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdatePrice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdatePrice";

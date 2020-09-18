@@ -1,6 +1,6 @@
 ﻿namespace SmartSales_v1
 {
-    partial class NewBank
+    partial class AddBank
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewBank));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBank));
             this.panel4 = new System.Windows.Forms.Panel();
             this.banknamefield = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
