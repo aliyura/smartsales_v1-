@@ -52,11 +52,13 @@
             this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.minimizedbutton);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 37);
             this.panel1.TabIndex = 4;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // closedbutton
             // 

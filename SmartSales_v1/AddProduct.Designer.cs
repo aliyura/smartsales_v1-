@@ -59,6 +59,7 @@
             this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.minimizedbutton);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -119,7 +120,7 @@
             this.panel.Controls.Add(this.button1);
             this.panel.Controls.Add(this.productnamedropdown);
             this.panel.Location = new System.Drawing.Point(23, 98);
-            this.panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(301, 38);
             this.panel.TabIndex = 10;
@@ -152,7 +153,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.locationdropdown);
             this.panel2.Location = new System.Drawing.Point(23, 170);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 38);
             this.panel2.TabIndex = 11;
@@ -175,7 +176,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.quantityfield);
             this.panel4.Location = new System.Drawing.Point(23, 239);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(301, 38);
             this.panel4.TabIndex = 12;
@@ -189,7 +190,7 @@
             this.quantityfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.quantityfield.Location = new System.Drawing.Point(26, 9);
-            this.quantityfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quantityfield.Margin = new System.Windows.Forms.Padding(2);
             this.quantityfield.Name = "quantityfield";
             this.quantityfield.Size = new System.Drawing.Size(243, 21);
             this.quantityfield.TabIndex = 1;
@@ -203,7 +204,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.descriptionfield);
             this.panel5.Location = new System.Drawing.Point(23, 301);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(301, 158);
             this.panel5.TabIndex = 13;
@@ -217,7 +218,7 @@
             this.descriptionfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.descriptionfield.Location = new System.Drawing.Point(25, 9);
-            this.descriptionfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descriptionfield.Margin = new System.Windows.Forms.Padding(2);
             this.descriptionfield.Multiline = true;
             this.descriptionfield.Name = "descriptionfield";
             this.descriptionfield.Size = new System.Drawing.Size(255, 134);
@@ -233,7 +234,7 @@
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
             this.addbutton.Location = new System.Drawing.Point(23, 482);
-            this.addbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addbutton.Margin = new System.Windows.Forms.Padding(2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(301, 47);
             this.addbutton.TabIndex = 14;
@@ -250,7 +251,7 @@
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox13.Location = new System.Drawing.Point(23, 77);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(118, 21);

@@ -324,13 +324,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1145, 52);
             this.panel3.TabIndex = 1;
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(629, 23);
+            this.label13.Location = new System.Drawing.Point(919, 23);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 16);
             this.label13.TabIndex = 14;
@@ -339,7 +340,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::SmartSales_v1.Properties.Resources.profile;
-            this.pictureBox10.Location = new System.Drawing.Point(747, 6);
+            this.pictureBox10.Location = new System.Drawing.Point(1037, 6);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(46, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,7 +354,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ImageIndex = 0;
             this.button6.ImageList = this.imageList1;
-            this.button6.Location = new System.Drawing.Point(806, 14);
+            this.button6.Location = new System.Drawing.Point(1096, 14);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 33);
             this.button6.TabIndex = 2;

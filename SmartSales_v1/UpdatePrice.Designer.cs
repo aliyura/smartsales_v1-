@@ -60,6 +60,7 @@
             this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.minimizedbutton);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -118,7 +119,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.productnamedropdown);
             this.panel3.Location = new System.Drawing.Point(26, 78);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(290, 38);
             this.panel3.TabIndex = 9;
@@ -142,7 +143,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.currentpricefield);
             this.panel2.Location = new System.Drawing.Point(26, 145);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(290, 38);
             this.panel2.TabIndex = 10;
@@ -156,7 +157,7 @@
             this.currentpricefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentpricefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.currentpricefield.Location = new System.Drawing.Point(26, 9);
-            this.currentpricefield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currentpricefield.Margin = new System.Windows.Forms.Padding(2);
             this.currentpricefield.Name = "currentpricefield";
             this.currentpricefield.Size = new System.Drawing.Size(212, 21);
             this.currentpricefield.TabIndex = 1;
@@ -169,7 +170,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.newpricefield);
             this.panel4.Location = new System.Drawing.Point(26, 214);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(290, 38);
             this.panel4.TabIndex = 11;
@@ -183,7 +184,7 @@
             this.newpricefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newpricefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.newpricefield.Location = new System.Drawing.Point(26, 8);
-            this.newpricefield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newpricefield.Margin = new System.Windows.Forms.Padding(2);
             this.newpricefield.Name = "newpricefield";
             this.newpricefield.Size = new System.Drawing.Size(212, 21);
             this.newpricefield.TabIndex = 1;
@@ -196,7 +197,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.currentcostfield);
             this.panel5.Location = new System.Drawing.Point(26, 280);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(290, 38);
             this.panel5.TabIndex = 12;
@@ -210,7 +211,7 @@
             this.currentcostfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentcostfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.currentcostfield.Location = new System.Drawing.Point(26, 8);
-            this.currentcostfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currentcostfield.Margin = new System.Windows.Forms.Padding(2);
             this.currentcostfield.Name = "currentcostfield";
             this.currentcostfield.Size = new System.Drawing.Size(212, 21);
             this.currentcostfield.TabIndex = 1;
@@ -223,7 +224,7 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.newcostfield);
             this.panel6.Location = new System.Drawing.Point(26, 346);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(290, 38);
             this.panel6.TabIndex = 13;
@@ -237,7 +238,7 @@
             this.newcostfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newcostfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.newcostfield.Location = new System.Drawing.Point(26, 8);
-            this.newcostfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newcostfield.Margin = new System.Windows.Forms.Padding(2);
             this.newcostfield.Name = "newcostfield";
             this.newcostfield.Size = new System.Drawing.Size(212, 21);
             this.newcostfield.TabIndex = 1;
@@ -252,7 +253,7 @@
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.White;
             this.update.Location = new System.Drawing.Point(26, 416);
-            this.update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.update.Margin = new System.Windows.Forms.Padding(2);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(290, 47);
             this.update.TabIndex = 14;
