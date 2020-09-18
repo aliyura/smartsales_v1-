@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
@@ -99,11 +92,6 @@ namespace SmartSales_v1
                 quantity = int.Parse(quantityfield.Text),
                 location = locationdropdown.Text
             };
-
-           
-
-
-
 
         }
     }

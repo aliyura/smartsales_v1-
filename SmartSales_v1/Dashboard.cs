@@ -12,6 +12,7 @@ namespace SmartSales_v1
 {
     public partial class Dashboard : Form
     {
+        public Point mouseLocation;
         public Dashboard()
         {
             InitializeComponent();
@@ -25,6 +26,16 @@ namespace SmartSales_v1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
         }
     }
 }

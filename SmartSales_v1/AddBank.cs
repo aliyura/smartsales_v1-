@@ -12,8 +12,10 @@ namespace SmartSales_v1
 {
     public partial class AddBank : Form
     {
+        public Point mouseLocation;
         Hint h = new Hint();
         App app = new App();
+
         SSAddService addService = new SSAddService();
 
         public AddBank()
@@ -23,19 +25,19 @@ namespace SmartSales_v1
 
         private void currentpricefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(bankNameField, 0, "Bank Name");
+            h.manageHint(banknamefield, 0, "Bank Name");
         }
 
         private void currentpricefield_MouseLeave(object sender, EventArgs e)
         {
-            h.manageHint(bankNameField, 1, "Bank Name");
+            h.manageHint(banknamefield, 1, "Bank Name");
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
             Bank bank = new Bank()
             {
-                name = bankNameField.Text
+                name = banknamefield.Text
             };
 
             if (bank.name == "Bank Name" || bank.name == "")
@@ -52,15 +54,15 @@ namespace SmartSales_v1
                     int response = addService.addBank(bank);
                     if (response != -1)
                     {
-                        bankNameField.Text = "";
+                        banknamefield.Text = "";
+
                         app.notifyTo(statusLabel, "Bank Added Successfully", "success");
                     }
 
                     else
                     {
-                        app.notifyTo(statusLabel, "Warning", "Unable to add bank");
+                        app.notifyTo(statusLabel, "Unable to add bank", "Warning");
                     }
-
                 }
                 else
                 {
@@ -68,5 +70,26 @@ namespace SmartSales_v1
                 }
             }
         }
+
+
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
     }
-    }
+  }

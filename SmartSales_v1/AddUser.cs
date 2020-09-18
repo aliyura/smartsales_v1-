@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
     public partial class AddUser : Form
     {
+        public Point mouseLocation;
         Hint h = new Hint();
         App app = new App();
         SSAddService addService= new SSAddService();
@@ -85,8 +87,8 @@ namespace SmartSales_v1
             else
             {
 
-                if (user.name != "" && user.mobile_number != ""  && user.username!="" && user.password!=""
-                    && user.name != "Name" && user.mobile_number != "Mobile Number" && user.username!="Username" && user.password!="Password")
+                if (user.name != "" && user.mobile_number != "" && user.username != "" && user.password != ""
+                    && user.name != "Name" && user.mobile_number != "Mobile Number" && user.username != "Username" && user.password != "Password")
                 {
 
                     int response = addService.addUser(user);
@@ -96,7 +98,7 @@ namespace SmartSales_v1
                         mobilenumberfield.Text = "Mobile Number";
                         usernamefield.Text = "Username";
                         passwordfield.Text = "Password";
-                       
+
                         app.notifyTo(statusLabel, "User Created Successfully", "success");
                     }
                     else
@@ -111,13 +113,25 @@ namespace SmartSales_v1
                 }
             }
 
-
-
-
-
         }
-          
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-     
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
     }
 }

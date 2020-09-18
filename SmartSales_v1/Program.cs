@@ -16,7 +16,8 @@ namespace SmartSales_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddProduct());
+            Application.Run(new Dashboard());
+
         }
     }
 }
