@@ -14,7 +14,7 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-      
+
         public AddBank()
         {
             InitializeComponent();
@@ -52,19 +52,19 @@ namespace SmartSales_v1
                     if (response != -1)
                     {
                         banknamefield.Text = "";
-                        app.notifyTo(statusLabel, "Bank Added Successfully", "Success");
+                        app.notifyTo(statusLabel, "Bank Added Successfully", "success");
                     }
 
                     else
                     {
-                        app.notifyTo(statusLabel, "Warning", "Unable to add bank");
+                        app.notifyTo(statusLabel, "Unable to add bank", "Warning");
                     }
-
                 }
                 else
                 {
                     app.notifyTo(statusLabel, "All fields required", "warning");
                 }
             }
+        }
     }
 }

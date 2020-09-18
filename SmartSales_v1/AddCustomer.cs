@@ -7,7 +7,7 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-      
+
         public AddCustomer()
         {
             InitializeComponent();
@@ -15,66 +15,86 @@ namespace SmartSales_v1
 
         private void AddCustomer_Load(object sender, EventArgs e)
         {
-
+            customergroupfield.Items[0] = "Regular";
+            customergroupfield.Items[0] = "Irregular";
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer
+            Customer customer = new Customer()
             {
-                name = customergroupfield.Text,
+                name = customernamefield.Text,
+                address = addressfield.Text,
                 phone_number = phonenumberfield.Text,
                 altphone_number = altphonenumberfield.Text,
-                address = addressfield.Text,
                 credit_limit = creditlimitfield.Text,
                 customer_group = customergroupfield.Text,
+                created_date = DateTime.Now
             };
 
-            if(customer.name == "" || customer.name == "Customer Name" )
-                app.notifyTo(statusLabel, "Enter the Customer name ", "warning");
-
-            if (customer.phone_number == "" || customer.phone_number == "Phone Number")
-                app.notifyTo(statusLabel, "Enter the Customer Phone Number","warning");
-
-            if (customer.altphone_number == "" || customer.altphone_number == "Alternate Phone Number")
-                app.notifyTo(statusLabel, "Enter the Customer Alternative Phone Number", "warning");
-
-            if (customer.address == "" || customer.address == "Address")
-                app.notifyTo(statusLabel, "Enter The Customer Address", "warning");
-
-            if (customer.credit_limit == "" || customer.credit_limit == "Credit Limit")
-                app.notifyTo(statusLabel, "Enter Customer Credit Limit","warning");
-
-            if (customer.customer_group == "" || customer.customer_group == "Customer Group")
-                app.notifyTo(statusLabel, "Enter the Customer of the The Customer registration", "warning");
-
-            if (customer.name !="" && customer.name !="Customer Name" && customer.phone_number !="" && customer.phone_number != "Phone Number" && customer.altphone_number != "Alternate Phone Number" && customer.altphone_number !="" && customer.address !="" && customer.address != "Address" && customer.credit_limit !="" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group" && customer.customer_group !="")
+            if (customer.name == "Customer Name" || customer.name == "")
             {
-                app.notifyTo(statusLabel, "Processing...", "success");
-                //int status = service.registerproduct(customer);
-                //if (status != -1)
-                //{
-                //    app.notifyTo(statusLabel, "User Created Successfully", "success");
-                //}
-                //else
-                //{
-                //    app.notifyTo(statusLabel, "Failed to create the User", "success");
-                //}
+                app.notifyTo(statusLabel, "Customer name required", "warning");
+            }
+            else if (customer.address == "Address" || customer.address == "")
+            {
+                app.notifyTo(statusLabel, "Address required", "warning");
+            }
+            else if (customer.address == "Address" || customer.address == "")
+            {
+                app.notifyTo(statusLabel, "Address required", "warning");
+            }
+            else if (customer.phone_number == "Phone Number" || customer.phone_number == "")
+            {
+                app.notifyTo(statusLabel, "Phone Number required", "warning");
+            }
+            else if (customer.altphone_number == "Alternate Phone Number" || customer.altphone_number == "")
+            {
+                app.notifyTo(statusLabel, "Alternate Phone Number required", "warning");
+            }
+            else if (customer.credit_limit == "Credit Limit" || customer.credit_limit == "")
+            {
+                app.notifyTo(statusLabel, "Credit Limit required", "warning");
+            }
+            else if (customer.customer_group == "Customer Group" || customer.customer_group == "")
+            {
+                app.notifyTo(statusLabel, "Customer Group required", "warning");
             }
             else
             {
-                app.notifyTo(statusLabel, "All fields are required!", "warning");
+
+                if (customer.name != "" && customer.address != "" && customer.phone_number != "" && customer.altphone_number != "" && customer.credit_limit != "" && customer.customer_group != ""
+                    && customer.name != "Customer Name" && customer.address != "Address" && customer.phone_number != "Phone Number"
+                    && customer.altphone_number != "Alternate Phone Number" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group")
+                {
+
+                    int response = 1; //addService.addLocation(location);
+                    if (response != -1)
+                    {
+                        customernamefield.Text = "Customer Name";
+                        addressfield.Text = "Address";
+                        phonenumberfield.Text = "Phone Number";
+                        altphonenumberfield.Text = "Alternate Phone Number";
+                        creditlimitfield.Text = "Credit Limit";
+                        customergroupfield.Text = "Customer Group";
+                        app.notifyTo(statusLabel, "Customer Added Successfully", "success");
+                    }
+                    else
+                    {
+                        app.notifyTo(statusLabel, "Unable to add this Customer", "success");
+                    }
+
+                }
+                else
+                {
+                    app.notifyTo(statusLabel, "All fields are required", "warning");
+                }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }
