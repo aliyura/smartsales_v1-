@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SmartSales_v1
 {
     public partial class AddProduct : Form
@@ -16,95 +8,154 @@ namespace SmartSales_v1
         App app = new App();
         SSAddService addService = new SSAddService();
 
-        public string productnamefield;
+
         public AddProduct()
         {
             InitializeComponent();
         }
 
-
-
-        public void pnfield(string pfn)
-        {
-
-            pfn = productnamefield;//store the value of product field here
-
-        }
-
-        private void productnamedropdown_MouseEnter(object sender, EventArgs e)
-        {
-            productnamedropdown.Text = "";
-        }
-
-        private void productnamedropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(productnamedropdown.Text == "")
-            {
-                productnamedropdown.Text = "Product Name";
-            }
-        }
-
-        private void locationdropdown_MouseEnter(object sender, EventArgs e)
-        {
-            locationdropdown.Text = "";
-        }
-
-        private void locationdropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(locationdropdown.Text == "")
-            {
-                locationdropdown.Text = "Location";
-            }
-        }
-
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 0, "Current Price");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 1, "Current Cost");
-        }
-
-        private void descriptionfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 0, "Description");
-        }
-
-        private void descriptionfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 1, "Description");
-        }
-        private void quantityfield_TextChanged(object sender, EventArgs e)
+        private void loginIDField_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void productnamefield_MouseLeave(object sender, EventArgs e)
+        {
+            h.manageHint(productNameField, 1, "Product Name");
+        }
+        private void savebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void productnamefield_MouseEnter(object sender, EventArgs e)
+        {
+
+            h.manageHint(productNameField, 0, "Product Name");
+        }
+
+        private void pricefield_MouseEnter(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 0, "Price");
+        }
+
+        private void pricefield_MouseLeave(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 1, "Price");//pricefile hint
+        }
+
+        private void reorderlevelfield_MouseEnter(object sender, EventArgs e)
+        {
+            h.manageHint(productReorderLevelField, 0, "Re-order level");
+        }
+
+        private void reorderlevelfield_MouseLeave(object sender, EventArgs e)
+        {
+            h.manageHint(productReorderLevelField, 1, "Re-order level");
+        }
+
+        private void costfield_MouseEnter(object sender, EventArgs e)
+        {
+            h.manageHint(productCostField, 0, "Cost");
+        }
+
+        private void costfield_MouseLeave(object sender, EventArgs e)
+        {
+            h.manageHint(productCostField, 1, "Cost");
+        }
+
         private void addbutton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pnfield(productnamedropdown.Text);//store the selected text in the given parameter 
-        }
-
-        private void addbutton_Click_1(object sender, EventArgs e)
-        {
-            Product product = new Product
+            try
             {
-                name = productnamedropdown.Text,
-                description = descriptionfield.Text,
-                quantity = int.Parse(quantityfield.Text),
-                location = locationdropdown.Text
-            };
-
-           
+                int price, cost, reorder_level;
+                price = cost = reorder_level = 0;
 
 
+                if (productPriceField.Text != "Price")
+                    price = int.Parse(productPriceField.Text);
+                if (productCostField.Text != "Cost")
+                    cost = int.Parse(productCostField.Text);
+                if (productReorderLevelField.Text != "Re-order Level")
+                    reorder_level = int.Parse(productReorderLevelField.Text);
 
+
+
+
+                Product product = new Product()
+                {
+                    name = productNameField.Text,
+                    price = price,
+                    reorder_level = reorder_level,
+                    cost = cost,
+                    barqr_code = productBarCodeField.Text,
+                };
+
+
+                if (product.name == "Product Name" || product.name == "")
+                {
+                    app.notifyTo(statusLabel1, "Product Name required", "warning");
+                }
+                else if (productPriceField.Text == "Price" || productPriceField.Text == "")
+                {
+                    app.notifyTo(statusLabel1, "Product price required", "warning");
+                }
+                else if (productCostField.Text == "Cost" || productCostField.Text == "")
+                {
+                    app.notifyTo(statusLabel1, "Product cost required", "warning");
+                }
+                else
+                {
+
+                    if (product.name != "" && productPriceField.Text != "" && productCostField.Text != "" && product.name != "Product Name" && productPriceField.Text != "Price" && productCostField.Text != "Cost")
+                    {
+
+                        int response = addService.addProduct(product);
+                        if (response != -1)
+                        {
+                            productNameField.Text = "Product Name";
+                            productPriceField.Text = "Price";
+                            productCostField.Text = "Cost";
+                            productReorderLevelField.Text = "Re-order Level";
+                            productBarCodeField.Text = "Bar Code";
+                            app.notifyTo(statusLabel1, "Product Added Successfully", "success");
+                        }
+
+                        else
+                        {
+                            app.notifyTo(statusLabel1, "Warning", "Unable to add bank");
+                        }
+
+                    }
+                    else
+                    {
+                        app.notifyTo(statusLabel1, "All fields required", "warning");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                app.notifyTo(statusLabel1, ex.Message, "warning");
+              
+            }
+        }
+
+        private void costfield_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
+
 }

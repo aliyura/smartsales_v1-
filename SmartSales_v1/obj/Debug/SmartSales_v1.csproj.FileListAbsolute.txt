@@ -64,7 +64,6 @@ C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
-C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddStock.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Sales.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
@@ -75,3 +74,4 @@ C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources

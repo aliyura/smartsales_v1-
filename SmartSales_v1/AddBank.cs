@@ -14,7 +14,8 @@ namespace SmartSales_v1
     {
         Hint h = new Hint();
         App app = new App();
-      
+        SSAddService addService = new SSAddService();
+
         public AddBank()
         {
             InitializeComponent();
@@ -22,24 +23,24 @@ namespace SmartSales_v1
 
         private void currentpricefield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageHint(banknamefield, 0, "Bank Name");
+            h.manageHint(bankNameField, 0, "Bank Name");
         }
 
         private void currentpricefield_MouseLeave(object sender, EventArgs e)
         {
-            h.manageHint(banknamefield, 1, "Bank Name");
+            h.manageHint(bankNameField, 1, "Bank Name");
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
             Bank bank = new Bank()
             {
-                name = banknamefield.Text
+                name = bankNameField.Text
             };
 
             if (bank.name == "Bank Name" || bank.name == "")
             {
-                app.notifyTo(statusLabel, "Bank name required", "Warning");
+                app.notifyTo(statusLabel, "Bank name required", "warning");
             }
 
             else
@@ -48,11 +49,11 @@ namespace SmartSales_v1
                 if (bank.name != "" && bank.name != "Bank Name")
                 {
 
-                    int response = 1; //addService.addLocation(location);
+                    int response = addService.addBank(bank);
                     if (response != -1)
                     {
-                        banknamefield.Text = "";
-                        app.notifyTo(statusLabel, "Bank Added Successfully", "Success");
+                        bankNameField.Text = "";
+                        app.notifyTo(statusLabel, "Bank Added Successfully", "success");
                     }
 
                     else
@@ -66,5 +67,6 @@ namespace SmartSales_v1
                     app.notifyTo(statusLabel, "All fields required", "warning");
                 }
             }
+        }
     }
-}
+    }

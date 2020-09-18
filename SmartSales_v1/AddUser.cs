@@ -65,9 +65,55 @@ namespace SmartSales_v1
                 password = passwordfield.Text,
             };
 
-            
 
-           
+            if (user.name == "Name" || user.name == "")
+            {
+                app.notifyTo(statusLabel, "User name is required", "warning");
+            }
+            else if (user.mobile_number == "Mobile Number" || user.mobile_number == "")
+            {
+                app.notifyTo(statusLabel, "User mobile number is required", "warning");
+            }
+            else if (user.username == "Username" || user.username == "")
+            {
+                app.notifyTo(statusLabel, "Username is required", "warning");
+            }
+            else if (user.password == "Password" || user.password == "")
+            {
+                app.notifyTo(statusLabel, "User Password is required", "warning");
+            }
+            else
+            {
+
+                if (user.name != "" && user.mobile_number != ""  && user.username!="" && user.password!=""
+                    && user.name != "Name" && user.mobile_number != "Mobile Number" && user.username!="Username" && user.password!="Password")
+                {
+
+                    int response = addService.addUser(user);
+                    if (response != -1)
+                    {
+                        namefield.Text = "Name";
+                        mobilenumberfield.Text = "Mobile Number";
+                        usernamefield.Text = "Username";
+                        passwordfield.Text = "Password";
+                       
+                        app.notifyTo(statusLabel, "User Created Successfully", "success");
+                    }
+                    else
+                    {
+                        app.notifyTo(statusLabel, "Success", "Unable to create this User");
+                    }
+
+                }
+                else
+                {
+                    app.notifyTo(statusLabel, "All fields are required", "warning");
+                }
+            }
+
+
+
+
 
         }
           

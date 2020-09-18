@@ -31,62 +31,41 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.productnamedropdown = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.locationdropdown = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.quantityfield = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.descriptionfield = new System.Windows.Forms.TextBox();
+            this.productNameField = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.productPriceField = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.productCostField = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.productReorderLevelField = new System.Windows.Forms.TextBox();
+            this.productBarCodeField = new System.Windows.Forms.TextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.statusLabel1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(55)))), ((int)(((byte)(155)))));
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 46);
-            this.panel1.TabIndex = 3;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageIndex = 1;
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(413, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 42);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
-            this.imageList1.Images.SetKeyName(1, "close (1).png");
-            this.imageList1.Images.SetKeyName(2, "plus.png");
+            this.panel1.Size = new System.Drawing.Size(485, 46);
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -107,128 +86,87 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageIndex = 0;
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(340, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(353, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 42);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel
+            // imageList1
             // 
-            this.panel.BackColor = System.Drawing.Color.White;
-            this.panel.Controls.Add(this.button1);
-            this.panel.Controls.Add(this.productnamedropdown);
-            this.panel.Location = new System.Drawing.Point(31, 121);
-            this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(401, 47);
-            this.panel.TabIndex = 10;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
+            this.imageList1.Images.SetKeyName(1, "close (1).png");
             // 
             // button1
             // 
-            this.button1.ImageIndex = 2;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageIndex = 1;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(357, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(420, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 34);
-            this.button1.TabIndex = 11;
+            this.button1.Size = new System.Drawing.Size(55, 42);
+            this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // productnamedropdown
-            // 
-            this.productnamedropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productnamedropdown.FormattingEnabled = true;
-            this.productnamedropdown.Location = new System.Drawing.Point(33, 6);
-            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.productnamedropdown.Name = "productnamedropdown";
-            this.productnamedropdown.Size = new System.Drawing.Size(308, 33);
-            this.productnamedropdown.TabIndex = 10;
-            this.productnamedropdown.Text = "Product Name";
-            this.productnamedropdown.MouseEnter += new System.EventHandler(this.productnamedropdown_MouseEnter);
-            this.productnamedropdown.MouseLeave += new System.EventHandler(this.productnamedropdown_MouseLeave);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.locationdropdown);
-            this.panel2.Location = new System.Drawing.Point(31, 209);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(401, 47);
-            this.panel2.TabIndex = 11;
-            // 
-            // locationdropdown
-            // 
-            this.locationdropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.locationdropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationdropdown.FormattingEnabled = true;
-            this.locationdropdown.Location = new System.Drawing.Point(33, 6);
-            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.locationdropdown.Name = "locationdropdown";
-            this.locationdropdown.Size = new System.Drawing.Size(339, 33);
-            this.locationdropdown.TabIndex = 11;
-            this.locationdropdown.Text = "Location";
-            this.locationdropdown.MouseEnter += new System.EventHandler(this.locationdropdown_MouseEnter);
-            this.locationdropdown.MouseLeave += new System.EventHandler(this.locationdropdown_MouseLeave);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.quantityfield);
-            this.panel4.Location = new System.Drawing.Point(31, 294);
+            this.panel4.Controls.Add(this.productNameField);
+            this.panel4.Location = new System.Drawing.Point(35, 123);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 47);
-            this.panel4.TabIndex = 12;
+            this.panel4.Size = new System.Drawing.Size(416, 47);
+            this.panel4.TabIndex = 5;
             // 
-            // quantityfield
+            // productNameField
             // 
-            this.quantityfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.quantityfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.quantityfield.BackColor = System.Drawing.Color.White;
-            this.quantityfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantityfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.quantityfield.Location = new System.Drawing.Point(35, 11);
-            this.quantityfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.quantityfield.Name = "quantityfield";
-            this.quantityfield.Size = new System.Drawing.Size(324, 27);
-            this.quantityfield.TabIndex = 1;
-            this.quantityfield.Text = "Quantity";
-            this.quantityfield.TextChanged += new System.EventHandler(this.quantityfield_TextChanged);
-            this.quantityfield.MouseEnter += new System.EventHandler(this.currentpricefield_MouseEnter);
-            this.quantityfield.MouseLeave += new System.EventHandler(this.currentpricefield_MouseLeave);
+            this.productNameField.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productNameField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.productNameField.BackColor = System.Drawing.Color.White;
+            this.productNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productNameField.Location = new System.Drawing.Point(29, 11);
+            this.productNameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productNameField.Name = "productNameField";
+            this.productNameField.Size = new System.Drawing.Size(366, 27);
+            this.productNameField.TabIndex = 1;
+            this.productNameField.Text = "Product Name";
+            this.productNameField.MouseEnter += new System.EventHandler(this.productnamefield_MouseEnter);
+            this.productNameField.MouseLeave += new System.EventHandler(this.productnamefield_MouseLeave);
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.descriptionfield);
-            this.panel5.Location = new System.Drawing.Point(31, 370);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(401, 194);
-            this.panel5.TabIndex = 13;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.productPriceField);
+            this.panel3.Location = new System.Drawing.Point(35, 212);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(416, 47);
+            this.panel3.TabIndex = 7;
             // 
-            // descriptionfield
+            // productPriceField
             // 
-            this.descriptionfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.descriptionfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.descriptionfield.BackColor = System.Drawing.Color.White;
-            this.descriptionfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionfield.Location = new System.Drawing.Point(33, 11);
-            this.descriptionfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.descriptionfield.Multiline = true;
-            this.descriptionfield.Name = "descriptionfield";
-            this.descriptionfield.Size = new System.Drawing.Size(340, 165);
-            this.descriptionfield.TabIndex = 1;
-            this.descriptionfield.Text = "Description";
-            this.descriptionfield.MouseEnter += new System.EventHandler(this.descriptionfield_MouseEnter);
-            this.descriptionfield.MouseLeave += new System.EventHandler(this.descriptionfield_MouseLeave);
+            this.productPriceField.BackColor = System.Drawing.Color.White;
+            this.productPriceField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productPriceField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productPriceField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productPriceField.Location = new System.Drawing.Point(41, 10);
+            this.productPriceField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productPriceField.Name = "productPriceField";
+            this.productPriceField.Size = new System.Drawing.Size(354, 27);
+            this.productPriceField.TabIndex = 1;
+            this.productPriceField.Text = "Price";
+            this.productPriceField.MouseEnter += new System.EventHandler(this.pricefield_MouseEnter);
+            this.productPriceField.MouseLeave += new System.EventHandler(this.pricefield_MouseLeave);
             // 
             // addbutton
             // 
@@ -236,54 +174,125 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(31, 593);
+            this.addbutton.Location = new System.Drawing.Point(35, 467);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
-            this.addbutton.Size = new System.Drawing.Size(401, 58);
-            this.addbutton.TabIndex = 14;
-            this.addbutton.Text = "Add Product";
+            this.addbutton.Size = new System.Drawing.Size(416, 58);
+            this.addbutton.TabIndex = 8;
+            this.addbutton.Text = "Register Product";
             this.addbutton.UseVisualStyleBackColor = false;
-            this.addbutton.Click += new System.EventHandler(this.addbutton_Click_1);
+            this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
-            // textBox13
+            // panel2
             // 
-            this.textBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox13.Location = new System.Drawing.Point(31, 95);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(157, 25);
-            this.textBox13.TabIndex = 35;
-            this.textBox13.Text = "Bar Code";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.productCostField);
+            this.panel2.Location = new System.Drawing.Point(35, 395);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(416, 47);
+            this.panel2.TabIndex = 8;
+            // 
+            // productCostField
+            // 
+            this.productCostField.BackColor = System.Drawing.Color.White;
+            this.productCostField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productCostField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productCostField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productCostField.Location = new System.Drawing.Point(41, 10);
+            this.productCostField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productCostField.Name = "productCostField";
+            this.productCostField.Size = new System.Drawing.Size(354, 27);
+            this.productCostField.TabIndex = 1;
+            this.productCostField.Text = "Cost";
+            this.productCostField.TextChanged += new System.EventHandler(this.costfield_TextChanged);
+            this.productCostField.MouseEnter += new System.EventHandler(this.costfield_MouseEnter);
+            this.productCostField.MouseLeave += new System.EventHandler(this.costfield_MouseLeave);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.productReorderLevelField);
+            this.panel5.Location = new System.Drawing.Point(35, 302);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(416, 47);
+            this.panel5.TabIndex = 9;
+            // 
+            // productReorderLevelField
+            // 
+            this.productReorderLevelField.BackColor = System.Drawing.Color.White;
+            this.productReorderLevelField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productReorderLevelField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productReorderLevelField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productReorderLevelField.Location = new System.Drawing.Point(41, 11);
+            this.productReorderLevelField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productReorderLevelField.Name = "productReorderLevelField";
+            this.productReorderLevelField.Size = new System.Drawing.Size(354, 27);
+            this.productReorderLevelField.TabIndex = 1;
+            this.productReorderLevelField.Text = "Re-order Level";
+            this.productReorderLevelField.MouseEnter += new System.EventHandler(this.reorderlevelfield_MouseEnter);
+            this.productReorderLevelField.MouseLeave += new System.EventHandler(this.reorderlevelfield_MouseLeave);
+            // 
+            // productBarCodeField
+            // 
+            this.productBarCodeField.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productBarCodeField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.productBarCodeField.BackColor = System.Drawing.Color.White;
+            this.productBarCodeField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productBarCodeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productBarCodeField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productBarCodeField.Location = new System.Drawing.Point(35, 98);
+            this.productBarCodeField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productBarCodeField.Multiline = true;
+            this.productBarCodeField.Name = "productBarCodeField";
+            this.productBarCodeField.Size = new System.Drawing.Size(207, 25);
+            this.productBarCodeField.TabIndex = 36;
+            this.productBarCodeField.Text = "Bar Code";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.Location = new System.Drawing.Point(30, 456);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 20);
+            this.statusLabel.TabIndex = 37;
+            // 
+            // statusLabel1
+            // 
+            this.statusLabel1.AutoSize = true;
+            this.statusLabel1.Location = new System.Drawing.Point(38, 560);
+            this.statusLabel1.Name = "statusLabel1";
+            this.statusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.statusLabel1.TabIndex = 37;
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 703);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.addbutton);
+            this.ClientSize = new System.Drawing.Size(485, 670);
+            this.Controls.Add(this.statusLabel1);
+            this.Controls.Add(this.productBarCodeField);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.addbutton);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProduct";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdateStock";
+            this.Text = "RegisterProduct";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -294,20 +303,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.ComboBox productnamedropdown;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox locationdropdown;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox quantityfield;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox descriptionfield;
-        private System.Windows.Forms.Button addbutton;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox productNameField;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox productPriceField;
+        private System.Windows.Forms.Button addbutton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox productCostField;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox productReorderLevelField;
+        private System.Windows.Forms.TextBox productBarCodeField;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label statusLabel1;
     }
 }

@@ -10,15 +10,8 @@ namespace SmartSales_v1
     {
 
         App app = new App();
-        SqlConnection connection;
         DateTime currentDate = DateTime.Now;//automate date setting
         SSService service = new SSService();
-       
-        public SSGetService()
-        {
-            this.connection = service.refreshConnection();
-        }
-       
 
         public User getUserByMobileNumber(string number)
         {
@@ -40,19 +33,7 @@ namespace SmartSales_v1
                         login_date = row.Field<DateTime>("login_date"),
                         created_date = row.Field<DateTime>("created_date"),
                     };
-
-                    string query = "INSERT INTO ss_users(name, username, password, mobile_number, login_date, created_date)VALUES(@name,@username,@password, @mobile_number, @login_date, @created_date)";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    //below lines assign the entered data to the fields created in the model class
-                    command.Parameters.AddWithValue("@name", user.name);
-                    command.Parameters.AddWithValue("@username", user.username);
-                    command.Parameters.AddWithValue("@password", user.password);
-                    command.Parameters.AddWithValue("@mobile_number", user.mobile_number);
-                    command.Parameters.AddWithValue("@login_date", currentDate);
-                    command.Parameters.AddWithValue("@created_date", currentDate);
-
                 }
-
 
                 return user;
             }
@@ -93,6 +74,35 @@ namespace SmartSales_v1
             }
         }
 
+        public Product getProductByName(string name)
+        {
+            Product product = new Product();
+            DateTime currentDate = DateTime.Now;
+            try
+            {
+                DataTable data = service.get("SELECT  top 1 * FROM ss_products WHERE name='" + name + "' order by created_date desc");
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    product = new Product()
+                    {
+                        name = row.Field<string>("name"),
+                        price = int.Parse(row.Field<string>("price")),
+                        reorder_level = int.Parse(row.Field<string>("reorder_level")),
+                        cost = int.Parse(row.Field<string>("cost")),
+                        barqr_code = row.Field<string>("barqr_code"),
+                        created_date = row.Field<DateTime>("created_date"),
+
+                    };
+                }
+                return product;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return product;
+            }
+        }
         public Location getLocationByName(string name)
         {
             Location existingLocation = new Location();
@@ -144,6 +154,30 @@ namespace SmartSales_v1
             }
         }
 
+        public Bank getBankByName(string name)
+        {
+            Bank existingBank = new Bank();
+            DateTime currentDate = DateTime.Now;
+            try
+            {
+                DataTable data = service.get("SELECT  top 1 * FROM ss_banks WHERE name='" + name + "' order by created_date desc");
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    existingBank = new Bank()
+                    {
+                        name = row.Field<string>("name"),
+                        created_date = row.Field<DateTime>("created_date"),
+                    };
+                }
+                return existingBank;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return existingBank;
+            }
+        }
 
         public DataTable getUsers()
         {

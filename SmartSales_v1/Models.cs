@@ -18,18 +18,18 @@ namespace SmartSales_v1
     }
 
 
-    class Stock
+    class Product
     {
         public int id { get; set; }
         public string name { get; set; }
         public int price { get; set; }
         public int cost { get; set; }
         public int reorder_level { get; set; }
-        public int barqr_code { get; set; }
+        public string barqr_code { get; set; }
         public DateTime created_date { get; set; }
 
     }
-    class Product
+    class Stock
     {
         public int id { get; set; }
         public string name { get; set; }

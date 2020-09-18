@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Collections.Generic;
 
 namespace SmartSales_v1
 {
@@ -11,16 +10,16 @@ namespace SmartSales_v1
         App app = new App();
         SqlConnection connection;
         DateTime currentDate = DateTime.Now;//automate date setting
+        string connecionStrring = "Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False";
 
 
         public SSService()
         {
-            this.connection = this.refreshConnection();
+            connection = this.getConnection();
         }
-        public SqlConnection refreshConnection()
+        public SqlConnection getConnection()
         {
-            connection = new SqlConnection("Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False");//set the db connection
-            return connection;
+            return  new SqlConnection(connecionStrring);//set the db connection
         }
 
 
@@ -28,6 +27,8 @@ namespace SmartSales_v1
         {
             try
             {
+                connection = this.getConnection();
+                cmd.Connection = connection;
                 using (connection)
                 {
                     using (cmd)
@@ -62,7 +63,7 @@ namespace SmartSales_v1
             DataTable dataTable = new DataTable();
             try
             {
-                this.refreshConnection();
+                connection = this.getConnection();
                 using (connection)
                 {
                     using (SqlCommand cmd = new SqlCommand(query, connection))
