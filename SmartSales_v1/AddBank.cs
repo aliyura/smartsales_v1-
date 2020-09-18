@@ -67,9 +67,6 @@ namespace SmartSales_v1
                 }
             }
         }
-<<<<<<< HEAD
-=======
-
         private void closedbutton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,6 +86,5 @@ namespace SmartSales_v1
                 Location = mousePose;
             }
         }
->>>>>>> b6d488153b13d4479910f3e25883e904db27433a
     }
 }

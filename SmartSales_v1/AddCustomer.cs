@@ -18,7 +18,7 @@ namespace SmartSales_v1
         private void AddCustomer_Load(object sender, EventArgs e)
         {
             customergroupfield.Items[0] = "Regular";
-            customergroupfield.Items[0] = "Irregular";
+            customergroupfield.Items[1] = "Irregular";
         }
 
         private void addbutton_Click(object sender, EventArgs e)
@@ -98,8 +98,6 @@ namespace SmartSales_v1
         {
             this.Close();
         }
-<<<<<<< HEAD
-=======
 
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
@@ -115,6 +113,5 @@ namespace SmartSales_v1
                 Location = mousePose;
             }
         }
->>>>>>> b6d488153b13d4479910f3e25883e904db27433a
     }
 }
