@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
     public partial class AddCustomer : Form
     {
+        public Point mouseLocation;
         Hint h = new Hint();
         App app = new App();
 
@@ -92,9 +94,27 @@ namespace SmartSales_v1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closedbutton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+>>>>>>> b6d488153b13d4479910f3e25883e904db27433a
     }
 }

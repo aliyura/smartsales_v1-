@@ -12,6 +12,7 @@ namespace SmartSales_v1
 {
     public partial class LoginForm : Form
     {
+        public Point mouseLocation;
         public LoginForm()
         {
             InitializeComponent();
@@ -63,7 +64,18 @@ namespace SmartSales_v1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-           
+            //Dashboard dashboard = new Dashboard();
+            //dashboard.Show();
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
         }
     }
 }

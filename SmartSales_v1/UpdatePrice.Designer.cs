@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePrice));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.closedbutton = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.minimizedbutton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.productnamedropdown = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,30 +57,29 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(55)))), ((int)(((byte)(155)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.closedbutton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.minimizedbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 46);
+            this.panel1.Size = new System.Drawing.Size(352, 37);
             this.panel1.TabIndex = 2;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // button4
+            // closedbutton
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageIndex = 1;
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(403, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 42);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.closedbutton.FlatAppearance.BorderSize = 0;
+            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedbutton.ImageIndex = 1;
+            this.closedbutton.ImageList = this.imageList1;
+            this.closedbutton.Location = new System.Drawing.Point(302, 1);
+            this.closedbutton.Name = "closedbutton";
+            this.closedbutton.Size = new System.Drawing.Size(41, 34);
+            this.closedbutton.TabIndex = 3;
+            this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
             // 
             // imageList1
             // 
@@ -94,36 +93,34 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Update Price";
             // 
-            // button2
+            // minimizedbutton
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageIndex = 0;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(340, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 42);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.minimizedbutton.FlatAppearance.BorderSize = 0;
+            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizedbutton.ImageIndex = 0;
+            this.minimizedbutton.ImageList = this.imageList1;
+            this.minimizedbutton.Location = new System.Drawing.Point(255, 1);
+            this.minimizedbutton.Name = "minimizedbutton";
+            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
+            this.minimizedbutton.TabIndex = 1;
+            this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.productnamedropdown);
-            this.panel3.Location = new System.Drawing.Point(35, 96);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(26, 78);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 47);
+            this.panel3.Size = new System.Drawing.Size(290, 38);
             this.panel3.TabIndex = 9;
             // 
             // productnamedropdown
@@ -131,10 +128,9 @@
             this.productnamedropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productnamedropdown.FormattingEnabled = true;
-            this.productnamedropdown.Location = new System.Drawing.Point(33, 6);
-            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4);
+            this.productnamedropdown.Location = new System.Drawing.Point(25, 5);
             this.productnamedropdown.Name = "productnamedropdown";
-            this.productnamedropdown.Size = new System.Drawing.Size(325, 33);
+            this.productnamedropdown.Size = new System.Drawing.Size(245, 28);
             this.productnamedropdown.TabIndex = 10;
             this.productnamedropdown.Text = "Product Name";
             this.productnamedropdown.TextChanged += new System.EventHandler(this.productnamedropdown_TextChanged);
@@ -145,10 +141,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.currentpricefield);
-            this.panel2.Location = new System.Drawing.Point(35, 178);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(26, 145);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 47);
+            this.panel2.Size = new System.Drawing.Size(290, 38);
             this.panel2.TabIndex = 10;
             // 
             // currentpricefield
@@ -159,10 +155,10 @@
             this.currentpricefield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.currentpricefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentpricefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.currentpricefield.Location = new System.Drawing.Point(35, 11);
-            this.currentpricefield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.currentpricefield.Location = new System.Drawing.Point(26, 9);
+            this.currentpricefield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentpricefield.Name = "currentpricefield";
-            this.currentpricefield.Size = new System.Drawing.Size(283, 27);
+            this.currentpricefield.Size = new System.Drawing.Size(212, 21);
             this.currentpricefield.TabIndex = 1;
             this.currentpricefield.Text = "Current Price";
             this.currentpricefield.MouseEnter += new System.EventHandler(this.currentpricefield_MouseEnter);
@@ -172,10 +168,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.newpricefield);
-            this.panel4.Location = new System.Drawing.Point(35, 263);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(26, 214);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(387, 47);
+            this.panel4.Size = new System.Drawing.Size(290, 38);
             this.panel4.TabIndex = 11;
             // 
             // newpricefield
@@ -186,10 +182,10 @@
             this.newpricefield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newpricefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newpricefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newpricefield.Location = new System.Drawing.Point(35, 10);
-            this.newpricefield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.newpricefield.Location = new System.Drawing.Point(26, 8);
+            this.newpricefield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newpricefield.Name = "newpricefield";
-            this.newpricefield.Size = new System.Drawing.Size(283, 27);
+            this.newpricefield.Size = new System.Drawing.Size(212, 21);
             this.newpricefield.TabIndex = 1;
             this.newpricefield.Text = "New Price";
             this.newpricefield.MouseEnter += new System.EventHandler(this.newpricefield_MouseEnter);
@@ -199,10 +195,10 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.currentcostfield);
-            this.panel5.Location = new System.Drawing.Point(35, 345);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(26, 280);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(387, 47);
+            this.panel5.Size = new System.Drawing.Size(290, 38);
             this.panel5.TabIndex = 12;
             // 
             // currentcostfield
@@ -213,10 +209,10 @@
             this.currentcostfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.currentcostfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentcostfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.currentcostfield.Location = new System.Drawing.Point(35, 10);
-            this.currentcostfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.currentcostfield.Location = new System.Drawing.Point(26, 8);
+            this.currentcostfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentcostfield.Name = "currentcostfield";
-            this.currentcostfield.Size = new System.Drawing.Size(283, 27);
+            this.currentcostfield.Size = new System.Drawing.Size(212, 21);
             this.currentcostfield.TabIndex = 1;
             this.currentcostfield.Text = "Current Cost";
             this.currentcostfield.MouseEnter += new System.EventHandler(this.currentcostfield_MouseEnter);
@@ -226,10 +222,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.newcostfield);
-            this.panel6.Location = new System.Drawing.Point(35, 426);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(26, 346);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(387, 47);
+            this.panel6.Size = new System.Drawing.Size(290, 38);
             this.panel6.TabIndex = 13;
             // 
             // newcostfield
@@ -240,10 +236,10 @@
             this.newcostfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newcostfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newcostfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newcostfield.Location = new System.Drawing.Point(35, 10);
-            this.newcostfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.newcostfield.Location = new System.Drawing.Point(26, 8);
+            this.newcostfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newcostfield.Name = "newcostfield";
-            this.newcostfield.Size = new System.Drawing.Size(283, 27);
+            this.newcostfield.Size = new System.Drawing.Size(212, 21);
             this.newcostfield.TabIndex = 1;
             this.newcostfield.Text = "New Cost";
             this.newcostfield.MouseEnter += new System.EventHandler(this.newcostfield_MouseEnter);
@@ -255,10 +251,10 @@
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.White;
-            this.update.Location = new System.Drawing.Point(35, 512);
-            this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.update.Location = new System.Drawing.Point(26, 416);
+            this.update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(387, 58);
+            this.update.Size = new System.Drawing.Size(290, 47);
             this.update.TabIndex = 14;
             this.update.Text = "Update Price";
             this.update.UseVisualStyleBackColor = false;
@@ -266,9 +262,9 @@
             // 
             // UpdatePrice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 608);
+            this.ClientSize = new System.Drawing.Size(352, 494);
             this.Controls.Add(this.update);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -277,7 +273,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdatePrice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdatePrice";
@@ -299,9 +294,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button closedbutton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button minimizedbutton;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox productnamedropdown;
