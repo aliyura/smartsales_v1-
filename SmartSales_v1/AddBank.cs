@@ -32,22 +32,39 @@ namespace SmartSales_v1
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            Bank bank = new Bank
+            Bank bank = new Bank()
             {
-                name = banknamefield.Text,
+                name = banknamefield.Text
             };
-            if (bank.name == "" || bank.name == "Bank Name")
-                app.notifyTo(statusLabel, "Enter bank name of the Bank", "warning");
 
-            if(bank.name != "" && bank.name != "")
+            if (bank.name == "Bank Name" || bank.name == "")
             {
-                app.notifyTo(statusLabel, "Processing...", "success");
-               
+                app.notifyTo(statusLabel, "Bank name required", "Warning");
             }
+
             else
             {
-                app.notifyTo(statusLabel, "All fields are required!", "warning");
+
+                if (bank.name != "" && bank.name != "Bank Name")
+                {
+
+                    int response = 1; //addService.addLocation(location);
+                    if (response != -1)
+                    {
+                        banknamefield.Text = "";
+                        app.notifyTo(statusLabel, "Bank Added Successfully", "Success");
+                    }
+
+                    else
+                    {
+                        app.notifyTo(statusLabel, "Warning", "Unable to add bank");
+                    }
+
+                }
+                else
+                {
+                    app.notifyTo(statusLabel, "All fields required", "warning");
+                }
             }
-        }
     }
 }
