@@ -104,5 +104,45 @@ namespace SmartSales_v1
                 Location = mousePose;
             }
         }
+
+        private void namefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(namefield, 1, "Name");
+        }
+
+        private void namefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(namefield, 0, "Name");
+        }
+
+        private void mobilenumberfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(mobilenumberfield, 1, "Mobile Number");
+        }
+
+        private void mobilenumberfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(mobilenumberfield, 0, "Mobile Number");
+        }
+
+        private void usernamefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(mobilenumberfield, 1, "Username");
+        }
+
+        private void usernamefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(mobilenumberfield, 0, "Mobile Number");
+        }
+
+        private void passwordfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(passwordfield, 1, "Password");
+        }
+
+        private void passwordfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(passwordfield, 0, "Password");
+        }
     }
 }

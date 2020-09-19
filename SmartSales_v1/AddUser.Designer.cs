@@ -139,7 +139,9 @@
             this.namefield.Size = new System.Drawing.Size(264, 21);
             this.namefield.TabIndex = 1;
             this.namefield.Text = "Name";
-             // 
+            this.namefield.Enter += new System.EventHandler(this.namefield_Enter);
+            this.namefield.Leave += new System.EventHandler(this.namefield_Leave);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -164,7 +166,9 @@
             this.mobilenumberfield.Size = new System.Drawing.Size(264, 21);
             this.mobilenumberfield.TabIndex = 1;
             this.mobilenumberfield.Text = "Mobile Number";
-             // 
+            this.mobilenumberfield.Enter += new System.EventHandler(this.mobilenumberfield_Enter);
+            this.mobilenumberfield.Leave += new System.EventHandler(this.mobilenumberfield_Leave);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -190,7 +194,9 @@
             this.usernamefield.TabIndex = 1;
             this.usernamefield.Text = "Username";
             this.usernamefield.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-                // 
+            this.usernamefield.Enter += new System.EventHandler(this.usernamefield_Enter);
+            this.usernamefield.Leave += new System.EventHandler(this.usernamefield_Leave);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -212,10 +218,13 @@
             this.passwordfield.Location = new System.Drawing.Point(25, 9);
             this.passwordfield.Margin = new System.Windows.Forms.Padding(2);
             this.passwordfield.Name = "passwordfield";
+            this.passwordfield.PasswordChar = '*';
             this.passwordfield.Size = new System.Drawing.Size(264, 21);
             this.passwordfield.TabIndex = 1;
             this.passwordfield.Text = "Password";
             this.passwordfield.UseSystemPasswordChar = true;
+            this.passwordfield.Enter += new System.EventHandler(this.passwordfield_Enter);
+            this.passwordfield.Leave += new System.EventHandler(this.passwordfield_Leave);
             // 
             // addbutton
             // 

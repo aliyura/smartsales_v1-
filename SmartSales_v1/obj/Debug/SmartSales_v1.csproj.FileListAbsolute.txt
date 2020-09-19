@@ -94,3 +94,4 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompil
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
 >>>>>>> refs/remotes/origin/master
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources

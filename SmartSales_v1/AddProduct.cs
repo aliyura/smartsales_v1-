@@ -150,6 +150,36 @@ namespace SmartSales_v1
         {
             h.manageHint(productBarCodeField, 0, "Product Name");
         }
+
+        private void productPriceField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 1, "Price");
+        }
+
+        private void productPriceField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 0, "Password");
+        }
+
+        private void productReorderLevelField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 1, "Re-order Level");
+        }
+
+        private void productReorderLevelField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 0, "Re-order Level");
+        }
+
+        private void productCostField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 1, "Cost");
+        }
+
+        private void productCostField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(productPriceField, 0, "Cost");
+        }
     }
 
 }

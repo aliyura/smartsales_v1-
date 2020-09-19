@@ -18,58 +18,6 @@ namespace SmartSales_v1
         {
             InitializeComponent();
         }
-        private void productnamedropdown_MouseEnter(object sender, EventArgs e)
-        {
-            this.productnamedropdown.Text = "";
-        }
-
-        private void productnamedropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(productnamedropdown.Text == "")
-            {
-                this.productnamedropdown.Text = "Product Name";
-            }
-        }
-
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(currentpricefield, 0, "Current Price");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(currentpricefield, 1, "Current Price");
-        }
-
-        private void newpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(newpricefield, 0, "New Price");
-        }
-
-        private void newpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(newpricefield, 1, "New Price");
-        }
-
-        private void currentcostfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 0, "Current Cost");
-        }
-
-        private void currentcostfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 1, "Current Cost");
-        }
-
-        private void newcostfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(newcostfield, 0, "New Cost");
-        }
-
-        private void newcostfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(newcostfield, 1, "New Cost");
-        }
 
         private void update_Click(object sender, EventArgs e)
         {
@@ -102,6 +50,51 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void productnamedropdown_Enter(object sender, EventArgs e)
+        {
+            h.manageComboHint(productnamedropdown, 1, "Product Name");
+        }
+
+        private void productnamedropdown_Leave(object sender, EventArgs e)
+        {
+            h.manageComboHint(productnamedropdown, 0, "Product Name");
+        }
+
+        private void currentpricefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(currentcostfield, 1, "Current Price");
+        }
+
+        private void currentpricefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(currentcostfield, 0, "Current Price");
+        }
+
+        private void newpricefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(newpricefield, 1, "New Price");
+        }
+
+        private void newpricefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(currentcostfield, 0, "New Price");
+        }
+
+        private void currentcostfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(currentcostfield, 1, "Current Cost");
+        }
+
+        private void currentcostfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(currentcostfield, 1, "Current Cost");
+        }
+
+        private void newcostfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(newcostfield, 1, "New Cost");
         }
     }
 }

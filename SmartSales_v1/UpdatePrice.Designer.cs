@@ -135,8 +135,8 @@
             this.productnamedropdown.TabIndex = 10;
             this.productnamedropdown.Text = "Product Name";
             this.productnamedropdown.TextChanged += new System.EventHandler(this.productnamedropdown_TextChanged);
-            this.productnamedropdown.MouseEnter += new System.EventHandler(this.productnamedropdown_MouseEnter);
-            this.productnamedropdown.MouseLeave += new System.EventHandler(this.productnamedropdown_MouseLeave);
+            this.productnamedropdown.Enter += new System.EventHandler(this.productnamedropdown_Enter);
+            this.productnamedropdown.Leave += new System.EventHandler(this.productnamedropdown_Leave);
             // 
             // panel2
             // 
@@ -162,8 +162,8 @@
             this.currentpricefield.Size = new System.Drawing.Size(212, 21);
             this.currentpricefield.TabIndex = 1;
             this.currentpricefield.Text = "Current Price";
-            this.currentpricefield.MouseEnter += new System.EventHandler(this.currentpricefield_MouseEnter);
-            this.currentpricefield.MouseLeave += new System.EventHandler(this.currentpricefield_MouseLeave);
+            this.currentpricefield.Enter += new System.EventHandler(this.currentpricefield_Enter);
+            this.currentpricefield.Leave += new System.EventHandler(this.currentpricefield_Leave);
             // 
             // panel4
             // 
@@ -189,8 +189,8 @@
             this.newpricefield.Size = new System.Drawing.Size(212, 21);
             this.newpricefield.TabIndex = 1;
             this.newpricefield.Text = "New Price";
-            this.newpricefield.MouseEnter += new System.EventHandler(this.newpricefield_MouseEnter);
-            this.newpricefield.MouseLeave += new System.EventHandler(this.newpricefield_MouseLeave);
+            this.newpricefield.Enter += new System.EventHandler(this.newpricefield_Enter);
+            this.newpricefield.Leave += new System.EventHandler(this.newpricefield_Leave);
             // 
             // panel5
             // 
@@ -216,8 +216,8 @@
             this.currentcostfield.Size = new System.Drawing.Size(212, 21);
             this.currentcostfield.TabIndex = 1;
             this.currentcostfield.Text = "Current Cost";
-            this.currentcostfield.MouseEnter += new System.EventHandler(this.currentcostfield_MouseEnter);
-            this.currentcostfield.MouseLeave += new System.EventHandler(this.currentcostfield_MouseLeave);
+            this.currentcostfield.Enter += new System.EventHandler(this.currentcostfield_Enter);
+            this.currentcostfield.Leave += new System.EventHandler(this.currentcostfield_Leave);
             // 
             // panel6
             // 
@@ -243,8 +243,7 @@
             this.newcostfield.Size = new System.Drawing.Size(212, 21);
             this.newcostfield.TabIndex = 1;
             this.newcostfield.Text = "New Cost";
-            this.newcostfield.MouseEnter += new System.EventHandler(this.newcostfield_MouseEnter);
-            this.newcostfield.MouseLeave += new System.EventHandler(this.newcostfield_MouseLeave);
+            this.newcostfield.Enter += new System.EventHandler(this.newcostfield_Enter);
             // 
             // update
             // 

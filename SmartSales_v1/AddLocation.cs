@@ -99,7 +99,7 @@ namespace SmartSales_v1
 
         private void locationType_Enter(object sender, EventArgs e)
         {
-            h.manageComboHint(locationType, 0, "Location Type");
+            h.manageComboHint(locationType, 1, "Location Type");
         }
 
         private void locationType_Leave(object sender, EventArgs e)

@@ -113,5 +113,15 @@ namespace SmartSales_v1
                 Location = mousePose;
             }
         }
+
+        private void customergroupfield_MouseEnter(object sender, EventArgs e)
+        {
+            h.manageComboHint(customergroupfield, 0, "");
+        }
+
+        private void customergroupfield_MouseLeave(object sender, EventArgs e)
+        {
+            h.manageComboHint(customergroupfield, 1, "Customer Group");
+        }
     }
 }
