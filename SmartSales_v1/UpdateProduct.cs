@@ -85,13 +85,80 @@ namespace SmartSales_v1
 
         private void addbutton_Click_1(object sender, EventArgs e)
         {
-            Stock product = new Stock()
+            try
             {
-                name = productnamedropdown.Text,
-                description = descriptionfield.Text,
-                quantity = int.Parse(quantityfield.Text),
-                location = locationdropdown.Text
-            };
+                int _quantity;
+
+
+                if (quantityfield.Text != "Current Cost")
+                    _quantity = int.Parse(quantityfield.Text);
+
+
+
+                ProductUpdate productUpdate = new ProductUpdate()
+                {
+                    name = productnamedropdown.Text,
+                    quantity = int.Parse(quantityfield.Text),
+                    location = locationdropdown.Text,
+                    description = descriptionfield.Text,
+                };
+
+
+                if (productUpdate.name == "Product Name" || productUpdate.name == "")
+                {
+                    app.notifyTo(statusLabel1, "Product Name required", "warning");
+                }
+                else if (productUpdate.location == "Location" || productUpdate.location == "")
+                {
+                    app.notifyTo(statusLabel1, "Product Location required", "warning");
+                }
+                else if (quantityfield.Text == "Quantity" || quantityfield.Text == "")
+                {
+                    app.notifyTo(statusLabel1, "Quantity required", "warning");
+                }
+
+                else
+                {
+
+                    if (productUpdate.name != "" && productUpdate.location != "" && quantityfield.Text != "" && productUpdate.name != "Product Name" && productUpdate.location != "Location"
+                        && quantityfield.Text != "Quantity")
+                    {
+
+                        int response = 1;//addService.addProduct(product);
+                        if (response > 0)
+                        {
+                            productnamedropdown.Text = "Product Name";
+                            locationdropdown.Text = "Location";
+                            descriptionfield.Text = "Description";
+                            quantityfield.Text = "Quantity";
+                            barcodefield.Text = "Bar Code";
+                            app.notifyTo(statusLabel1, "Product Updated Successfully", "success");
+                        }
+
+                        else
+                        {
+                            if (response == -404)
+                            {
+                                app.notifyTo(statusLabel1, "Product [" + productUpdate.name + "] not found", "warning");
+                            }
+                            else
+                            {
+                                app.notifyTo(statusLabel1, "Unable to update product", "warning");
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        app.notifyTo(statusLabel1, "All fields required", "warning");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                app.notifyTo(statusLabel1, ex.Message, "error");
+
+            }
 
         }
 
