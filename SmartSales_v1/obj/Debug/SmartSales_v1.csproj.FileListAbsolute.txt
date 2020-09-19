@@ -95,3 +95,8 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
 >>>>>>> refs/remotes/origin/master
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listproduct.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listbanks.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listcustomer.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listuser.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.location.resources

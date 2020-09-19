@@ -24,55 +24,7 @@ namespace SmartSales_v1
 
         }
 
-        private void productnamedropdown_MouseEnter(object sender, EventArgs e)
-        {
-            productnamedropdown.Text = "";
-        }
-
-        private void productnamedropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(productnamedropdown.Text == "")
-            {
-                productnamedropdown.Text = "Product Name";
-            }
-        }
-
-        private void locationdropdown_MouseEnter(object sender, EventArgs e)
-        {
-            locationdropdown.Text = "";
-        }
-
-        private void locationdropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(locationdropdown.Text == "")
-            {
-                locationdropdown.Text = "Location";
-            }
-        }
-
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 0, "Current Price");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 1, "Current Cost");
-        }
-
-        private void descriptionfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 0, "Description");
-        }
-
-        private void descriptionfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 1, "Description");
-        }
-        private void quantityfield_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         private void addbutton_Click(object sender, EventArgs e)
         {
 
@@ -170,6 +122,46 @@ namespace SmartSales_v1
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void productnamedropdown_Enter(object sender, EventArgs e)
+        {
+            h.manageComboHint(productnamedropdown, 1, "Product Name");
+        }
+
+        private void productnamedropdown_Leave(object sender, EventArgs e)
+        {
+            h.manageComboHint(productnamedropdown, 0, "Product Name");
+        }
+
+        private void locationdropdown_Enter(object sender, EventArgs e)
+        {
+            h.manageComboHint(locationdropdown, 1, "Location");
+        }
+
+        private void locationdropdown_Leave(object sender, EventArgs e)
+        {
+            h.manageComboHint(locationdropdown, 0, "Location");
+        }
+
+        private void quantityfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(quantityfield, 1, "Quantity");
+        }
+
+        private void quantityfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(quantityfield, 0, "Quantity");
+        }
+
+        private void descriptionfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(descriptionfield, 1, "Description");
+        }
+
+        private void descriptionfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(descriptionfield, 0, "Description");
         }
     }
 }

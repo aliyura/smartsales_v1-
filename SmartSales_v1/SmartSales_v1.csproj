@@ -71,6 +71,36 @@
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
+    <Compile Include="listbanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listbanks.Designer.cs">
+      <DependentUpon>listbanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listcustomer.Designer.cs">
+      <DependentUpon>listcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listproduct.Designer.cs">
+      <DependentUpon>listproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listuser.Designer.cs">
+      <DependentUpon>listuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="location.Designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
     <Compile Include="SSGetService.cs" />
     <Compile Include="HintManager.cs" />
     <Compile Include="Dashboard.cs">
@@ -133,6 +163,21 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="listbanks.resx">
+      <DependentUpon>listbanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listcustomer.resx">
+      <DependentUpon>listcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listproduct.resx">
+      <DependentUpon>listproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listuser.resx">
+      <DependentUpon>listuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="location.resx">
+      <DependentUpon>location.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,7 +206,6 @@
     <EmbeddedResource Include="UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
