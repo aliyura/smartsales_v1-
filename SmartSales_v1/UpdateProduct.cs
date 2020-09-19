@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
@@ -8,107 +9,57 @@ namespace SmartSales_v1
         Hint h = new Hint();
         App app = new App();
         SSAddService addService = new SSAddService();
+        SSGetService getService = new SSGetService();
 
-        public string productnamefield;
         public UpdateProduct()
         {
+           
             InitializeComponent();
-        }
-
-
-
-        public void pnfield(string pfn)
-        {
-
-            pfn = productnamefield;//store the value of product field here
+            initializeApp();
 
         }
 
-        private void productnamedropdown_MouseEnter(object sender, EventArgs e)
+        private void  initializeApp()
         {
-            productnamedropdown.Text = "";
-        }
+            //set locations
+            DataTable locations = getService.getDataFrom(app.objects["locations"]);
+            if (locations.Rows.Count > 0)
+                foreach(DataRow row in locations.Rows)
+                    locationdropdown.Items.Add(row.Field<string>("name"));
 
-        private void productnamedropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(productnamedropdown.Text == "")
-            {
-                productnamedropdown.Text = "Product Name";
-            }
-        }
+            //set products
+            DataTable products = getService.getDataFrom(app.objects["products"]);
+            if (products.Rows.Count > 0)
+                foreach (DataRow row in products.Rows)
+                    productnamedropdown.Items.Add(row.Field<string>("name"));
 
-        private void locationdropdown_MouseEnter(object sender, EventArgs e)
-        {
-            locationdropdown.Text = "";
-        }
-
-        private void locationdropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if(locationdropdown.Text == "")
-            {
-                locationdropdown.Text = "Location";
-            }
-        }
-
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 0, "Current Price");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(quantityfield, 1, "Current Cost");
-        }
-
-        private void descriptionfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 0, "Description");
-        }
-
-        private void descriptionfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(descriptionfield, 1, "Description");
-        }
-        private void quantityfield_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void addbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pnfield(productnamedropdown.Text);//store the selected text in the given parameter 
         }
 
         private void addbutton_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                int _quantity;
+                int quantity;
+                quantity = 0;
 
 
-                if (quantityfield.Text != "Current Cost")
-                    _quantity = int.Parse(quantityfield.Text);
+                if (quantityfield.Text != "Quantity" && app.isAllDigits(quantityfield.Text))
+                    quantity = int.Parse(quantityfield.Text);
+                else
+                     app.notifyTo(statusLabel1, "Quantity not in a right format", "warning");
 
-
-
-                ProductUpdate productUpdate = new ProductUpdate()
+            Stock stock = new Stock()
                 {
                     name = productnamedropdown.Text,
-                    quantity = int.Parse(quantityfield.Text),
+                    quantity = quantity,
                     location = locationdropdown.Text,
                     description = descriptionfield.Text,
                 };
+                 
 
-
-                if (productUpdate.name == "Product Name" || productUpdate.name == "")
+                if (stock.name == "Product Name" || stock.name == "")
                 {
                     app.notifyTo(statusLabel1, "Product Name required", "warning");
                 }
-                else if (productUpdate.location == "Location" || productUpdate.location == "")
+                else if (stock.location == "Location" || stock.location == "")
                 {
                     app.notifyTo(statusLabel1, "Product Location required", "warning");
                 }
@@ -120,26 +71,29 @@ namespace SmartSales_v1
                 else
                 {
 
-                    if (productUpdate.name != "" && productUpdate.location != "" && quantityfield.Text != "" && productUpdate.name != "Product Name" && productUpdate.location != "Location"
+                    if (stock.name != "" && stock.location != "" && quantityfield.Text != "" && stock.name != "Product Name" && stock.location != "Location"
                         && quantityfield.Text != "Quantity")
                     {
 
-                        int response = 1;//addService.addProduct(product);
+                        int response = addService.addStock(stock);
                         if (response > 0)
                         {
                             productnamedropdown.Text = "Product Name";
                             locationdropdown.Text = "Location";
                             descriptionfield.Text = "Description";
                             quantityfield.Text = "Quantity";
-                            barcodefield.Text = "Bar Code";
                             app.notifyTo(statusLabel1, "Product Updated Successfully", "success");
                         }
 
                         else
                         {
-                            if (response == -404)
+                            if (response == -403)
                             {
-                                app.notifyTo(statusLabel1, "Product [" + productUpdate.name + "] not found", "warning");
+                                app.notifyTo(statusLabel1, "Product [" + stock.name + "] not found", "warning");
+                            }
+                            else if (response == -404)
+                            {
+                                app.notifyTo(statusLabel1, "Location [" + stock.location + "] not found", "warning");
                             }
                             else
                             {
@@ -153,13 +107,7 @@ namespace SmartSales_v1
                         app.notifyTo(statusLabel1, "All fields required", "warning");
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                app.notifyTo(statusLabel1, ex.Message, "error");
-
-            }
-
+       
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -170,6 +118,11 @@ namespace SmartSales_v1
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            app.redirect(this, new AddProduct());
         }
     }
 }

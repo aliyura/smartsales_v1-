@@ -45,7 +45,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.descriptionfield = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.statusLabel1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel.SuspendLayout();
@@ -62,9 +61,9 @@
             this.panel1.Controls.Add(this.minimizedbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 46);
+            this.panel1.Size = new System.Drawing.Size(468, 46);
             this.panel1.TabIndex = 3;
             // 
             // button4
@@ -75,7 +74,7 @@
             this.button4.ImageIndex = 1;
             this.button4.ImageList = this.imageList1;
             this.button4.Location = new System.Drawing.Point(413, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(55, 42);
             this.button4.TabIndex = 3;
@@ -110,7 +109,7 @@
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
             this.minimizedbutton.Location = new System.Drawing.Point(340, 1);
-            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizedbutton.Name = "minimizedbutton";
             this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
             this.minimizedbutton.TabIndex = 1;
@@ -122,7 +121,7 @@
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.Controls.Add(this.button1);
             this.panel.Controls.Add(this.productnamedropdown);
-            this.panel.Location = new System.Drawing.Point(31, 121);
+            this.panel.Location = new System.Drawing.Point(31, 77);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(401, 47);
@@ -132,32 +131,31 @@
             // 
             this.button1.ImageIndex = 2;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(357, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(357, 7);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 34);
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // productnamedropdown
             // 
             this.productnamedropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productnamedropdown.FormattingEnabled = true;
-            this.productnamedropdown.Location = new System.Drawing.Point(33, 6);
-            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productnamedropdown.Location = new System.Drawing.Point(33, 8);
+            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4);
             this.productnamedropdown.Name = "productnamedropdown";
             this.productnamedropdown.Size = new System.Drawing.Size(308, 33);
             this.productnamedropdown.TabIndex = 10;
             this.productnamedropdown.Text = "Product Name";
-            this.productnamedropdown.MouseEnter += new System.EventHandler(this.productnamedropdown_MouseEnter);
-            this.productnamedropdown.MouseLeave += new System.EventHandler(this.productnamedropdown_MouseLeave);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.locationdropdown);
-            this.panel2.Location = new System.Drawing.Point(31, 209);
+            this.panel2.Location = new System.Drawing.Point(31, 148);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(401, 47);
@@ -169,19 +167,17 @@
             this.locationdropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationdropdown.FormattingEnabled = true;
             this.locationdropdown.Location = new System.Drawing.Point(33, 6);
-            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4);
             this.locationdropdown.Name = "locationdropdown";
-            this.locationdropdown.Size = new System.Drawing.Size(339, 33);
+            this.locationdropdown.Size = new System.Drawing.Size(308, 33);
             this.locationdropdown.TabIndex = 11;
             this.locationdropdown.Text = "Location";
-            this.locationdropdown.MouseEnter += new System.EventHandler(this.locationdropdown_MouseEnter);
-            this.locationdropdown.MouseLeave += new System.EventHandler(this.locationdropdown_MouseLeave);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.quantityfield);
-            this.panel4.Location = new System.Drawing.Point(31, 294);
+            this.panel4.Location = new System.Drawing.Point(31, 220);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(401, 47);
@@ -201,15 +197,12 @@
             this.quantityfield.Size = new System.Drawing.Size(324, 27);
             this.quantityfield.TabIndex = 1;
             this.quantityfield.Text = "Quantity";
-            this.quantityfield.TextChanged += new System.EventHandler(this.quantityfield_TextChanged);
-            this.quantityfield.MouseEnter += new System.EventHandler(this.currentpricefield_MouseEnter);
-            this.quantityfield.MouseLeave += new System.EventHandler(this.currentpricefield_MouseLeave);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.descriptionfield);
-            this.panel5.Location = new System.Drawing.Point(31, 370);
+            this.panel5.Location = new System.Drawing.Point(31, 296);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(401, 194);
@@ -223,15 +216,13 @@
             this.descriptionfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionfield.Location = new System.Drawing.Point(33, 11);
+            this.descriptionfield.Location = new System.Drawing.Point(33, 14);
             this.descriptionfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.descriptionfield.Multiline = true;
             this.descriptionfield.Name = "descriptionfield";
             this.descriptionfield.Size = new System.Drawing.Size(340, 165);
             this.descriptionfield.TabIndex = 1;
             this.descriptionfield.Text = "Description";
-            this.descriptionfield.MouseEnter += new System.EventHandler(this.descriptionfield_MouseEnter);
-            this.descriptionfield.MouseLeave += new System.EventHandler(this.descriptionfield_MouseLeave);
             // 
             // addbutton
             // 
@@ -239,7 +230,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(31, 580);
+            this.addbutton.Location = new System.Drawing.Point(31, 515);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(401, 58);
@@ -248,26 +239,10 @@
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click_1);
             // 
-            // textBox13
-            // 
-            this.textBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox13.Location = new System.Drawing.Point(31, 95);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(157, 25);
-            this.textBox13.TabIndex = 35;
-            this.textBox13.Text = "Bar Code";
-            // 
             // statusLabel1
             // 
             this.statusLabel1.AutoSize = true;
-            this.statusLabel1.Location = new System.Drawing.Point(31, 653);
+            this.statusLabel1.Location = new System.Drawing.Point(31, 592);
             this.statusLabel1.Name = "statusLabel1";
             this.statusLabel1.Size = new System.Drawing.Size(0, 17);
             this.statusLabel1.TabIndex = 36;
@@ -276,9 +251,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 703);
+            this.ClientSize = new System.Drawing.Size(468, 644);
             this.Controls.Add(this.statusLabel1);
-            this.Controls.Add(this.textBox13);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -286,7 +260,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateStock";
@@ -319,7 +293,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox descriptionfield;
         private System.Windows.Forms.Button addbutton;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label statusLabel1;
     }
