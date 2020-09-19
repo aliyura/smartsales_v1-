@@ -9,35 +9,21 @@ namespace SmartSales_v1
         DateTime currentDate = DateTime.Now;//automate date setting
         SSService service = new SSService();
         SSGetService getService = new SSGetService();
-        public int addLog(Log log)
+        SSAddService addService = new SSAddService();
+    
+        public int updatePrice(Product product)
         {
             DateTime currentDate = DateTime.Now;
-            using (SqlCommand command = new SqlCommand("INSERT INTO ss_logs(description, statement, type, created_date)VALUES(@description, @statement, @type, @created_date)"))
-            {
-                command.Parameters.AddWithValue("@description", log.created_date);
-                command.Parameters.AddWithValue("@statement", log.statement);
-                command.Parameters.AddWithValue("@type", log.type);
-                command.Parameters.AddWithValue("@created_date", currentDate);
-                int response = service.add(command);
-                return response;
-
-            }
-        }
-        public int updatePrice(PriceUpdate priceUpdate)
-        {
-            DateTime currentDate = DateTime.Now;
-            Product existingProduct = getService.getProductByName(priceUpdate.name);
+            Product existingProduct = getService.getProductByName(product.name);
             if (existingProduct.name != null)
             {
-                using (SqlCommand command = new SqlCommand("UPDATE ss_product SET (current_price,current_cost,new_price,new_cost) VALUES(@current_price,@current_cost,@new_price,@new_cost)"))
+                using (SqlCommand command = new SqlCommand("UPDATE ss_products SET price=@price, cost=@cost WHERE id="+existingProduct.id+""))
                 {
-                    command.Parameters.AddWithValue("@current_price", priceUpdate.current_price);
-                    command.Parameters.AddWithValue("@current_cost", priceUpdate.current_cost);
-                    command.Parameters.AddWithValue("@new_cost", priceUpdate.new_cost);
-                    command.Parameters.AddWithValue("@new_price", priceUpdate.new_price);
+                    command.Parameters.AddWithValue("@price", product.price);
+                    command.Parameters.AddWithValue("@cost", product.cost);
                     int response = service.add(command);
                     if (response > 0)
-                        this.addLog(new Log()
+                        addService.addLog(new Log()
                         {
                             type = "Updated Price",
                             statement = command.CommandText,

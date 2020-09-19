@@ -16,5 +16,15 @@ namespace SmartSales_v1
         {
             InitializeComponent();
         }
+
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

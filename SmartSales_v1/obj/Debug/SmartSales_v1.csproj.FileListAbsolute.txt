@@ -100,3 +100,6 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listbanks.resourc
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listcustomer.resources
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listuser.resources
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.location.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+>>>>>>> 6a97ea301af3100a48c99ffcd033f589494d74ba
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Data.SqlTypes;
 
 namespace SmartSales_v1
 {
@@ -12,6 +12,22 @@ namespace SmartSales_v1
         App app = new App();
         DateTime currentDate = DateTime.Now;//automate date setting
         SSService service = new SSService();
+
+
+        public DataTable getDataFrom(string table)
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                data = service.get("SELECT * FROM "+ table + " WHERE 1=1 order by created_date desc");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return data;
+            }
+        }
 
         public User getUserByMobileNumber(string number)
         {
@@ -77,19 +93,21 @@ namespace SmartSales_v1
         public Product getProductByName(string name)
         {
             Product product = new Product();
-            DateTime currentDate = DateTime.Now;
+ 
             try
             {
                 DataTable data = service.get("SELECT  top 1 * FROM ss_products WHERE name='" + name + "' order by created_date desc");
                 if (data.Rows.Count > 0)
                 {
                     DataRow row = data.Rows[0];
+
                     product = new Product()
-                    {
+                    { 
+                        id = row.Field<Int32>("id"),
                         name = row.Field<string>("name"),
-                        price = int.Parse(row.Field<string>("price")),
-                        reorder_level = int.Parse(row.Field<string>("reorder_level")),
-                        cost = int.Parse(row.Field<string>("cost")),
+                        price = row.Field<Int32>("price"),
+                        reorder_level = row.Field<Int32>("reorder_level"),
+                        cost = row.Field<Int32>("cost"),
                         barqr_code = row.Field<string>("barqr_code"),
                         created_date = row.Field<DateTime>("created_date"),
 
@@ -103,6 +121,7 @@ namespace SmartSales_v1
                 return product;
             }
         }
+
         public Location getLocationByName(string name)
         {
             Location existingLocation = new Location();
@@ -179,34 +198,30 @@ namespace SmartSales_v1
             }
         }
 
-        public DataTable getUsers()
-        {
-            DataTable data = new DataTable();
-            try
-            {
-                data = service.get("SELECT* FROM ss_users WHERE 1=1 order by created_date desc");
-                return data;
-            }
-            catch (Exception ex)
-            {
-                app.showError(ex.Message);
-                return data;
-            }
-        }
-        public DataTable getProducts()
-        {
-            DataTable data = new DataTable();
-            try
-            {
-                data = service.get("SELECT* FROM ss_products WHERE 1=1 order by created_date desc");
-                return data;
-            }
-            catch (Exception ex)
-            {
-                app.showError(ex.Message);
-                return data;
-            }
-        }
 
+        public Group getGroupByName(string name)
+        {
+            Group existingGroup = new Group();
+            DateTime currentDate = DateTime.Now;
+            try
+            {
+                DataTable data = service.get("SELECT  top 1 * FROM ss_customer_groups WHERE name='" + name + "'");
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    existingGroup = new Group()
+                    {
+                        name = row.Field<string>("name"),
+                        created_date = row.Field<DateTime>("created_date"),
+                    };
+                }
+                return existingGroup;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return existingGroup;
+            }
+        }
     }
 }

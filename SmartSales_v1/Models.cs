@@ -6,7 +6,18 @@ namespace SmartSales_v1
 {
 
 
-    class Log
+    class ComboBoxItem
+    {
+
+        public string Text { get; set; }
+        public int Value { get; set; }
+        public override string ToString()
+        {
+            return Text;
+        }
+    }
+
+        class Log
     {
         public int id { get; set; }
         public string description { get; set; }
@@ -75,4 +86,11 @@ namespace SmartSales_v1
         public string customer_group { get; set; }
         public DateTime created_date { get; set; }
     }
+    class Group
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public DateTime created_date { get; set; }
+    }
+  
 }

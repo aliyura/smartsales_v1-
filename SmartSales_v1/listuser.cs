@@ -27,5 +27,15 @@ namespace SmartSales_v1
         {
             h.manageHint(mobilenumberfield, 0, "Mobile Number");
         }
+
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

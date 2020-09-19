@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
@@ -8,23 +9,17 @@ namespace SmartSales_v1
         Hint h = new Hint();
         App app = new App();
         SSAddService addService = new SSAddService();
+        SSGetService getService = new SSGetService();
 
-        public string productnamefield;
         public UpdateProduct()
         {
+
             InitializeComponent();
-        }
-
-
-
-        public void pnfield(string pfn)
-        {
-
-            pfn = productnamefield;//store the value of product field here
+            initializeApp();
 
         }
 
-        
+
         private void addbutton_Click(object sender, EventArgs e)
         {
 
@@ -32,84 +27,96 @@ namespace SmartSales_v1
 
         private void productnamedropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pnfield(productnamedropdown.Text);//store the selected text in the given parameter 
+        
+        }
+
+        private void initializeApp()
+        {
+            //set locations
+            DataTable locations = getService.getDataFrom(app.objects["locations"]);
+            if (locations.Rows.Count > 0)
+                foreach (DataRow row in locations.Rows)
+                    locationdropdown.Items.Add(row.Field<string>("name"));
+
+            //set products
+            DataTable products = getService.getDataFrom(app.objects["products"]);
+            if (products.Rows.Count > 0)
+                foreach (DataRow row in products.Rows)
+                    productnamedropdown.Items.Add(row.Field<string>("name"));
+
         }
 
         private void addbutton_Click_1(object sender, EventArgs e)
         {
-            try
+            int quantity;
+            quantity = 0;
+
+
+            if (quantityfield.Text != "Quantity" && app.isAllDigits(quantityfield.Text))
+                quantity = int.Parse(quantityfield.Text);
+            else
+                app.notifyTo(statusLabel1, "Quantity not in a right format", "warning");
+
+            Stock stock = new Stock()
             {
-                int _quantity;
+                name = productnamedropdown.Text,
+                quantity = quantity,
+                location = locationdropdown.Text,
+                description = descriptionfield.Text,
+            };
 
 
-                if (quantityfield.Text != "Current Cost")
-                    _quantity = int.Parse(quantityfield.Text);
+            if (stock.name == "Product Name" || stock.name == "")
+            {
+                app.notifyTo(statusLabel1, "Product Name required", "warning");
+            }
+            else if (stock.location == "Location" || stock.location == "")
+            {
+                app.notifyTo(statusLabel1, "Product Location required", "warning");
+            }
+            else if (quantityfield.Text == "Quantity" || quantityfield.Text == "")
+            {
+                app.notifyTo(statusLabel1, "Quantity required", "warning");
+            }
 
+            else
+            {
 
-
-                ProductUpdate productUpdate = new ProductUpdate()
-                {
-                    name = productnamedropdown.Text,
-                    quantity = int.Parse(quantityfield.Text),
-                    location = locationdropdown.Text,
-                    description = descriptionfield.Text,
-                };
-
-
-                if (productUpdate.name == "Product Name" || productUpdate.name == "")
-                {
-                    app.notifyTo(statusLabel1, "Product Name required", "warning");
-                }
-                else if (productUpdate.location == "Location" || productUpdate.location == "")
-                {
-                    app.notifyTo(statusLabel1, "Product Location required", "warning");
-                }
-                else if (quantityfield.Text == "Quantity" || quantityfield.Text == "")
-                {
-                    app.notifyTo(statusLabel1, "Quantity required", "warning");
-                }
-
-                else
+                if (stock.name != "" && stock.location != "" && quantityfield.Text != "" && stock.name != "Product Name" && stock.location != "Location"
+                    && quantityfield.Text != "Quantity")
                 {
 
-                    if (productUpdate.name != "" && productUpdate.location != "" && quantityfield.Text != "" && productUpdate.name != "Product Name" && productUpdate.location != "Location"
-                        && quantityfield.Text != "Quantity")
+                    int response = addService.addStock(stock);
+                    if (response > 0)
                     {
-
-                        int response = 1;//addService.addProduct(product);
-                        if (response > 0)
-                        {
-                            productnamedropdown.Text = "Product Name";
-                            locationdropdown.Text = "Location";
-                            descriptionfield.Text = "Description";
-                            quantityfield.Text = "Quantity";
-                            barcodefield.Text = "Bar Code";
-                            app.notifyTo(statusLabel1, "Product Updated Successfully", "success");
-                        }
-
-                        else
-                        {
-                            if (response == -404)
-                            {
-                                app.notifyTo(statusLabel1, "Product [" + productUpdate.name + "] not found", "warning");
-                            }
-                            else
-                            {
-                                app.notifyTo(statusLabel1, "Unable to update product", "warning");
-                            }
-                        }
-
+                        productnamedropdown.Text = "Product Name";
+                        locationdropdown.Text = "Location";
+                        descriptionfield.Text = "Description";
+                        quantityfield.Text = "Quantity";
+                        app.notifyTo(statusLabel1, "Product Updated Successfully", "success");
                     }
+
                     else
                     {
-                        app.notifyTo(statusLabel1, "All fields required", "warning");
+                        if (response == -403)
+                        {
+                            app.notifyTo(statusLabel1, "Product [" + stock.name + "] not found", "warning");
+                        }
+                        else if (response == -404)
+                        {
+                            app.notifyTo(statusLabel1, "Location [" + stock.location + "] not found", "warning");
+                        }
+                        else
+                        {
+                            app.notifyTo(statusLabel1, "Unable to update product", "warning");
+                        }
                     }
-                }
-            }
-            catch (Exception ex)
-            {
-                app.notifyTo(statusLabel1, ex.Message, "error");
 
+                }
+                else
+                {
+                    app.notifyTo(statusLabel1, "All fields required", "warning");
+                }
             }
 
         }
@@ -123,6 +130,7 @@ namespace SmartSales_v1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
 
         private void productnamedropdown_Enter(object sender, EventArgs e)
         {
@@ -163,5 +171,12 @@ namespace SmartSales_v1
         {
             h.manageHint(descriptionfield, 0, "Description");
         }
+
+            private void button1_Click(object sender, EventArgs e)
+            {
+                app.redirect(this, new AddProduct());
+
+            }
+        }
     }
-}
+

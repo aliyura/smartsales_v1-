@@ -27,5 +27,14 @@ namespace SmartSales_v1
         {
             h.manageHint(customerfield, 0, "Customer Name");
         }
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -14,78 +14,75 @@ namespace SmartSales_v1
     {
         public Point mouseLocation;
         Hint h = new Hint();
+        App app = new App();
+
+       SSUpdateService updateService =new SSUpdateService();
+       SSGetService getService = new SSGetService();
+
+
         public UpdatePrice()
         {
             InitializeComponent();
+            initializeApp();
+        }
+
+        private void initializeApp()
+        {
+            //set products
+            DataTable products = getService.getDataFrom(app.objects["products"]);
+            if (products.Rows.Count > 0)
+                foreach (DataRow row in products.Rows)
+                    productNameField.Items.Add(row.Field<string>("name"));
+
         }
 
         private void update_Click(object sender, EventArgs e)
         {
             try
             {
-                int current_price, current_cost, new_price, new_cost;
+                int price, cost;
+                price = cost =  0;
 
+                if (priceField.Text != "Price")
+                    price = int.Parse(priceField.Text);
+                if (costField.Text != "Cost")
+                    cost = int.Parse(costField.Text);
+                
 
-                if (currentcostfield.Text != "Current Cost")
-                    current_cost = int.Parse(currentcostfield.Text);
-                if (currentpricefield.Text != "Current Price")
-                    current_price = int.Parse(currentpricefield.Text);
-                if (newpricefield.Text != "New Price")
-                    new_price = int.Parse(newpricefield.Text);
-                if (newcostfield.Text != "New Cost")
-                    new_cost = int.Parse(newcostfield.Text);
-
-
-
-
-                PriceUpdate priceUpdate = new PriceUpdate()
+                Product product = new Product()
                 {
-                    name = productnamedropdown.Text,
-                    current_cost = int.Parse(currentcostfield.Text),
-                    current_price = int.Parse(currentpricefield.Text),
-                    new_price = int.Parse(newcostfield.Text),
-                    new_cost = int.Parse(newpricefield.Text)
+                    name=productNameField.Text,
+                    price=price,
+                    cost=cost,
                 };
 
 
-                if (priceUpdate.name == "Product Name" || priceUpdate.name == "")
+                if (productNameField.Text == "Product Name" || productNameField.Text == "")
                 {
                     app.notifyTo(statusLabel, "Product Name required", "warning");
                 }
-                else if (currentcostfield.Text == "Current Cost" || currentcostfield.Text == "")
-                {
-                    app.notifyTo(statusLabel, "Current Cost required", "warning");
-                }
-                else if (currentpricefield.Text == "Current Price" || currentpricefield.Text == "")
-                {
-                    app.notifyTo(statusLabel, "Current Price required", "warning");
-                }
 
-                else if (newpricefield.Text == "New Price" || newpricefield.Text == "")
+                else if (priceField.Text == "Price" || priceField.Text == "")
                 {
                     app.notifyTo(statusLabel, "New Price required", "warning");
                 }
-
-                else if (newcostfield.Text == "New Cost" || newcostfield.Text == "")
+                else if (costField.Text == "Cost" || costField.Text == "")
                 {
                     app.notifyTo(statusLabel, "New Cost required", "warning");
                 }
                 else
                 {
 
-                    if (priceUpdate.name != "" && currentcostfield.Text != "" && currentpricefield.Text != "" && newpricefield.Text != "" && newcostfield.Text != ""
-                        && priceUpdate.name != "Product Name" && currentcostfield.Text != "Current Cost" && currentpricefield.Text != "Current Price" && newpricefield.Text != "New Price"
-                        && newcostfield.Text != "New Cost")
+                    if ( productNameField.Text != "" && priceField.Text != "" && costField.Text != ""
+                        && productNameField.Text != "Product Name" && priceField.Text != "Price" && costField.Text != "Cost")
                     {
 
-                        int response = 1;//addService.addProduct(product);
+                        int response =updateService.updatePrice(product);
                         if (response > 0)
                         {
-                            productnamedropdown.Text = "Product Name";
-                            currentpricefield.Text = "Current Price";
-                            currentcostfield.Text = "Current Cost";
-                            newpricefield.Text = "New Price";
-                            newcostfield.Text = "New Cost";
+                            productNameField.Text = "Product Name";
+                            priceField.Text = "Price";
+                            costField.Text = "Cost";
                             app.notifyTo(statusLabel, "Price Updated Successfully", "success");
                         }
 
@@ -93,7 +90,7 @@ namespace SmartSales_v1
                         {
                             if (response == -404)
                             {
-                                app.notifyTo(statusLabel, "Product [" + priceUpdate.name + "] not found", "warning");
+                                app.notifyTo(statusLabel, "Product [" + product.name + "] not found", "warning");
                             }
                             else
                             {
@@ -115,13 +112,6 @@ namespace SmartSales_v1
             }
         }
 
-        private void productnamedropdown_TextChanged(object sender, EventArgs e)
-        {
-            currentpricefield.Text = "";
-            newpricefield.Text = "";
-            currentcostfield.Text = "";
-            newcostfield.Text = "";
-        }
 
         private void closedbutton_Click(object sender, EventArgs e)
         {
@@ -141,51 +131,6 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
-        }
-
-        private void productnamedropdown_Enter(object sender, EventArgs e)
-        {
-            h.manageComboHint(productnamedropdown, 1, "Product Name");
-        }
-
-        private void productnamedropdown_Leave(object sender, EventArgs e)
-        {
-            h.manageComboHint(productnamedropdown, 0, "Product Name");
-        }
-
-        private void currentpricefield_Enter(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 1, "Current Price");
-        }
-
-        private void currentpricefield_Leave(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 0, "Current Price");
-        }
-
-        private void newpricefield_Enter(object sender, EventArgs e)
-        {
-            h.manageHint(newpricefield, 1, "New Price");
-        }
-
-        private void newpricefield_Leave(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 0, "New Price");
-        }
-
-        private void currentcostfield_Enter(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 1, "Current Cost");
-        }
-
-        private void currentcostfield_Leave(object sender, EventArgs e)
-        {
-            h.manageHint(currentcostfield, 1, "Current Cost");
-        }
-
-        private void newcostfield_Enter(object sender, EventArgs e)
-        {
-            h.manageHint(newcostfield, 1, "New Cost");
         }
     }
 }

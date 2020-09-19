@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,16 +11,20 @@ namespace SmartSales_v1
         Hint h = new Hint();
         App app = new App();
         SSAddService addService = new SSAddService();
+        SSGetService getService = new SSGetService();
 
         public AddCustomer()
         {
             InitializeComponent();
         }
 
-        private void AddCustomer_Load(object sender, EventArgs e)
+        private void initializeApp()
         {
-            customergroupfield.Items[0] = "Regular";
-            customergroupfield.Items[1] = "Irregular";
+            //set customer groups
+            DataTable locations = getService.getDataFrom(app.objects["groups"]);
+            if (locations.Rows.Count > 0)
+                foreach (DataRow row in locations.Rows)
+                    customergroupCombobox.Items.Add(row.Field<string>("name"));
         }
 
         private void addbutton_Click(object sender, EventArgs e)
@@ -35,7 +40,7 @@ namespace SmartSales_v1
                 phone_number = phonenumberfield.Text,
                 altphone_number = altphonenumberfield.Text,
                 credit_limit = credit_limit,
-                customer_group = customergroupfield.Text,
+                customer_group = customergroupCombobox.Text,
             };
 
             if (customer.name == "Customer Name" || customer.name == "")
@@ -78,7 +83,7 @@ namespace SmartSales_v1
                         phonenumberfield.Text = "Phone Number";
                         altphonenumberfield.Text = "Alternate Phone Number";
                         creditlimitfield.Text = "Credit Limit";
-                        customergroupfield.Text = "Customer Group";
+                        customergroupCombobox.Text = "Customer Group";
                         app.notifyTo(statusLabel, "Customer Added Successfully", "success");
                     }
                     else
@@ -116,12 +121,21 @@ namespace SmartSales_v1
 
         private void customergroupfield_MouseEnter(object sender, EventArgs e)
         {
-            h.manageComboHint(customergroupfield, 0, "");
+            h.manageComboHint(customergroupCombobox, 0, "");
         }
 
         private void customergroupfield_MouseLeave(object sender, EventArgs e)
         {
-            h.manageComboHint(customergroupfield, 1, "Customer Group");
+            h.manageComboHint(customergroupCombobox, 1, "Customer Group");
+        }
+
+        private void addCustomerGroup_Click(object sender, EventArgs e)
+        {
+
+           
+            AddGroup groupAdd = new AddGroup();
+            groupAdd.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listbanks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.closedbutton = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.minimizedbutton = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,6 +74,16 @@
             this.closedbutton.Size = new System.Drawing.Size(41, 34);
             this.closedbutton.TabIndex = 3;
             this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
+            this.imageList1.Images.SetKeyName(1, "close (1).png");
+            this.imageList1.Images.SetKeyName(2, "add.png");
+            this.imageList1.Images.SetKeyName(3, "cancel.png");
             // 
             // label1
             // 
@@ -98,15 +108,7 @@
             this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
             this.minimizedbutton.TabIndex = 1;
             this.minimizedbutton.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
-            this.imageList1.Images.SetKeyName(1, "close (1).png");
-            this.imageList1.Images.SetKeyName(2, "add.png");
-            this.imageList1.Images.SetKeyName(3, "cancel.png");
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
             // flowLayoutPanel1
             // 

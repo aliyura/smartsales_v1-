@@ -16,7 +16,10 @@ namespace SmartSales_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new listproduct());
+
+            Application.Run(new UpdateProduct());
 
         }
     }

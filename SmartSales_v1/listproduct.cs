@@ -27,5 +27,15 @@ namespace SmartSales_v1
         {
             h.manageHint(productnamesearchfield, 0, "Product Name");
         }
+
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

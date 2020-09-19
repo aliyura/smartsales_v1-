@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listproduct));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.closedbutton = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.minimizedbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.addbutton = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.productnamesearchfield = new System.Windows.Forms.TextBox();
-            this.closedbutton = new System.Windows.Forms.Button();
-            this.minimizedbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -58,6 +58,29 @@
             this.panel1.Size = new System.Drawing.Size(640, 37);
             this.panel1.TabIndex = 4;
             // 
+            // closedbutton
+            // 
+            this.closedbutton.FlatAppearance.BorderSize = 0;
+            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedbutton.ImageIndex = 1;
+            this.closedbutton.ImageList = this.imageList1;
+            this.closedbutton.Location = new System.Drawing.Point(592, 3);
+            this.closedbutton.Name = "closedbutton";
+            this.closedbutton.Size = new System.Drawing.Size(41, 34);
+            this.closedbutton.TabIndex = 3;
+            this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
+            this.imageList1.Images.SetKeyName(1, "close (1).png");
+            this.imageList1.Images.SetKeyName(2, "add.png");
+            this.imageList1.Images.SetKeyName(3, "cancel.png");
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -69,14 +92,19 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "List product";
             // 
-            // imageList1
+            // minimizedbutton
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "minus-symbol.png");
-            this.imageList1.Images.SetKeyName(1, "close (1).png");
-            this.imageList1.Images.SetKeyName(2, "add.png");
-            this.imageList1.Images.SetKeyName(3, "cancel.png");
+            this.minimizedbutton.FlatAppearance.BorderSize = 0;
+            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizedbutton.ImageIndex = 0;
+            this.minimizedbutton.ImageList = this.imageList1;
+            this.minimizedbutton.Location = new System.Drawing.Point(537, 3);
+            this.minimizedbutton.Name = "minimizedbutton";
+            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
+            this.minimizedbutton.TabIndex = 1;
+            this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
             // dataGridView1
             // 
@@ -93,7 +121,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(316, 59);
+            this.addbutton.Location = new System.Drawing.Point(518, 60);
             this.addbutton.Margin = new System.Windows.Forms.Padding(2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(122, 31);
@@ -105,7 +133,7 @@
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel12.Controls.Add(this.productnamesearchfield);
-            this.panel12.Location = new System.Drawing.Point(47, 59);
+            this.panel12.Location = new System.Drawing.Point(249, 60);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(264, 31);
             this.panel12.TabIndex = 42;
@@ -127,32 +155,6 @@
             this.productnamesearchfield.Text = "Product Name";
             this.productnamesearchfield.Enter += new System.EventHandler(this.productnamesearchfield_Enter);
             this.productnamesearchfield.Leave += new System.EventHandler(this.productnamesearchfield_Leave);
-            // 
-            // closedbutton
-            // 
-            this.closedbutton.FlatAppearance.BorderSize = 0;
-            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closedbutton.ImageIndex = 1;
-            this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(592, 3);
-            this.closedbutton.Name = "closedbutton";
-            this.closedbutton.Size = new System.Drawing.Size(41, 34);
-            this.closedbutton.TabIndex = 3;
-            this.closedbutton.UseVisualStyleBackColor = true;
-            // 
-            // minimizedbutton
-            // 
-            this.minimizedbutton.FlatAppearance.BorderSize = 0;
-            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizedbutton.ImageIndex = 0;
-            this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(537, 3);
-            this.minimizedbutton.Name = "minimizedbutton";
-            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
-            this.minimizedbutton.TabIndex = 1;
-            this.minimizedbutton.UseVisualStyleBackColor = true;
             // 
             // listproduct
             // 

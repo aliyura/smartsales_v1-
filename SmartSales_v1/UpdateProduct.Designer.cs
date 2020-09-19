@@ -62,8 +62,9 @@
             this.panel1.Controls.Add(this.minimizedbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 37);
+            this.panel1.Size = new System.Drawing.Size(364, 46);
             this.panel1.TabIndex = 3;
             // 
             // button4
@@ -73,7 +74,8 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ImageIndex = 1;
             this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(310, 1);
+            this.button4.Location = new System.Drawing.Point(413, 1);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(41, 34);
             this.button4.TabIndex = 3;
@@ -106,7 +108,8 @@
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(255, 1);
+            this.minimizedbutton.Location = new System.Drawing.Point(340, 1);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizedbutton.Name = "minimizedbutton";
             this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
             this.minimizedbutton.TabIndex = 1;
@@ -118,8 +121,8 @@
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.Controls.Add(this.button1);
             this.panel.Controls.Add(this.productnamedropdown);
-            this.panel.Location = new System.Drawing.Point(23, 98);
-            this.panel.Margin = new System.Windows.Forms.Padding(2);
+            this.panel.Location = new System.Drawing.Point(31, 77);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(301, 38);
             this.panel.TabIndex = 10;
@@ -128,18 +131,21 @@
             // 
             this.button1.ImageIndex = 2;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(268, 5);
+            this.button1.Location = new System.Drawing.Point(357, 7);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 28);
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // productnamedropdown
             // 
             this.productnamedropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productnamedropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productnamedropdown.FormattingEnabled = true;
-            this.productnamedropdown.Location = new System.Drawing.Point(25, 5);
+            this.productnamedropdown.Location = new System.Drawing.Point(33, 8);
+            this.productnamedropdown.Margin = new System.Windows.Forms.Padding(4);
             this.productnamedropdown.Name = "productnamedropdown";
             this.productnamedropdown.Size = new System.Drawing.Size(232, 28);
             this.productnamedropdown.TabIndex = 10;
@@ -151,8 +157,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.locationdropdown);
-            this.panel2.Location = new System.Drawing.Point(23, 170);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(31, 148);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 38);
             this.panel2.TabIndex = 11;
@@ -162,9 +168,10 @@
             this.locationdropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.locationdropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationdropdown.FormattingEnabled = true;
-            this.locationdropdown.Location = new System.Drawing.Point(25, 5);
+            this.locationdropdown.Location = new System.Drawing.Point(33, 6);
+            this.locationdropdown.Margin = new System.Windows.Forms.Padding(4);
             this.locationdropdown.Name = "locationdropdown";
-            this.locationdropdown.Size = new System.Drawing.Size(255, 28);
+            this.locationdropdown.Size = new System.Drawing.Size(308, 28);
             this.locationdropdown.TabIndex = 11;
             this.locationdropdown.Text = "Location";
             this.locationdropdown.Enter += new System.EventHandler(this.locationdropdown_Enter);
@@ -174,8 +181,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.quantityfield);
-            this.panel4.Location = new System.Drawing.Point(23, 239);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(31, 220);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(301, 38);
             this.panel4.TabIndex = 12;
@@ -201,8 +208,8 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.descriptionfield);
-            this.panel5.Location = new System.Drawing.Point(23, 301);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(31, 296);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(301, 158);
             this.panel5.TabIndex = 13;
@@ -215,8 +222,8 @@
             this.descriptionfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionfield.Location = new System.Drawing.Point(25, 9);
-            this.descriptionfield.Margin = new System.Windows.Forms.Padding(2);
+            this.descriptionfield.Location = new System.Drawing.Point(33, 14);
+            this.descriptionfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.descriptionfield.Multiline = true;
             this.descriptionfield.Name = "descriptionfield";
             this.descriptionfield.Size = new System.Drawing.Size(255, 134);
@@ -231,8 +238,8 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(23, 471);
-            this.addbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.addbutton.Location = new System.Drawing.Point(31, 492);
+            this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(301, 47);
             this.addbutton.TabIndex = 14;
@@ -248,7 +255,7 @@
             this.barcodefield.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.barcodefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barcodefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.barcodefield.Location = new System.Drawing.Point(23, 77);
+            this.barcodefield.Location = new System.Drawing.Point(31, 56);
             this.barcodefield.Margin = new System.Windows.Forms.Padding(2);
             this.barcodefield.Multiline = true;
             this.barcodefield.Name = "barcodefield";
@@ -259,7 +266,7 @@
             // statusLabel1
             // 
             this.statusLabel1.AutoSize = true;
-            this.statusLabel1.Location = new System.Drawing.Point(23, 531);
+            this.statusLabel1.Location = new System.Drawing.Point(31, 592);
             this.statusLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.statusLabel1.Name = "statusLabel1";
             this.statusLabel1.Size = new System.Drawing.Size(0, 13);
@@ -269,9 +276,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 571);
-            this.Controls.Add(this.statusLabel1);
+            this.ClientSize = new System.Drawing.Size(364, 550);
             this.Controls.Add(this.barcodefield);
+            this.Controls.Add(this.statusLabel1);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -279,6 +286,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateStock";
@@ -311,7 +319,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox descriptionfield;
         private System.Windows.Forms.Button addbutton;
+
         private System.Windows.Forms.TextBox barcodefield;
+
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label statusLabel1;
     }

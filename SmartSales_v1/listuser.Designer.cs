@@ -70,6 +70,7 @@
             this.closedbutton.Size = new System.Drawing.Size(41, 34);
             this.closedbutton.TabIndex = 3;
             this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
             // 
             // imageList1
             // 
@@ -103,9 +104,11 @@
             this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
             this.minimizedbutton.TabIndex = 1;
             this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 100);
@@ -119,7 +122,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(336, 63);
+            this.addbutton.Location = new System.Drawing.Point(534, 64);
             this.addbutton.Margin = new System.Windows.Forms.Padding(2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(122, 31);
@@ -131,7 +134,7 @@
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel12.Controls.Add(this.mobilenumberfield);
-            this.panel12.Location = new System.Drawing.Point(67, 63);
+            this.panel12.Location = new System.Drawing.Point(265, 64);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(264, 31);
             this.panel12.TabIndex = 44;

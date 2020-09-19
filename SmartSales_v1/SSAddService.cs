@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
+using System.Data.SqlTypes;
 
 namespace SmartSales_v1
 {
@@ -186,6 +187,35 @@ namespace SmartSales_v1
             }
         }
 
+        public int addCustomerGroup(Group group)
+        {
+            DateTime currentDate = DateTime.Now;
+            Group existingGroup = getService.getGroupByName(group.name);
+            if (existingGroup.name == null)
+            {
+                using (SqlCommand command = new SqlCommand("INSERT INTO ss_customer_groups(name,created_date)VALUES(@name,@created_date)"))
+                {
+                    command.Parameters.AddWithValue("@name", group.name);
+                    command.Parameters.AddWithValue("@created_date", currentDate);
+                    int response = service.add(command);
+                    if (response > 0)
+                        this.addLog(new Log()
+                        {
+                            type = "Add Group",
+                            statement = command.CommandText,
+                            description = "Added new Group" + group.name,
+                            created_date = currentDate
+                        });
+                    return response;
+                }
+            }
+            else
+            {
+                app.showWarning("Group already exist");
+                return -2;
+            }
+        }
+
         public int addCustomer(Customer customer)
         {
             DateTime currentDate = DateTime.Now;
@@ -212,6 +242,71 @@ namespace SmartSales_v1
                 }
     
         }
+
+        public int addStock(Stock stock)
+        {
+            Product existingProduct = getService.getProductByName(stock.name);
+            if (existingProduct.name != null)
+            {
+                Location existingLocation = getService.getLocationByName(stock.location);
+                if (existingLocation.name != null)
+                {
+
+                    string batchId = app.generateId(10, true);
+                    string batchName = "BATCH" + app.genetareNumber(1, 9999).ToString();
+
+                    using (SqlCommand command = new SqlCommand("INSERT INTO ss_stocks(pid,bid,quantity,description,created_date,last_modified_date)VALUES(@pid,@bid,@quantity,@description,@created_date,@last_modified_date)"))
+                    {
+                        command.Parameters.AddWithValue("@pid", existingProduct.id);
+                        command.Parameters.AddWithValue("@bid", batchId);
+                        command.Parameters.AddWithValue("@quantity", stock.quantity);
+                        command.Parameters.AddWithValue("@description", stock.description);
+                        command.Parameters.AddWithValue("@last_modified_date", currentDate);
+                        command.Parameters.AddWithValue("@created_date", currentDate);
+                        int response = service.add(command);
+                        if (response > 0)
+                        {
+                            using (SqlCommand batchCommand = new SqlCommand("INSERT INTO ss_batches(id,name,pid,total,balance,sold,created_date)VALUES(@id,@name,@pid,@total,@balance,@sold,@created_date)"))
+                            {
+                                batchCommand.Parameters.AddWithValue("@id", batchId);
+                                batchCommand.Parameters.AddWithValue("@name", batchName);
+                                batchCommand.Parameters.AddWithValue("@pid", existingProduct.id);
+                                batchCommand.Parameters.AddWithValue("@total", stock.quantity);
+                                batchCommand.Parameters.AddWithValue("@balance", stock.quantity);
+                                batchCommand.Parameters.AddWithValue("@sold", 0);
+                                batchCommand.Parameters.AddWithValue("@created_date", currentDate);
+                                int batchResponse = service.add(batchCommand);
+                                if (batchResponse > 0)
+                                    this.addLog(new Log()
+                                    {
+                                        type = "Add Stock",
+                                        statement = command.CommandText + ";" + batchCommand.CommandText,
+                                        description = "Added new Stock" + stock.name,
+                                        created_date = currentDate
+                                    });
+                                return batchResponse;
+                            }
+                        }
+                        else
+                        {
+                            return -1;
+                        }
+                    }
+                }
+                else
+                {
+                    return -404;
+                }
+            }
+            else
+            {
+                return -403;
+
+            }
+            return -1;
+        }
+
+
 
 
 
