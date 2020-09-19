@@ -9,6 +9,7 @@ namespace SmartSales_v1
         public Point mouseLocation;
         Hint h = new Hint();
         App app = new App();
+        SSAddService addService = new SSAddService();
 
         public AddCustomer()
         {
@@ -23,15 +24,18 @@ namespace SmartSales_v1
 
         private void addbutton_Click(object sender, EventArgs e)
         {
+            int credit_limit = 0;
+            if (creditlimitfield.Text != "Credit Limit")
+                credit_limit = int.Parse(creditlimitfield.Text);
+
             Customer customer = new Customer()
             {
                 name = customernamefield.Text,
                 address = addressfield.Text,
                 phone_number = phonenumberfield.Text,
                 altphone_number = altphonenumberfield.Text,
-                credit_limit = creditlimitfield.Text,
+                credit_limit = credit_limit,
                 customer_group = customergroupfield.Text,
-                created_date = DateTime.Now
             };
 
             if (customer.name == "Customer Name" || customer.name == "")
@@ -54,10 +58,6 @@ namespace SmartSales_v1
             {
                 app.notifyTo(statusLabel, "Alternate Phone Number required", "warning");
             }
-            else if (customer.credit_limit == "Credit Limit" || customer.credit_limit == "")
-            {
-                app.notifyTo(statusLabel, "Credit Limit required", "warning");
-            }
             else if (customer.customer_group == "Customer Group" || customer.customer_group == "")
             {
                 app.notifyTo(statusLabel, "Customer Group required", "warning");
@@ -65,13 +65,13 @@ namespace SmartSales_v1
             else
             {
 
-                if (customer.name != "" && customer.address != "" && customer.phone_number != "" && customer.altphone_number != "" && customer.credit_limit != "" && customer.customer_group != ""
+                if (customer.name != "" && customer.address != "" && customer.phone_number != "" && customer.altphone_number != "" && customer.customer_group != ""
                     && customer.name != "Customer Name" && customer.address != "Address" && customer.phone_number != "Phone Number"
-                    && customer.altphone_number != "Alternate Phone Number" && customer.credit_limit != "Credit Limit" && customer.customer_group != "Customer Group")
+                    && customer.altphone_number != "Alternate Phone Number" && customer.customer_group != "Customer Group")
                 {
 
-                    int response = 1; //addService.addLocation(location);
-                    if (response != -1)
+                    int response = addService.addCustomer(customer);
+                    if (response >0)
                     {
                         customernamefield.Text = "Customer Name";
                         addressfield.Text = "Address";
@@ -83,13 +83,13 @@ namespace SmartSales_v1
                     }
                     else
                     {
-                        app.notifyTo(statusLabel, "Unable to add this Customer", "success");
+                        app.notifyTo(statusLabel, "Unable to add the Customer", "error");
                     }
 
                 }
                 else
                 {
-                    app.notifyTo(statusLabel, "All fields are required", "warning");
+                    app.notifyTo(statusLabel, "All fields are required", "error");
                 }
             }
         }

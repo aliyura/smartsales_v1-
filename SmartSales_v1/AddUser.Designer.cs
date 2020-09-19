@@ -139,9 +139,7 @@
             this.namefield.Size = new System.Drawing.Size(264, 21);
             this.namefield.TabIndex = 1;
             this.namefield.Text = "Name";
-            this.namefield.MouseEnter += new System.EventHandler(this.namefield_MouseEnter);
-            this.namefield.MouseLeave += new System.EventHandler(this.namefield_MouseLeave);
-            // 
+             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -166,9 +164,7 @@
             this.mobilenumberfield.Size = new System.Drawing.Size(264, 21);
             this.mobilenumberfield.TabIndex = 1;
             this.mobilenumberfield.Text = "Mobile Number";
-            this.mobilenumberfield.MouseEnter += new System.EventHandler(this.mobilenumberfield_MouseEnter);
-            this.mobilenumberfield.MouseLeave += new System.EventHandler(this.mobilenumberfield_MouseLeave);
-            // 
+             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -194,9 +190,7 @@
             this.usernamefield.TabIndex = 1;
             this.usernamefield.Text = "Username";
             this.usernamefield.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.usernamefield.MouseEnter += new System.EventHandler(this.usernamefield_MouseEnter);
-            this.usernamefield.MouseLeave += new System.EventHandler(this.usernamefield_MouseLeave);
-            // 
+                // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -222,7 +216,6 @@
             this.passwordfield.TabIndex = 1;
             this.passwordfield.Text = "Password";
             this.passwordfield.UseSystemPasswordChar = true;
-            this.passwordfield.MouseEnter += new System.EventHandler(this.passwordfield_MouseEnter);
             // 
             // addbutton
             // 

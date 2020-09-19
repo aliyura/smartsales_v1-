@@ -15,29 +15,7 @@ namespace SmartSales_v1
         {
             InitializeComponent();
         }
-
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(locationName, 0, "Location Name");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(locationName, 1, "Location Name");
-        }
-
-        private void storetypredropdown_MouseEnter(object sender, EventArgs e)
-        {
-            locationType.Text = "";
-        }
-
-        private void storetypredropdown_MouseLeave(object sender, EventArgs e)
-        {
-            if (locationType.Text == "")
-            {
-                locationType.Text = "Location Type";
-            }
-        }
+      
 
         private void addbutton_Click(object sender, EventArgs e)
         {
@@ -62,21 +40,28 @@ namespace SmartSales_v1
                 {
 
                     int response = addService.addLocation(location);
-                    if (response != -1)
+                    if (response >0)
                     {
-                        locationName.Text = "";
-                        locationType.Text = "";
+                        locationName.Text = "Location Name";
+                        locationType.Text = "Location Type";
                         app.notifyTo(statusLabel, "Location Added Successfully", "success");
                     }
                     else
                     {
-                        app.notifyTo(statusLabel, "Success", "Unable to add this Location");
+                        if (response == -2)
+                        {
+                            app.notifyTo(statusLabel, "Location [" + location.name + "] already exist", "warning");
+                        }
+                        else
+                        {
+                            app.notifyTo(statusLabel, "Unable to add the location", "warning");
+                        }
                     }
 
                 }
                 else
                 {
-                    app.notifyTo(statusLabel, "All fields are required", "warning");
+                    app.notifyTo(statusLabel, "All fields are required", "error");
                 }
             }
 
@@ -100,6 +85,26 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void locationName_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(locationName, 1, "Location Name");
+        }
+
+        private void locationName_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(locationName, 0, "Location Name");
+        }
+
+        private void locationType_Enter(object sender, EventArgs e)
+        {
+            h.manageComboHint(locationType, 0, "Location Type");
+        }
+
+        private void locationType_Leave(object sender, EventArgs e)
+        {
+            h.manageComboHint(locationType, 0, "Location Type");
         }
     }
 }

@@ -160,7 +160,7 @@ namespace SmartSales_v1
             DateTime currentDate = DateTime.Now;
             try
             {
-                DataTable data = service.get("SELECT  top 1 * FROM ss_banks WHERE name='" + name + "' order by created_date desc");
+                DataTable data = service.get("SELECT  top 1 * FROM ss_banks WHERE name='" + name + "'");
                 if (data.Rows.Count > 0)
                 {
                     DataRow row = data.Rows[0];

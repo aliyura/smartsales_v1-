@@ -10,7 +10,7 @@ namespace SmartSales_v1
         App app = new App();
         SqlConnection connection;
         DateTime currentDate = DateTime.Now;//automate date setting
-        string connecionStrring = "Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False";
+        const string connecionStrring = "Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False";
 
 
         public SSService()

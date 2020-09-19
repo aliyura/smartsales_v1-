@@ -49,7 +49,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.addbutton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,8 +76,9 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(310, 37);
+            this.panel1.Size = new System.Drawing.Size(413, 46);
             this.panel1.TabIndex = 1;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -87,9 +87,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer";
             // 
@@ -100,10 +101,10 @@
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(239, 3);
-            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimizedbutton.Location = new System.Drawing.Point(317, 4);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minimizedbutton.Name = "minimizedbutton";
-            this.minimizedbutton.Size = new System.Drawing.Size(31, 28);
+            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
             this.minimizedbutton.TabIndex = 1;
             this.minimizedbutton.UseVisualStyleBackColor = true;
             this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
@@ -115,10 +116,10 @@
             this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedbutton.ImageIndex = 1;
             this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(276, 3);
-            this.closedbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closedbutton.Location = new System.Drawing.Point(368, 4);
+            this.closedbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closedbutton.Name = "closedbutton";
-            this.closedbutton.Size = new System.Drawing.Size(31, 28);
+            this.closedbutton.Size = new System.Drawing.Size(41, 34);
             this.closedbutton.TabIndex = 0;
             this.closedbutton.UseVisualStyleBackColor = true;
             this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
@@ -127,10 +128,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.customernamefield);
-            this.panel4.Location = new System.Drawing.Point(16, 80);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(21, 98);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(274, 38);
+            this.panel4.Size = new System.Drawing.Size(365, 47);
             this.panel4.TabIndex = 6;
             // 
             // customernamefield
@@ -141,10 +142,10 @@
             this.customernamefield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.customernamefield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customernamefield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customernamefield.Location = new System.Drawing.Point(22, 8);
-            this.customernamefield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customernamefield.Location = new System.Drawing.Point(29, 10);
+            this.customernamefield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customernamefield.Name = "customernamefield";
-            this.customernamefield.Size = new System.Drawing.Size(217, 21);
+            this.customernamefield.Size = new System.Drawing.Size(289, 27);
             this.customernamefield.TabIndex = 1;
             this.customernamefield.Text = "Customer Name";
             // 
@@ -152,10 +153,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.addressfield);
-            this.panel2.Location = new System.Drawing.Point(16, 143);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(21, 176);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 38);
+            this.panel2.Size = new System.Drawing.Size(365, 47);
             this.panel2.TabIndex = 7;
             // 
             // addressfield
@@ -166,10 +167,10 @@
             this.addressfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addressfield.Location = new System.Drawing.Point(22, 8);
-            this.addressfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addressfield.Location = new System.Drawing.Point(29, 10);
+            this.addressfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addressfield.Name = "addressfield";
-            this.addressfield.Size = new System.Drawing.Size(217, 21);
+            this.addressfield.Size = new System.Drawing.Size(289, 27);
             this.addressfield.TabIndex = 1;
             this.addressfield.Text = "Address";
             // 
@@ -177,10 +178,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.phonenumberfield);
-            this.panel3.Location = new System.Drawing.Point(16, 204);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(21, 251);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 38);
+            this.panel3.Size = new System.Drawing.Size(365, 47);
             this.panel3.TabIndex = 8;
             // 
             // phonenumberfield
@@ -191,11 +192,11 @@
             this.phonenumberfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phonenumberfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phonenumberfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.phonenumberfield.Location = new System.Drawing.Point(22, 8);
-            this.phonenumberfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phonenumberfield.Location = new System.Drawing.Point(29, 10);
+            this.phonenumberfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phonenumberfield.MaxLength = 11;
             this.phonenumberfield.Name = "phonenumberfield";
-            this.phonenumberfield.Size = new System.Drawing.Size(217, 21);
+            this.phonenumberfield.Size = new System.Drawing.Size(289, 27);
             this.phonenumberfield.TabIndex = 1;
             this.phonenumberfield.Text = "Phone Number";
             // 
@@ -203,10 +204,10 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.altphonenumberfield);
-            this.panel5.Location = new System.Drawing.Point(16, 267);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(21, 329);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(274, 38);
+            this.panel5.Size = new System.Drawing.Size(365, 47);
             this.panel5.TabIndex = 9;
             // 
             // altphonenumberfield
@@ -217,10 +218,10 @@
             this.altphonenumberfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.altphonenumberfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.altphonenumberfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.altphonenumberfield.Location = new System.Drawing.Point(22, 8);
-            this.altphonenumberfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.altphonenumberfield.Location = new System.Drawing.Point(29, 10);
+            this.altphonenumberfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.altphonenumberfield.Name = "altphonenumberfield";
-            this.altphonenumberfield.Size = new System.Drawing.Size(217, 21);
+            this.altphonenumberfield.Size = new System.Drawing.Size(289, 27);
             this.altphonenumberfield.TabIndex = 1;
             this.altphonenumberfield.Text = "Alternate Phone Number";
             // 
@@ -228,10 +229,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.creditlimitfield);
-            this.panel6.Location = new System.Drawing.Point(16, 330);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Location = new System.Drawing.Point(21, 406);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(274, 38);
+            this.panel6.Size = new System.Drawing.Size(365, 47);
             this.panel6.TabIndex = 10;
             // 
             // creditlimitfield
@@ -242,24 +243,25 @@
             this.creditlimitfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.creditlimitfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditlimitfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.creditlimitfield.Location = new System.Drawing.Point(22, 8);
-            this.creditlimitfield.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.creditlimitfield.Location = new System.Drawing.Point(29, 10);
+            this.creditlimitfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.creditlimitfield.Name = "creditlimitfield";
-            this.creditlimitfield.Size = new System.Drawing.Size(217, 21);
+            this.creditlimitfield.Size = new System.Drawing.Size(289, 27);
             this.creditlimitfield.TabIndex = 1;
             this.creditlimitfield.Text = "Credit Limit";
             // 
             // customergroupfield
             // 
-            this.customergroupfield.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.customergroupfield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customergroupfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customergroupfield.FormattingEnabled = true;
             this.customergroupfield.Items.AddRange(new object[] {
             "Regular",
             "Irregular"});
-            this.customergroupfield.Location = new System.Drawing.Point(38, 394);
+            this.customergroupfield.Location = new System.Drawing.Point(51, 485);
+            this.customergroupfield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customergroupfield.Name = "customergroupfield";
-            this.customergroupfield.Size = new System.Drawing.Size(215, 28);
+            this.customergroupfield.Size = new System.Drawing.Size(285, 33);
             this.customergroupfield.TabIndex = 12;
             this.customergroupfield.Text = "Customer Group";
             // 
@@ -267,18 +269,20 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.button4);
-            this.panel7.Location = new System.Drawing.Point(16, 389);
+            this.panel7.Location = new System.Drawing.Point(21, 479);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(274, 39);
+            this.panel7.Size = new System.Drawing.Size(365, 48);
             this.panel7.TabIndex = 13;
             // 
             // button4
             // 
             this.button4.ImageIndex = 2;
             this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(243, 5);
+            this.button4.Location = new System.Drawing.Point(324, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(28, 28);
+            this.button4.Size = new System.Drawing.Size(37, 34);
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -288,44 +292,30 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(168, 458);
-            this.addbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addbutton.Location = new System.Drawing.Point(21, 564);
+            this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
-            this.addbutton.Size = new System.Drawing.Size(122, 47);
+            this.addbutton.Size = new System.Drawing.Size(366, 58);
             this.addbutton.TabIndex = 14;
             this.addbutton.Text = "Add Customer";
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(16, 458);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 47);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Deactivate";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(19, 516);
+            this.statusLabel.Location = new System.Drawing.Point(25, 643);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 13);
+            this.statusLabel.Size = new System.Drawing.Size(0, 17);
             this.statusLabel.TabIndex = 16;
             // 
             // AddCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 536);
+            this.ClientSize = new System.Drawing.Size(413, 692);
             this.Controls.Add(this.statusLabel);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.customergroupfield);
             this.Controls.Add(this.panel6);
@@ -336,6 +326,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "add_customer";
@@ -378,7 +369,6 @@
         private System.Windows.Forms.ComboBox customergroupfield;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button addbutton;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label statusLabel;
     }

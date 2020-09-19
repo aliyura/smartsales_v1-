@@ -15,7 +15,6 @@ namespace SmartSales_v1
         public Point mouseLocation;
         Hint h = new Hint();
         App app = new App();
-
         SSAddService addService = new SSAddService();
 
         public AddBank()
@@ -23,21 +22,11 @@ namespace SmartSales_v1
             InitializeComponent();
         }
 
-        private void currentpricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(banknamefield, 0, "Bank Name");
-        }
-
-        private void currentpricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(banknamefield, 1, "Bank Name");
-        }
-
         private void addbutton_Click(object sender, EventArgs e)
         {
             Bank bank = new Bank()
             {
-                name = banknamefield.Text
+                name = bankNameField.Text
             };
 
             if (bank.name == "Bank Name" || bank.name == "")
@@ -52,16 +41,22 @@ namespace SmartSales_v1
                 {
 
                     int response = addService.addBank(bank);
-                    if (response != -1)
+                    if (response > 0)
                     {
-                        banknamefield.Text = "";
-
+                        bankNameField.Text = "Bank Name";
                         app.notifyTo(statusLabel, "Bank Added Successfully", "success");
                     }
-
                     else
                     {
-                        app.notifyTo(statusLabel, "Unable to add bank", "Warning");
+                        if (response == -2)
+                        {
+                            app.notifyTo(statusLabel, "Bank ["+bank.name+"] already exist", "warning");
+                        }
+                        else
+                        {
+                            app.notifyTo(statusLabel, "Unable to add bank", "warning");
+                        }
+                       
                     }
                 }
                 else
@@ -90,6 +85,16 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void banknamefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(bankNameField, 1, "Bank Name");
+        }
+
+        private void banknamefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(bankNameField, 0, "Bank Name");
         }
     }
   }

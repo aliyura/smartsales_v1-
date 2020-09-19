@@ -17,11 +17,6 @@ namespace SmartSales_v1
             InitializeComponent();
         }
 
-        private void loginIDField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -30,52 +25,6 @@ namespace SmartSales_v1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void productnamefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(productNameField, 1, "Product Name");
-        }
-        private void savebutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void productnamefield_MouseEnter(object sender, EventArgs e)
-        {
-
-            h.manageHint(productNameField, 0, "Product Name");
-        }
-
-        private void pricefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(productPriceField, 0, "Price");
-        }
-
-        private void pricefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(productPriceField, 1, "Price");//pricefile hint
-        }
-
-        private void reorderlevelfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(productReorderLevelField, 0, "Re-order level");
-        }
-
-        private void reorderlevelfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(productReorderLevelField, 1, "Re-order level");
-        }
-
-        private void costfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(productCostField, 0, "Cost");
-        }
-
-        private void costfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(productCostField, 1, "Cost");
         }
 
         private void addbutton_Click(object sender, EventArgs e)
@@ -126,7 +75,7 @@ namespace SmartSales_v1
                     {
 
                         int response = addService.addProduct(product);
-                        if (response != -1)
+                        if (response >0)
                         {
                             productNameField.Text = "Product Name";
                             productPriceField.Text = "Price";
@@ -138,7 +87,14 @@ namespace SmartSales_v1
 
                         else
                         {
-                            app.notifyTo(statusLabel1, "Warning", "Unable to add bank");
+                            if (response == -2)
+                            {
+                                app.notifyTo(statusLabel, "Product [" + product.name + "] already exist", "warning");
+                            }
+                            else
+                            {
+                                app.notifyTo(statusLabel, "Unable to add the product", "warning");
+                            }
                         }
 
                     }
@@ -150,14 +106,9 @@ namespace SmartSales_v1
             }
             catch(Exception ex)
             {
-                app.notifyTo(statusLabel1, ex.Message, "warning");
+                app.notifyTo(statusLabel1, ex.Message, "error");
               
             }
-        }
-
-        private void costfield_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void closedbutton_Click(object sender, EventArgs e)
@@ -178,6 +129,26 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void productBarCodeField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(productBarCodeField, 1, "Bar Code");
+        }
+
+        private void productBarCodeField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(productBarCodeField, 0, "Bar Code");
+        }
+
+        private void productNameField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(productBarCodeField, 0, "Product Name");
+        }
+
+        private void productNameField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(productBarCodeField, 0, "Product Name");
         }
     }
 

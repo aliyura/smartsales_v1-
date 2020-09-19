@@ -21,42 +21,6 @@ namespace SmartSales_v1
         {
             passwordfield.Text = usernamefield.Text + "123"; // auto generate password
         }
-
-        private void namefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(namefield, 0, "");
-        }
-
-        private void namefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(namefield, 1, "name");
-        }
-
-        private void mobilenumberfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(mobilenumberfield, 0, "");
-        }
-
-        private void mobilenumberfield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(mobilenumberfield, 1, "Mobile Number");
-        }
-
-        private void usernamefield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(usernamefield, 0, "");
-        }
-
-        private void usernamefield_MouseLeave(object sender, EventArgs e)
-        {
-            h.manageHint(usernamefield, 1, "username");
-        }
-
-        private void passwordfield_MouseEnter(object sender, EventArgs e)
-        {
-            h.manageHint(passwordfield, 0, "");
-        }
-
         private void addbutton_Click(object sender, EventArgs e)
         {
             User user = new User()
@@ -92,7 +56,7 @@ namespace SmartSales_v1
                 {
 
                     int response = addService.addUser(user);
-                    if (response != -1)
+                    if (response >0)
                     {
                         namefield.Text = "Name";
                         mobilenumberfield.Text = "Mobile Number";
@@ -103,7 +67,14 @@ namespace SmartSales_v1
                     }
                     else
                     {
-                        app.notifyTo(statusLabel, "Success", "Unable to create this User");
+                        if (response == -2)
+                        {
+                            app.notifyTo(statusLabel, "User [" + user.username + "] already exist", "warning");
+                        }
+                        else
+                        {
+                            app.notifyTo(statusLabel, "Unable to add the user", "warning");
+                        }
                     }
 
                 }

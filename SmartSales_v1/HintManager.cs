@@ -29,6 +29,26 @@ namespace SmartSales_v1
             }
 
         }
-     
+        public void manageComboHint(ComboBox comboBox, int eventType, string defaultText)
+        {
+            string text = comboBox.Text;
+
+            if (eventType == 0)
+            {
+                if (text == "")
+                {
+                    comboBox.Text = defaultText;
+                }
+            }
+            else
+            {
+                if (text == defaultText)
+                {
+                    comboBox.Text = "";
+                }
+            }
+
+        }
+
     }
        }

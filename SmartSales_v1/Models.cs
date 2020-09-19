@@ -4,6 +4,18 @@ using System;
 
 namespace SmartSales_v1
 {
+
+
+    class Log
+    {
+        public int id { get; set; }
+        public string description { get; set; }
+        public string statement { get; set; }
+        public string type { get; set; }
+        public DateTime created_date { get; set; }
+
+    }
+
     class User
     {
         public int id { get; set; }
@@ -59,7 +71,7 @@ namespace SmartSales_v1
         public string address { get; set; }
         public string phone_number { get; set; }
         public string altphone_number { get; set; }
-        public string credit_limit { get; set; }
+        public int credit_limit { get; set; }
         public string customer_group { get; set; }
         public DateTime created_date { get; set; }
     }
