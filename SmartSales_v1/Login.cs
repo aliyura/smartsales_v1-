@@ -77,5 +77,16 @@ namespace SmartSales_v1
                 Location = mousePose;
             }
         }
+
+        private void closedbutton_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+        }
+
+        private void minimizedbutton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

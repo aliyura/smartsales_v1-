@@ -13,20 +13,14 @@ namespace SmartSales_v1
     public partial class Dashboard : Form
     {
         public Point mouseLocation;
+        App app = new App();
+        int isOpen = 0;
+
         public Dashboard()
         {
             InitializeComponent();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -36,6 +30,44 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            settingDrawer.Hide();
+            isOpen = 0;
+            Application.Exit();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            settingDrawer.Hide();
+            isOpen = 0;
+            app.redirect(this, new LoginForm());
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
+            if (isOpen==0) {
+                settingDrawer.Show();
+                isOpen = 1;
+            }
+            else
+            {
+                settingDrawer.Hide();
+                isOpen = 0;
+            }
+        }
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            settingDrawer.Hide();
+            isOpen = 0;
+        }
+
+        private void manageproductbutton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

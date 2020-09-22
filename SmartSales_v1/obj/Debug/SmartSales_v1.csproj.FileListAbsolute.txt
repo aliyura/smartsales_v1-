@@ -112,3 +112,5 @@ C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBatches.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
