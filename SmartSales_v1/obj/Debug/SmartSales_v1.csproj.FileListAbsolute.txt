@@ -103,3 +103,12 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.location.resource
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
 >>>>>>> 6a97ea301af3100a48c99ffcd033f589494d74ba
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listbanks.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listcustomer.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listproduct.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listuser.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.location.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBatches.resources
+C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources

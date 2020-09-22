@@ -1,6 +1,6 @@
 ﻿namespace SmartSales_v1
 {
-    partial class listcustomer
+    partial class ListProducts
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listcustomer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListProducts));
             this.panel1 = new System.Windows.Forms.Panel();
             this.closedbutton = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.minimizedbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.customerfield = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.productnamesearchfield = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -55,8 +55,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 37);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(640, 37);
+            this.panel1.TabIndex = 4;
             // 
             // closedbutton
             // 
@@ -65,7 +65,7 @@
             this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedbutton.ImageIndex = 1;
             this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(589, 3);
+            this.closedbutton.Location = new System.Drawing.Point(592, 3);
             this.closedbutton.Name = "closedbutton";
             this.closedbutton.Size = new System.Drawing.Size(41, 34);
             this.closedbutton.TabIndex = 3;
@@ -88,9 +88,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 16);
+            this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Customers List";
+            this.label1.Text = "List product";
             // 
             // minimizedbutton
             // 
@@ -99,7 +99,7 @@
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(532, 3);
+            this.minimizedbutton.Location = new System.Drawing.Point(537, 3);
             this.minimizedbutton.Name = "minimizedbutton";
             this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
             this.minimizedbutton.TabIndex = 1;
@@ -110,37 +110,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 96);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(642, 251);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel12.Controls.Add(this.customerfield);
-            this.panel12.Location = new System.Drawing.Point(249, 56);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(264, 31);
-            this.panel12.TabIndex = 40;
-            // 
-            // customerfield
-            // 
-            this.customerfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.customerfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.customerfield.BackColor = System.Drawing.Color.White;
-            this.customerfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customerfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customerfield.Location = new System.Drawing.Point(13, 2);
-            this.customerfield.Margin = new System.Windows.Forms.Padding(2);
-            this.customerfield.Multiline = true;
-            this.customerfield.Name = "customerfield";
-            this.customerfield.Size = new System.Drawing.Size(230, 27);
-            this.customerfield.TabIndex = 14;
-            this.customerfield.Text = "Customer Name";
-            this.customerfield.Enter += new System.EventHandler(this.customerfield_Enter);
-            this.customerfield.Leave += new System.EventHandler(this.customerfield_Leave);
+            this.dataGridView1.Size = new System.Drawing.Size(640, 306);
+            this.dataGridView1.TabIndex = 8;
             // 
             // addbutton
             // 
@@ -148,28 +121,55 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(518, 56);
+            this.addbutton.Location = new System.Drawing.Point(518, 60);
             this.addbutton.Margin = new System.Windows.Forms.Padding(2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(122, 31);
-            this.addbutton.TabIndex = 41;
+            this.addbutton.TabIndex = 43;
             this.addbutton.Text = "Search";
             this.addbutton.UseVisualStyleBackColor = false;
             // 
-            // listcustomer
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel12.Controls.Add(this.productnamesearchfield);
+            this.panel12.Location = new System.Drawing.Point(249, 60);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(264, 31);
+            this.panel12.TabIndex = 42;
+            // 
+            // productnamesearchfield
+            // 
+            this.productnamesearchfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productnamesearchfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.productnamesearchfield.BackColor = System.Drawing.Color.White;
+            this.productnamesearchfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnamesearchfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productnamesearchfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productnamesearchfield.Location = new System.Drawing.Point(19, 2);
+            this.productnamesearchfield.Margin = new System.Windows.Forms.Padding(2);
+            this.productnamesearchfield.Multiline = true;
+            this.productnamesearchfield.Name = "productnamesearchfield";
+            this.productnamesearchfield.Size = new System.Drawing.Size(230, 27);
+            this.productnamesearchfield.TabIndex = 14;
+            this.productnamesearchfield.Text = "Product Name";
+            this.productnamesearchfield.Enter += new System.EventHandler(this.productnamesearchfield_Enter);
+            this.productnamesearchfield.Leave += new System.EventHandler(this.productnamesearchfield_Leave);
+            // 
+            // listproduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 343);
+            this.ClientSize = new System.Drawing.Size(640, 402);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "listcustomer";
+            this.Name = "listproduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "listcustomer";
-            this.Load += new System.EventHandler(this.listcustomer_Load);
+            this.Text = "listproduct";
+            this.Load += new System.EventHandler(this.listproduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -187,8 +187,8 @@
         private System.Windows.Forms.Button minimizedbutton;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox customerfield;
         private System.Windows.Forms.Button addbutton;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox productnamesearchfield;
     }
 }

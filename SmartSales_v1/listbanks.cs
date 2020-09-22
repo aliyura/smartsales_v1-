@@ -10,14 +10,12 @@ using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
-    public partial class listbanks : Form
+    public partial class ListBanks : Form
     {
         SSGetService service = new SSGetService();
-        public listbanks()
+        public ListBanks()
         {
             InitializeComponent();
-            LoginForm login = new LoginForm();
-            login.Show();
         }
 
         private void closedbutton_Click(object sender, EventArgs e)
@@ -30,12 +28,5 @@ namespace SmartSales_v1
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void listbanks_Load(object sender, EventArgs e)
-        {
-            for (j = 1; j <= service.getDataFrom(""); j++)
-            {
-
-            }
-        }
     }
 }

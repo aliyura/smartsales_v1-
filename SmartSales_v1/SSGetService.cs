@@ -19,7 +19,35 @@ namespace SmartSales_v1
             DataTable data = new DataTable();
             try
             {
-                data = service.get("SELECT * FROM "+ table + " WHERE 1=1 order by created_date desc");
+                data = service.get("SELECT * FROM "+ table + " WHERE 1=1 order by id asc");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return data;
+            }
+        }
+        public DataTable searchDataFrom(string table, string q)
+        {
+            DataTable data = new DataTable();
+            string criteria = "1=1";
+
+            if (table == app.objects["users"])
+                criteria = "name like '%" + q + "%' or username like '%" + q + "%' or mobile_number like '%" + q + "%' ";
+            else if(table == app.objects["banks"])
+                criteria = "name like '%" + q + "%'";
+            else if (table == app.objects["locations"])
+                criteria = "name like '%" + q + "%' or type like '%" + q + "%'";
+            else if (table == app.objects["products"])
+                criteria = "name like '%" + q + "%' or price like '%" + q + "%' or cost like '%" + q + "%' ";
+            else if (table == app.objects["customers"])
+                criteria = "name like '%" + q + "%' or address like '%" + q + "%' or phone_number like '%" + q + "%' or credit_limit like '%" + q + "%' or customer_group like '%" + q + "%'";
+
+
+            try
+            {
+                data = service.get("SELECT * FROM " + table + " WHERE "+ criteria + " order by id asc");
                 return data;
             }
             catch (Exception ex)

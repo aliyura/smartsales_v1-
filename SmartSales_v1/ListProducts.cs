@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SmartSales_v1
 {
-    public partial class listproduct : Form
+    public partial class ListProducts : Form
     {
         Hint h = new Hint();
         SSGetService service = new SSGetService();
-        public listproduct()
+        public ListProducts()
         {
             InitializeComponent();
         }

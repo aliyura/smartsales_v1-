@@ -77,35 +77,35 @@
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
-    <Compile Include="listbanks.cs">
+    <Compile Include="ListBatches.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listbanks.Designer.cs">
-      <DependentUpon>listbanks.cs</DependentUpon>
+    <Compile Include="ListBatches.Designer.cs">
+      <DependentUpon>ListBatches.cs</DependentUpon>
     </Compile>
-    <Compile Include="listcustomer.cs">
+    <Compile Include="ListCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listcustomer.Designer.cs">
-      <DependentUpon>listcustomer.cs</DependentUpon>
+    <Compile Include="ListCustomers.Designer.cs">
+      <DependentUpon>ListCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="listproduct.cs">
+    <Compile Include="ListBanks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listproduct.Designer.cs">
-      <DependentUpon>listproduct.cs</DependentUpon>
+    <Compile Include="ListBanks.Designer.cs">
+      <DependentUpon>ListBanks.cs</DependentUpon>
     </Compile>
-    <Compile Include="listuser.cs">
+    <Compile Include="ListProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listuser.Designer.cs">
-      <DependentUpon>listuser.cs</DependentUpon>
+    <Compile Include="ListProducts.Designer.cs">
+      <DependentUpon>ListProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="location.cs">
+    <Compile Include="ListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="location.Designer.cs">
-      <DependentUpon>location.cs</DependentUpon>
+    <Compile Include="ListUsers.Designer.cs">
+      <DependentUpon>ListUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="SSGetService.cs" />
     <Compile Include="HintManager.cs" />
@@ -172,20 +172,20 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listbanks.resx">
-      <DependentUpon>listbanks.cs</DependentUpon>
+    <EmbeddedResource Include="ListBanks.resx">
+      <DependentUpon>ListBanks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listcustomer.resx">
-      <DependentUpon>listcustomer.cs</DependentUpon>
+    <EmbeddedResource Include="ListBatches.resx">
+      <DependentUpon>ListBatches.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listproduct.resx">
-      <DependentUpon>listproduct.cs</DependentUpon>
+    <EmbeddedResource Include="ListCustomers.resx">
+      <DependentUpon>ListCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listuser.resx">
-      <DependentUpon>listuser.cs</DependentUpon>
+    <EmbeddedResource Include="ListProducts.resx">
+      <DependentUpon>ListProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="location.resx">
-      <DependentUpon>location.cs</DependentUpon>
+    <EmbeddedResource Include="ListUsers.resx">
+      <DependentUpon>ListUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
