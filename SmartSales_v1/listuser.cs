@@ -37,5 +37,10 @@ namespace SmartSales_v1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void listuser_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

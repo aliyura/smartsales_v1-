@@ -208,6 +208,7 @@
             this.Name = "listbanks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listbanks";
+            this.Load += new System.EventHandler(this.listbanks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

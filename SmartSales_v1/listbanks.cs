@@ -12,6 +12,7 @@ namespace SmartSales_v1
 {
     public partial class listbanks : Form
     {
+        SSGetService service = new SSGetService();
         public listbanks()
         {
             InitializeComponent();
@@ -27,6 +28,14 @@ namespace SmartSales_v1
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void listbanks_Load(object sender, EventArgs e)
+        {
+            for (j = 1; j <= service.getDataFrom(""); j++)
+            {
+
+            }
         }
     }
 }

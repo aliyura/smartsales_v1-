@@ -13,6 +13,7 @@ namespace SmartSales_v1
     public partial class listproduct : Form
     {
         Hint h = new Hint();
+        SSGetService service = new SSGetService();
         public listproduct()
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace SmartSales_v1
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void listproduct_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.getDataFrom("");
         }
     }
 }

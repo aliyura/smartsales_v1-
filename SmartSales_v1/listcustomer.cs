@@ -12,6 +12,7 @@ namespace SmartSales_v1
 {
     public partial class listcustomer : Form
     {
+        SSGetService service = new SSGetService();
         Hint h = new Hint();
         public listcustomer()
         {
@@ -35,6 +36,11 @@ namespace SmartSales_v1
         private void minimizedbutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void listcustomer_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.getDataFrom("");
         }
     }
 }

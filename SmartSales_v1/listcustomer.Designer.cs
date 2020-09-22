@@ -169,6 +169,7 @@
             this.Name = "listcustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listcustomer";
+            this.Load += new System.EventHandler(this.listcustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
