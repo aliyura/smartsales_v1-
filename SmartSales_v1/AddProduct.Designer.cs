@@ -35,13 +35,11 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.minimizedbutton = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.customerPanel = new System.Windows.Forms.Panel();
             this.productNameField = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.productPriceField = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.productCostField = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.productReorderLevelField = new System.Windows.Forms.TextBox();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -49,9 +47,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.productBarCodeField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.customerPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +62,9 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 46);
+            this.panel1.Size = new System.Drawing.Size(437, 46);
             this.panel1.TabIndex = 3;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -78,8 +75,8 @@
             this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedbutton.ImageIndex = 1;
             this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(413, 1);
-            this.closedbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closedbutton.Location = new System.Drawing.Point(373, 1);
+            this.closedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.closedbutton.Name = "closedbutton";
             this.closedbutton.Size = new System.Drawing.Size(55, 42);
             this.closedbutton.TabIndex = 3;
@@ -112,23 +109,23 @@
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(340, 1);
-            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minimizedbutton.Location = new System.Drawing.Point(300, 1);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizedbutton.Name = "minimizedbutton";
             this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
             this.minimizedbutton.TabIndex = 1;
             this.minimizedbutton.UseVisualStyleBackColor = true;
             this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
-            // panel4
+            // customerPanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.productNameField);
-            this.panel4.Location = new System.Drawing.Point(45, 158);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(384, 58);
-            this.panel4.TabIndex = 12;
+            this.customerPanel.BackColor = System.Drawing.Color.White;
+            this.customerPanel.Controls.Add(this.productNameField);
+            this.customerPanel.Location = new System.Drawing.Point(22, 158);
+            this.customerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerPanel.Name = "customerPanel";
+            this.customerPanel.Size = new System.Drawing.Size(384, 58);
+            this.customerPanel.TabIndex = 12;
             // 
             // productNameField
             // 
@@ -151,7 +148,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.productPriceField);
-            this.panel3.Location = new System.Drawing.Point(45, 233);
+            this.panel3.Location = new System.Drawing.Point(22, 233);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(387, 58);
@@ -163,7 +160,7 @@
             this.productPriceField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productPriceField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productPriceField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productPriceField.Location = new System.Drawing.Point(46, 14);
+            this.productPriceField.Location = new System.Drawing.Point(45, 15);
             this.productPriceField.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.productPriceField.Name = "productPriceField";
             this.productPriceField.Size = new System.Drawing.Size(311, 27);
@@ -178,7 +175,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(45, 476);
+            this.addbutton.Location = new System.Drawing.Point(22, 388);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(387, 58);
@@ -187,36 +184,11 @@
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.productCostField);
-            this.panel2.Location = new System.Drawing.Point(45, 385);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 58);
-            this.panel2.TabIndex = 8;
-            // 
-            // productCostField
-            // 
-            this.productCostField.BackColor = System.Drawing.Color.White;
-            this.productCostField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productCostField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productCostField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productCostField.Location = new System.Drawing.Point(46, 13);
-            this.productCostField.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.productCostField.Name = "productCostField";
-            this.productCostField.Size = new System.Drawing.Size(315, 27);
-            this.productCostField.TabIndex = 1;
-            this.productCostField.Text = "Cost";
-            this.productCostField.Enter += new System.EventHandler(this.productCostField_Enter);
-            this.productCostField.Leave += new System.EventHandler(this.productCostField_Leave);
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.productReorderLevelField);
-            this.panel5.Location = new System.Drawing.Point(45, 306);
+            this.panel5.Location = new System.Drawing.Point(22, 306);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(387, 58);
@@ -228,13 +200,14 @@
             this.productReorderLevelField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productReorderLevelField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productReorderLevelField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productReorderLevelField.Location = new System.Drawing.Point(46, 14);
+            this.productReorderLevelField.Location = new System.Drawing.Point(45, 14);
             this.productReorderLevelField.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.productReorderLevelField.Name = "productReorderLevelField";
             this.productReorderLevelField.Size = new System.Drawing.Size(301, 27);
             this.productReorderLevelField.TabIndex = 1;
             this.productReorderLevelField.Text = "Re-order Level";
             this.productReorderLevelField.Enter += new System.EventHandler(this.productReorderLevelField_Enter);
+            this.productReorderLevelField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productReorderLevelField_KeyDown);
             this.productReorderLevelField.Leave += new System.EventHandler(this.productReorderLevelField_Leave);
             // 
             // statusLabel
@@ -250,7 +223,7 @@
             // statusLabel1
             // 
             this.statusLabel1.AutoSize = true;
-            this.statusLabel1.Location = new System.Drawing.Point(52, 559);
+            this.statusLabel1.Location = new System.Drawing.Point(24, 464);
             this.statusLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel1.Name = "statusLabel1";
             this.statusLabel1.Size = new System.Drawing.Size(0, 17);
@@ -260,10 +233,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.productBarCodeField);
-            this.panel6.Location = new System.Drawing.Point(45, 82);
+            this.panel6.Location = new System.Drawing.Point(22, 82);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(246, 53);
+            this.panel6.Size = new System.Drawing.Size(245, 53);
             this.panel6.TabIndex = 38;
             // 
             // productBarCodeField
@@ -274,7 +247,7 @@
             this.productBarCodeField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productBarCodeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productBarCodeField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productBarCodeField.Location = new System.Drawing.Point(45, 13);
+            this.productBarCodeField.Location = new System.Drawing.Point(45, 14);
             this.productBarCodeField.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.productBarCodeField.Name = "productBarCodeField";
             this.productBarCodeField.Size = new System.Drawing.Size(175, 27);
@@ -287,27 +260,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 606);
+            this.ClientSize = new System.Drawing.Size(437, 495);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.statusLabel1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.customerPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddProduct";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterProduct";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.customerPanel.ResumeLayout(false);
+            this.customerPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -324,13 +298,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimizedbutton;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel customerPanel;
         private System.Windows.Forms.TextBox productNameField;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox productPriceField;
         private System.Windows.Forms.Button addbutton;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox productCostField;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox productReorderLevelField;
         private System.Windows.Forms.Label statusLabel;

@@ -32,29 +32,22 @@ namespace SmartSales_v1
 
             try
             {
-                int price, cost, reorder_level;
-                price = cost = reorder_level = 0;
+                int price, reorder_level;
+                price = reorder_level = 0;
 
 
                 if (productPriceField.Text != "Price")
                     price = int.Parse(productPriceField.Text);
-                if (productCostField.Text != "Cost")
-                    cost = int.Parse(productCostField.Text);
                 if (productReorderLevelField.Text != "Re-order Level")
                     reorder_level = int.Parse(productReorderLevelField.Text);
-
-
-
 
                 Product product = new Product()
                 {
                     name = productNameField.Text,
                     price = price,
                     reorder_level = reorder_level,
-                    cost = cost,
                     barqr_code = productBarCodeField.Text,
                 };
-
 
                 if (product.name == "Product Name" || product.name == "")
                 {
@@ -64,36 +57,32 @@ namespace SmartSales_v1
                 {
                     app.notifyTo(statusLabel1, "Product price required", "warning");
                 }
-                else if (productCostField.Text == "Cost" || productCostField.Text == "")
-                {
-                    app.notifyTo(statusLabel1, "Product cost required", "warning");
-                }
                 else
                 {
 
-                    if (product.name != "" && productPriceField.Text != "" && productCostField.Text != "" && product.name != "Product Name" && productPriceField.Text != "Price" && productCostField.Text != "Cost")
+                    if (product.name != "" && productPriceField.Text != "" && product.name != "Product Name" && productPriceField.Text != "Price")
                     {
 
+                        addbutton.Enabled = false;
                         int response = addService.addProduct(product);
+                        addbutton.Enabled = true;
                         if (response >0)
                         {
                             productNameField.Text = "Product Name";
                             productPriceField.Text = "Price";
-                            productCostField.Text = "Cost";
                             productReorderLevelField.Text = "Re-order Level";
                             productBarCodeField.Text = "Bar Code";
                             app.notifyTo(statusLabel1, "Product Added Successfully", "success");
                         }
-
                         else
                         {
                             if (response == -2)
                             {
-                                app.notifyTo(statusLabel, "Product [" + product.name + "] already exist", "warning");
+                                app.notifyTo(statusLabel1, "Product with name " + product.name +" already exist", "warning");
                             }
                             else
                             {
-                                app.notifyTo(statusLabel, "Unable to add the product", "warning");
+                                app.notifyTo(statusLabel1, "Unable to add the product", "warning");
                             }
                         }
 
@@ -143,12 +132,12 @@ namespace SmartSales_v1
 
         private void productNameField_Enter(object sender, EventArgs e)
         {
-            h.manageHint(productBarCodeField, 0, "Product Name");
+            h.manageHint(productNameField, 1, "Product Name");
         }
 
         private void productNameField_Leave(object sender, EventArgs e)
         {
-            h.manageHint(productBarCodeField, 0, "Product Name");
+            h.manageHint(productNameField, 0, "Product Name");
         }
 
         private void productPriceField_Enter(object sender, EventArgs e)
@@ -158,27 +147,23 @@ namespace SmartSales_v1
 
         private void productPriceField_Leave(object sender, EventArgs e)
         {
-            h.manageHint(productPriceField, 0, "Password");
+            h.manageHint(productPriceField, 0, "Price");
         }
 
         private void productReorderLevelField_Enter(object sender, EventArgs e)
         {
-            h.manageHint(productPriceField, 1, "Re-order Level");
+            h.manageHint(productReorderLevelField, 1, "Re-order Level");
         }
 
         private void productReorderLevelField_Leave(object sender, EventArgs e)
         {
-            h.manageHint(productPriceField, 0, "Re-order Level");
+            h.manageHint(productReorderLevelField, 0, "Re-order Level");
         }
 
-        private void productCostField_Enter(object sender, EventArgs e)
+        private void productReorderLevelField_KeyDown(object sender, KeyEventArgs e)
         {
-            h.manageHint(productPriceField, 1, "Cost");
-        }
-
-        private void productCostField_Leave(object sender, EventArgs e)
-        {
-            h.manageHint(productPriceField, 0, "Cost");
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
         }
     }
 

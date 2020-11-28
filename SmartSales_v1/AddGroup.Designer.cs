@@ -34,11 +34,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupNameField = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.closedbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.minimizedbutton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
             this.addbutton = new System.Windows.Forms.Button();
-            this.closedbutton = new System.Windows.Forms.Button();
-            this.minimizedbutton = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.groupNameField);
-            this.panel4.Location = new System.Drawing.Point(21, 94);
+            this.panel4.Location = new System.Drawing.Point(21, 68);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(401, 47);
@@ -68,13 +68,14 @@
             this.groupNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.groupNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupNameField.Location = new System.Drawing.Point(35, 11);
+            this.groupNameField.Location = new System.Drawing.Point(35, 8);
             this.groupNameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupNameField.Name = "groupNameField";
             this.groupNameField.Size = new System.Drawing.Size(320, 27);
             this.groupNameField.TabIndex = 1;
             this.groupNameField.Text = "Customer Group";
             this.groupNameField.Enter += new System.EventHandler(this.groupNameField_Enter);
+            this.groupNameField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.groupNameField_KeyDown);
             this.groupNameField.Leave += new System.EventHandler(this.groupNameField_Leave);
             // 
             // panel1
@@ -87,8 +88,24 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 46);
+            this.panel1.Size = new System.Drawing.Size(632, 46);
             this.panel1.TabIndex = 19;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // closedbutton
+            // 
+            this.closedbutton.FlatAppearance.BorderSize = 0;
+            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedbutton.ImageIndex = 1;
+            this.closedbutton.ImageList = this.imageList1;
+            this.closedbutton.Location = new System.Drawing.Point(564, 0);
+            this.closedbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.closedbutton.Name = "closedbutton";
+            this.closedbutton.Size = new System.Drawing.Size(55, 42);
+            this.closedbutton.TabIndex = 3;
+            this.closedbutton.UseVisualStyleBackColor = true;
+            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
             // 
             // label1
             // 
@@ -102,10 +119,25 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Add New Customer Group";
             // 
+            // minimizedbutton
+            // 
+            this.minimizedbutton.FlatAppearance.BorderSize = 0;
+            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizedbutton.ImageIndex = 0;
+            this.minimizedbutton.ImageList = this.imageList1;
+            this.minimizedbutton.Location = new System.Drawing.Point(482, 0);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.minimizedbutton.Name = "minimizedbutton";
+            this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
+            this.minimizedbutton.TabIndex = 1;
+            this.minimizedbutton.UseVisualStyleBackColor = true;
+            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
+            // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(29, 163);
+            this.statusLabel.Location = new System.Drawing.Point(25, 132);
             this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 17);
@@ -117,7 +149,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(437, 94);
+            this.addbutton.Location = new System.Drawing.Point(437, 68);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(171, 47);
@@ -126,48 +158,23 @@
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
-            // closedbutton
-            // 
-            this.closedbutton.FlatAppearance.BorderSize = 0;
-            this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closedbutton.ImageIndex = 1;
-            this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(555, 4);
-            this.closedbutton.Margin = new System.Windows.Forms.Padding(4);
-            this.closedbutton.Name = "closedbutton";
-            this.closedbutton.Size = new System.Drawing.Size(55, 42);
-            this.closedbutton.TabIndex = 3;
-            this.closedbutton.UseVisualStyleBackColor = true;
-            this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
-            // 
-            // minimizedbutton
-            // 
-            this.minimizedbutton.FlatAppearance.BorderSize = 0;
-            this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizedbutton.ImageIndex = 0;
-            this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(473, 4);
-            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
-            this.minimizedbutton.Name = "minimizedbutton";
-            this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
-            this.minimizedbutton.TabIndex = 1;
-            this.minimizedbutton.UseVisualStyleBackColor = true;
-            this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
-            // 
             // AddGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 220);
+            this.ClientSize = new System.Drawing.Size(632, 164);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.addbutton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddGroup";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddGroup";
+            this.TopMost = true;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);

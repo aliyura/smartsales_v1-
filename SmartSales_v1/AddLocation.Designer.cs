@@ -114,7 +114,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.locationName);
-            this.panel4.Location = new System.Drawing.Point(37, 111);
+            this.panel4.Location = new System.Drawing.Point(37, 72);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(401, 47);
@@ -135,13 +135,14 @@
             this.locationName.TabIndex = 1;
             this.locationName.Text = "Location Name";
             this.locationName.Enter += new System.EventHandler(this.locationName_Enter);
+            this.locationName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.locationName_KeyDown);
             this.locationName.Leave += new System.EventHandler(this.locationName_Leave);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.locationType);
-            this.panel2.Location = new System.Drawing.Point(37, 178);
+            this.panel2.Location = new System.Drawing.Point(37, 139);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(401, 47);
@@ -163,6 +164,7 @@
             this.locationType.TabIndex = 11;
             this.locationType.Text = "Location Type";
             this.locationType.Enter += new System.EventHandler(this.locationType_Enter);
+            this.locationType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.locationType_KeyDown);
             this.locationType.Leave += new System.EventHandler(this.locationType_Leave);
             // 
             // addbutton
@@ -171,7 +173,7 @@
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbutton.ForeColor = System.Drawing.Color.White;
-            this.addbutton.Location = new System.Drawing.Point(37, 286);
+            this.addbutton.Location = new System.Drawing.Point(37, 228);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(401, 58);
@@ -183,7 +185,7 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(37, 361);
+            this.statusLabel.Location = new System.Drawing.Point(37, 319);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 17);
             this.statusLabel.TabIndex = 16;
@@ -192,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 399);
+            this.ClientSize = new System.Drawing.Size(476, 358);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel2);
@@ -201,7 +203,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddLocation";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStore";
+            this.TopMost = true;
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddLocation_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

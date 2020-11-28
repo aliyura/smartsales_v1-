@@ -37,11 +37,11 @@
             this.minimizedbutton = new System.Windows.Forms.Button();
             this.usersGridView = new System.Windows.Forms.DataGridView();
             this.searchButton = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.userPanel = new System.Windows.Forms.Panel();
             this.usersSearchTextField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).BeginInit();
-            this.panel12.SuspendLayout();
+            this.userPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,17 +55,19 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1133, 46);
+            this.panel1.Size = new System.Drawing.Size(1136, 46);
             this.panel1.TabIndex = 7;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // closedbutton
             // 
+            this.closedbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closedbutton.FlatAppearance.BorderSize = 0;
             this.closedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedbutton.ImageIndex = 1;
             this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(1073, 2);
+            this.closedbutton.Location = new System.Drawing.Point(1077, 2);
             this.closedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.closedbutton.Name = "closedbutton";
             this.closedbutton.Size = new System.Drawing.Size(55, 42);
@@ -90,18 +92,19 @@
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Users List";
+            this.label1.Text = "Users";
             // 
             // minimizedbutton
             // 
+            this.minimizedbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizedbutton.FlatAppearance.BorderSize = 0;
             this.minimizedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(997, 2);
+            this.minimizedbutton.Location = new System.Drawing.Point(1001, 4);
             this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizedbutton.Name = "minimizedbutton";
             this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
@@ -114,11 +117,11 @@
             this.usersGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.usersGridView.Location = new System.Drawing.Point(0, 123);
+            this.usersGridView.Location = new System.Drawing.Point(0, 130);
             this.usersGridView.Margin = new System.Windows.Forms.Padding(4);
             this.usersGridView.Name = "usersGridView";
             this.usersGridView.RowHeadersWidth = 51;
-            this.usersGridView.Size = new System.Drawing.Size(1133, 431);
+            this.usersGridView.Size = new System.Drawing.Size(1136, 448);
             this.usersGridView.TabIndex = 9;
             // 
             // searchButton
@@ -127,24 +130,24 @@
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(970, 70);
+            this.searchButton.Location = new System.Drawing.Point(970, 66);
             this.searchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(163, 40);
+            this.searchButton.Size = new System.Drawing.Size(163, 39);
             this.searchButton.TabIndex = 45;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // panel12
+            // userPanel
             // 
-            this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel12.Controls.Add(this.usersSearchTextField);
-            this.panel12.Location = new System.Drawing.Point(611, 72);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(352, 38);
-            this.panel12.TabIndex = 44;
+            this.userPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userPanel.Controls.Add(this.usersSearchTextField);
+            this.userPanel.Location = new System.Drawing.Point(610, 67);
+            this.userPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.userPanel.Name = "userPanel";
+            this.userPanel.Size = new System.Drawing.Size(352, 38);
+            this.userPanel.TabIndex = 44;
             // 
             // usersSearchTextField
             // 
@@ -152,15 +155,14 @@
             this.usersSearchTextField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.usersSearchTextField.BackColor = System.Drawing.Color.White;
             this.usersSearchTextField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usersSearchTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersSearchTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersSearchTextField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.usersSearchTextField.Location = new System.Drawing.Point(27, 3);
+            this.usersSearchTextField.Location = new System.Drawing.Point(27, 7);
             this.usersSearchTextField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usersSearchTextField.Multiline = true;
             this.usersSearchTextField.Name = "usersSearchTextField";
-            this.usersSearchTextField.Size = new System.Drawing.Size(307, 33);
+            this.usersSearchTextField.Size = new System.Drawing.Size(307, 23);
             this.usersSearchTextField.TabIndex = 14;
-            this.usersSearchTextField.Text = "Search user e.g Aliyura";
+            this.usersSearchTextField.Text = "Search";
             this.usersSearchTextField.TextChanged += new System.EventHandler(this.usersSearchTextField_TextChanged);
             this.usersSearchTextField.Enter += new System.EventHandler(this.mobilenumberfield_Enter);
             this.usersSearchTextField.Leave += new System.EventHandler(this.mobilenumberfield_Leave);
@@ -169,21 +171,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 554);
+            this.ClientSize = new System.Drawing.Size(1136, 578);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.userPanel);
             this.Controls.Add(this.usersGridView);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListUsers";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listuser";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.userPanel.ResumeLayout(false);
+            this.userPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +202,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView usersGridView;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel userPanel;
         private System.Windows.Forms.TextBox usersSearchTextField;
     }
 }

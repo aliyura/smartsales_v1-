@@ -15,6 +15,11 @@ namespace SmartSales_v1
         {         
             
             InitializeComponent();
+
+            System.Drawing.Drawing2D.GraphicsPath gp1 = new System.Drawing.Drawing2D.GraphicsPath();
+            gp1.AddEllipse(0, 0, userPictureBox.Width , userPictureBox.Height);
+            Region rg1 = new Region(gp1);
+            userPictureBox.Region = rg1;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -23,12 +28,15 @@ namespace SmartSales_v1
         }
         private void addbutton_Click(object sender, EventArgs e)
         {
+            User session = app.getSession();
             User user = new User()
             {
                 name = namefield.Text,
                 mobile_number = mobilenumberfield.Text,
                 username = usernamefield.Text,
                 password = passwordfield.Text,
+                bid = session.bid,
+             
             };
 
 
@@ -55,21 +63,30 @@ namespace SmartSales_v1
                     && user.name != "Name" && user.mobile_number != "Mobile Number" && user.username != "Username" && user.password != "Password")
                 {
 
+
+                    if (userPictureBox.Image != null)
+                        user.picture = app.imageToByteArray(userPictureBox.Image);
+
+                    addbutton.Enabled = false;
                     int response = addService.addUser(user);
+                    addbutton.Enabled = true;
                     if (response >0)
                     {
                         namefield.Text = "Name";
                         mobilenumberfield.Text = "Mobile Number";
                         usernamefield.Text = "Username";
                         passwordfield.Text = "Password";
-
                         app.notifyTo(statusLabel, "User Created Successfully", "success");
                     }
                     else
                     {
                         if (response == -2)
                         {
-                            app.notifyTo(statusLabel, "User [" + user.username + "] already exist", "warning");
+                            app.notifyTo(statusLabel, "User " + user.username + " already exist", "warning");
+                        }
+                        if (response == -3)
+                        {
+                            app.notifyTo(statusLabel, "User with mobile number " + user.mobile_number + " already exist", "warning");
                         }
                         else
                         {
@@ -127,12 +144,12 @@ namespace SmartSales_v1
 
         private void usernamefield_Enter(object sender, EventArgs e)
         {
-            h.manageHint(mobilenumberfield, 1, "Username");
+            h.manageHint(usernamefield, 1, "Username");
         }
 
         private void usernamefield_Leave(object sender, EventArgs e)
         {
-            h.manageHint(mobilenumberfield, 0, "Mobile Number");
+            h.manageHint(usernamefield, 0, "Username");
         }
 
         private void passwordfield_Enter(object sender, EventArgs e)
@@ -143,6 +160,22 @@ namespace SmartSales_v1
         private void passwordfield_Leave(object sender, EventArgs e)
         {
             h.manageHint(passwordfield, 0, "Password");
+        }
+
+        private void browseImageButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                userPictureBox.Image = new Bitmap(open.FileName);
+            }
+        }
+
+        private void usernamefield_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
         }
     }
 }

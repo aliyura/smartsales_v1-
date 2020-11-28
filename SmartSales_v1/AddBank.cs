@@ -96,5 +96,11 @@ namespace SmartSales_v1
         {
             h.manageHint(bankNameField, 0, "Bank Name");
         }
+
+        private void bankNameField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
+        }
     }
   }

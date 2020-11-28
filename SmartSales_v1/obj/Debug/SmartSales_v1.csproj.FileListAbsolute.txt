@@ -26,18 +26,12 @@ C:\Users\User\Downloads\SmartSales_v1\SmartSales_v1\SmartSales_v1\obj\Debug\Smar
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csprojAssemblyReference.cache
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddCustomer.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddStore.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.NewBank.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.RegisterProduct.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Sales.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateStock.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateResource.cache
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
@@ -47,7 +41,6 @@ C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resource
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Sales.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
-C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddStock.resources
 C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddStock.resources
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
@@ -70,9 +63,7 @@ C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
-<<<<<<< HEAD
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
-=======
 C:\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
 C:\Project\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
 C:\Project\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
@@ -93,7 +84,6 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateRe
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
->>>>>>> refs/remotes/origin/master
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listproduct.resources
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listbanks.resources
@@ -101,7 +91,6 @@ C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listcustomer.reso
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listuser.resources
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.location.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
->>>>>>> 6a97ea301af3100a48c99ffcd033f589494d74ba
 C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listbanks.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.listcustomer.resources
@@ -114,3 +103,238 @@ C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
 C:\Projects\CSharp\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csprojAssemblyReference.cache
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddCustomer.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddLocation.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBanks.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Sales.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateResource.cache
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStores.resources
+C:\Users\ACER NITRO 5\Documents\smartsales_v1\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddLocation.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBanks.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStores.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddRole.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSoldproductcs.resources
+C:\Project\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Adjustment.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddCustomer.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddLocation.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddRole.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Adjustment.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBanks.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSoldproductcs.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStores.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
+C:\Users\User\Desktop\Umar\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
+C:\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
+C:\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
+C:\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csprojAssemblyReference.cache
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddCustomer.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddLocation.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddRole.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Adjustment.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBanks.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSoldproductcs.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStores.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateResource.cache
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
+C:\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe.config
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.exe
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\bin\Debug\SmartSales_v1.pdb
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddCustomer.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddGroup.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddLocation.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddPayment.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddRole.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddUser.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Adjustment.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Dashboard.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListBanks.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListDebtors.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSales.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSoldproductcs.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStocks.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListCustomers.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListLocations.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListProducts.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListStores.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListUsers.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.LoginForm.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBank.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Properties.Resources.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddProduct.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.MakeSales.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdatePrice.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateProduct.resources
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.exe
+C:\Users\User\Desktop\Umar\Projects\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.pdb
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddRole.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Adjustment.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListSoldproductcs.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListPayments.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ManageWallet.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\bin\Debug\CircularProgressBar.dll
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\bin\Debug\WinFormAnimation.dll
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\bin\Debug\CircularProgressBar.xml
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.csproj.CopyComplete
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListAdjustments.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddVoucherCategory.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ListVouchers.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddVoucher.resources
+C:\Projects\CSharp\smartsales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.UpdateCost.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\EnvDTE.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\stdole.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\Microsoft.MSXML.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Report.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\RdlCompile.cache
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\RdlCompile.compiled
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.AddBusiness.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.ActivateBusiness.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.EditProfile.resources
+C:\Projects\CSharp\SmartSales_v1\SmartSales_v1\obj\Debug\SmartSales_v1.Profile.resources

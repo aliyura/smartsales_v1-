@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,7 +52,29 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -50,8 +87,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivateBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivateBusiness.Designer.cs">
+      <DependentUpon>ActivateBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBusiness.Designer.cs">
+      <DependentUpon>AddBusiness.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,18 +122,72 @@
     <Compile Include="AddLocation.Designer.cs">
       <DependentUpon>AddLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPayment.Designer.cs">
+      <DependentUpon>AddPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRole.Designer.cs">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="App.cs" />
-    <Compile Include="ListStocks.cs">
+    <Compile Include="AddVoucherCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListStocks.Designer.cs">
-      <DependentUpon>ListStocks.cs</DependentUpon>
+    <Compile Include="AddVoucherCategory.Designer.cs">
+      <DependentUpon>AddVoucherCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustment.Designer.cs">
+      <DependentUpon>Adjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.cs" />
+    <Compile Include="EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListAdjustments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAdjustments.Designer.cs">
+      <DependentUpon>ListAdjustments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDebtors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDebtors.Designer.cs">
+      <DependentUpon>ListDebtors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPayments.Designer.cs">
+      <DependentUpon>ListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListSales.Designer.cs">
+      <DependentUpon>ListSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListSoldProductcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListSoldProductcs.Designer.cs">
+      <DependentUpon>ListSoldProductcs.cs</DependentUpon>
     </Compile>
     <Compile Include="ListCustomers.cs">
       <SubType>Form</SubType>
@@ -113,6 +219,38 @@
     <Compile Include="ListUsers.Designer.cs">
       <DependentUpon>ListUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListVouchers.Designer.cs">
+      <DependentUpon>ListVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageWallet.Designer.cs">
+      <DependentUpon>ManageWallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="SSConfig.cs" />
+    <Compile Include="SSDeletionService.cs" />
     <Compile Include="SSGetService.cs" />
     <Compile Include="HintManager.cs" />
     <Compile Include="Dashboard.cs">
@@ -121,12 +259,13 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SSRemoteService.cs" />
     <Compile Include="SSService.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="AddBank.cs">
@@ -144,13 +283,19 @@
     <Compile Include="AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales.cs">
+    <Compile Include="MakeSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <Compile Include="MakeSales.Designer.cs">
+      <DependentUpon>MakeSales.cs</DependentUpon>
     </Compile>
     <Compile Include="SSUpdateService.cs" />
+    <Compile Include="UpdateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCost.Designer.cs">
+      <DependentUpon>UpdateCost.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +308,18 @@
     <Compile Include="UpdateProduct.Designer.cs">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVoucher.Designer.cs">
+      <DependentUpon>AddVoucher.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActivateBusiness.resx">
+      <DependentUpon>ActivateBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBusiness.resx">
+      <DependentUpon>AddBusiness.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,17 +329,46 @@
     <EmbeddedResource Include="AddLocation.resx">
       <DependentUpon>AddLocation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPayment.resx">
+      <DependentUpon>AddPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRole.resx">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddVoucherCategory.resx">
+      <DependentUpon>AddVoucherCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustment.resx">
+      <DependentUpon>Adjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashVoucher.rdlc" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.rdlc" />
+    <EmbeddedResource Include="ListAdjustments.resx">
+      <DependentUpon>ListAdjustments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListBanks.resx">
       <DependentUpon>ListBanks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListStocks.resx">
-      <DependentUpon>ListStocks.cs</DependentUpon>
+    <EmbeddedResource Include="ListDebtors.resx">
+      <DependentUpon>ListDebtors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPayments.resx">
+      <DependentUpon>ListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListSales.resx">
+      <DependentUpon>ListSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListSoldProductcs.resx">
+      <DependentUpon>ListSoldProductcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListCustomers.resx">
       <DependentUpon>ListCustomers.cs</DependentUpon>
@@ -196,11 +382,21 @@
     <EmbeddedResource Include="ListUsers.resx">
       <DependentUpon>ListUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="ListVouchers.resx">
+      <DependentUpon>ListVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddBank.resx">
       <DependentUpon>AddBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageWallet.resx">
+      <DependentUpon>ManageWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReceipt.rdlc" />
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -215,8 +411,14 @@
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <EmbeddedResource Include="MakeSales.resx">
+      <DependentUpon>MakeSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCost.resx">
+      <DependentUpon>UpdateCost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePrice.resx">
       <DependentUpon>UpdatePrice.cs</DependentUpon>
@@ -224,6 +426,10 @@
     <EmbeddedResource Include="UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddVoucher.resx">
+      <DependentUpon>AddVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,6 +444,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReportDataset.xsc">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataset.xss">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +480,156 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vouhcer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\continue.png" />
+    <None Include="Resources\nologo.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

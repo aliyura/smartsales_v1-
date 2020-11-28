@@ -35,17 +35,13 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.minimizedbutton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.bankPanel = new System.Windows.Forms.Panel();
+            this.banknamesearchfield = new System.Windows.Forms.TextBox();
+            this.bankdataGridView = new System.Windows.Forms.DataGridView();
+            this.addbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.bankPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bankdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,10 +53,11 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(622, 37);
+            this.panel1.Size = new System.Drawing.Size(469, 46);
             this.panel1.TabIndex = 5;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // closedbutton
             // 
@@ -69,9 +66,10 @@
             this.closedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedbutton.ImageIndex = 1;
             this.closedbutton.ImageList = this.imageList1;
-            this.closedbutton.Location = new System.Drawing.Point(573, 3);
+            this.closedbutton.Location = new System.Drawing.Point(420, 3);
+            this.closedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.closedbutton.Name = "closedbutton";
-            this.closedbutton.Size = new System.Drawing.Size(41, 34);
+            this.closedbutton.Size = new System.Drawing.Size(55, 42);
             this.closedbutton.TabIndex = 3;
             this.closedbutton.UseVisualStyleBackColor = true;
             this.closedbutton.Click += new System.EventHandler(this.closedbutton_Click);
@@ -90,11 +88,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Banks List";
+            this.label1.Text = "Banks";
             // 
             // minimizedbutton
             // 
@@ -103,116 +102,91 @@
             this.minimizedbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizedbutton.ImageIndex = 0;
             this.minimizedbutton.ImageList = this.imageList1;
-            this.minimizedbutton.Location = new System.Drawing.Point(515, 3);
+            this.minimizedbutton.Location = new System.Drawing.Point(344, 0);
+            this.minimizedbutton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizedbutton.Name = "minimizedbutton";
-            this.minimizedbutton.Size = new System.Drawing.Size(41, 34);
+            this.minimizedbutton.Size = new System.Drawing.Size(55, 42);
             this.minimizedbutton.TabIndex = 1;
             this.minimizedbutton.UseVisualStyleBackColor = true;
             this.minimizedbutton.Click += new System.EventHandler(this.minimizedbutton_Click);
             // 
-            // flowLayoutPanel1
+            // bankPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 37);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(580, 277);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.bankPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bankPanel.Controls.Add(this.banknamesearchfield);
+            this.bankPanel.Location = new System.Drawing.Point(44, 63);
+            this.bankPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.bankPanel.Name = "bankPanel";
+            this.bankPanel.Size = new System.Drawing.Size(298, 38);
+            this.bankPanel.TabIndex = 48;
             // 
-            // panel2
+            // banknamesearchfield
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(550, 42);
-            this.panel2.TabIndex = 0;
+            this.banknamesearchfield.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.banknamesearchfield.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.banknamesearchfield.BackColor = System.Drawing.Color.White;
+            this.banknamesearchfield.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.banknamesearchfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.banknamesearchfield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banknamesearchfield.Location = new System.Drawing.Point(20, 7);
+            this.banknamesearchfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.banknamesearchfield.Name = "banknamesearchfield";
+            this.banknamesearchfield.Size = new System.Drawing.Size(253, 23);
+            this.banknamesearchfield.TabIndex = 14;
+            this.banknamesearchfield.Text = "Search";
+            this.banknamesearchfield.TextChanged += new System.EventHandler(this.banknamesearchfield_TextChanged);
+            this.banknamesearchfield.Enter += new System.EventHandler(this.productnamesearchfield_Enter);
+            this.banknamesearchfield.Leave += new System.EventHandler(this.productnamesearchfield_Leave);
             // 
-            // label8
+            // bankdataGridView
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(90, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "12/03/2020";
+            this.bankdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bankdataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bankdataGridView.Location = new System.Drawing.Point(0, 120);
+            this.bankdataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.bankdataGridView.Name = "bankdataGridView";
+            this.bankdataGridView.RowHeadersWidth = 51;
+            this.bankdataGridView.Size = new System.Drawing.Size(469, 307);
+            this.bankdataGridView.TabIndex = 47;
             // 
-            // label9
+            // addbutton
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(11, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Date Created :";
+            this.addbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(55)))), ((int)(((byte)(155)))));
+            this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addbutton.ForeColor = System.Drawing.Color.White;
+            this.addbutton.Location = new System.Drawing.Point(354, 63);
+            this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addbutton.Name = "addbutton";
+            this.addbutton.Size = new System.Drawing.Size(111, 38);
+            this.addbutton.TabIndex = 49;
+            this.addbutton.Text = "Search";
+            this.addbutton.UseVisualStyleBackColor = false;
+            this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
-            // label4
+            // ListBanks
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(95, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "FirstBank";
-            // 
-            // button1
-            // 
-            this.button1.ImageIndex = 3;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(500, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 32);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.ImageIndex = 2;
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(459, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 32);
-            this.button4.TabIndex = 2;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bank Name :";
-            // 
-            // listbanks
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 314);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(469, 427);
+            this.Controls.Add(this.addbutton);
+            this.Controls.Add(this.bankPanel);
+            this.Controls.Add(this.bankdataGridView);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "listbanks";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ListBanks";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listbanks";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.ListBanks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.bankPanel.ResumeLayout(false);
+            this.bankPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bankdataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,13 +198,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimizedbutton;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel bankPanel;
+        private System.Windows.Forms.TextBox banknamesearchfield;
+        private System.Windows.Forms.DataGridView bankdataGridView;
+        private System.Windows.Forms.Button addbutton;
     }
 }

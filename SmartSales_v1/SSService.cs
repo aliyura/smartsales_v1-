@@ -8,26 +8,142 @@ namespace SmartSales_v1
     {
 
         App app = new App();
+        SSConfig config = new SSConfig();
         SqlConnection connection;
-        DateTime currentDate = DateTime.Now;//automate date setting
-        const string connecionStrring = "Data Source=DESKTOP-S0QL4PD;Initial Catalog=smartsalesdb;Integrated Security=True;Pooling=False";
-
-
+      
         public SSService()
         {
             connection = this.getConnection();
         }
+
+        public  bool isConnencted()
+        {
+             try
+            {
+                SqlConnection con = new SqlConnection(config.getlocalConnection);//set the db connection
+                con.Open();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+
+        }
         public SqlConnection getConnection()
         {
-            return  new SqlConnection(connecionStrring);//set the db connection
+            return  new SqlConnection(config.getlocalConnection);//set the db connection
         }
-
-
-        public int add(SqlCommand cmd)//implementation of the sql command exwecution
+        public SqlConnection getRemoteConnection()
+        {
+            return new SqlConnection(config.getRemoteConnection);//set the db connection
+        }
+        public int execute(SqlCommand cmd)//implementation of the sql command exwecution
         {
             try
             {
                 connection = this.getConnection();
+                cmd.Connection = connection;
+                using (connection)
+                {
+                    using (cmd)
+                    {
+                        if (this.isConnencted())
+                        {
+                            connection.Open();
+                            int response = cmd.ExecuteNonQuery();
+                            connection.Close();
+                            return response;
+                        }
+                        else
+                        {
+                            return -1;//...else return error
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public DataTable get(string query)//implementation of the sql command exwecution
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (this.isConnencted())
+                {
+                    connection = this.getConnection();
+                    using (connection)
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, connection))
+                        {
+                            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                            {
+
+                                connection.Open();
+                                da.Fill(dataTable);
+                                connection.Close();
+                                da.Dispose();
+                                return dataTable;
+                            }
+                        }
+                    };
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable remoteGet(string query)//implementation of the sql command exwecution
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                connection = this.getRemoteConnection();
+                using (connection)
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+
+                            connection.Open();
+                            da.Fill(dataTable);
+                            connection.Close();
+                            da.Dispose();
+                            return dataTable;
+                        }
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                app.showError(ex.Message);
+                return null;
+            }
+
+
+        }
+
+        public int remoteExecute(SqlCommand cmd)//implementation of the sql command exwecution
+        {
+            try
+            {
+                connection = this.getRemoteConnection();
                 cmd.Connection = connection;
                 using (connection)
                 {
@@ -57,37 +173,44 @@ namespace SmartSales_v1
             {
                 connection.Close();
             }
+
         }
-        public DataTable get(string query)//implementation of the sql command exwecution
+        public DataSet getDataset(string query)//implementation of the sql command exwecution
         {
-            DataTable dataTable = new DataTable();
+            DataSet dataSet = new DataSet();
             try
             {
-                connection = this.getConnection();
-                using (connection)
+                if (this.isConnencted())
                 {
-                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    connection = this.getConnection();
+                    using (connection)
                     {
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        using (SqlCommand cmd = new SqlCommand(query, connection))
                         {
+                            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                            {
 
-                            connection.Open();
-                            da.Fill(dataTable);
-                            connection.Close();
-                            da.Dispose();
-                            return dataTable;
+                                connection.Open();
+                                da.Fill(dataSet);
+                                connection.Close();
+                                da.Dispose();
+                                return dataSet;
+                            }
                         }
-                    }
-                };
+                    };
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception ex)
             {
-                app.showError(ex.Message);
-                return null;
+                return dataSet;
             }
 
 
         }
-    }
+        }
 
-}
+    }

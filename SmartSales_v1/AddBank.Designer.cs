@@ -59,15 +59,16 @@
             this.bankNameField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.bankNameField.BackColor = System.Drawing.Color.White;
             this.bankNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bankNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bankNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bankNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bankNameField.Location = new System.Drawing.Point(35, 11);
+            this.bankNameField.Location = new System.Drawing.Point(28, 12);
             this.bankNameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bankNameField.Name = "bankNameField";
-            this.bankNameField.Size = new System.Drawing.Size(320, 27);
+            this.bankNameField.Size = new System.Drawing.Size(335, 23);
             this.bankNameField.TabIndex = 1;
             this.bankNameField.Text = "Bank Name";
             this.bankNameField.Enter += new System.EventHandler(this.banknamefield_Enter);
+            this.bankNameField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bankNameField_KeyDown);
             this.bankNameField.Leave += new System.EventHandler(this.banknamefield_Leave);
             // 
             // panel1
@@ -144,14 +145,14 @@
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(171, 47);
             this.addbutton.TabIndex = 16;
-            this.addbutton.Text = "Add New Bank";
+            this.addbutton.Text = "Add Bank";
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(29, 129);
+            this.statusLabel.Location = new System.Drawing.Point(29, 136);
             this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 17);
@@ -161,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 179);
+            this.ClientSize = new System.Drawing.Size(625, 178);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.panel1);
@@ -169,7 +170,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddBank";
+            this.RightToLeftLayout = true;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewBank";
+            this.TopMost = true;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);

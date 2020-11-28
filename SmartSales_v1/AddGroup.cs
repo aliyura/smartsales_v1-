@@ -12,7 +12,7 @@ namespace SmartSales_v1
 {
     public partial class AddGroup : Form
     {
-
+        public Point mouseLocation;
         SSAddService addService = new SSAddService();
         Hint h = new Hint();
         App app = new App();
@@ -85,6 +85,22 @@ namespace SmartSales_v1
         private void groupNameField_Leave(object sender, EventArgs e)
         {
             h.manageHint(groupNameField, 0, "Customer Group");
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+
+        private void groupNameField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
         }
     }
 }

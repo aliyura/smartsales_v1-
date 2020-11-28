@@ -106,5 +106,27 @@ namespace SmartSales_v1
         {
             h.manageComboHint(locationType, 0, "Location Type");
         }
+
+        private void AddLocation_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+
+        private void locationName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
+        }
+
+        private void locationType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
+        }
     }
 }

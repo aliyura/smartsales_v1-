@@ -16,6 +16,7 @@ namespace SmartSales_v1
         public AddCustomer()
         {
             InitializeComponent();
+            initializeApp();
         }
 
         private void initializeApp()
@@ -40,6 +41,7 @@ namespace SmartSales_v1
                 phone_number = phonenumberfield.Text,
                 altphone_number = altphonenumberfield.Text,
                 credit_limit = credit_limit,
+                account_balance = 0,
                 customer_group = customergroupCombobox.Text,
             };
 
@@ -59,10 +61,6 @@ namespace SmartSales_v1
             {
                 app.notifyTo(statusLabel, "Phone Number required", "warning");
             }
-            else if (customer.altphone_number == "Alternate Phone Number" || customer.altphone_number == "")
-            {
-                app.notifyTo(statusLabel, "Alternate Phone Number required", "warning");
-            }
             else if (customer.customer_group == "Customer Group" || customer.customer_group == "")
             {
                 app.notifyTo(statusLabel, "Customer Group required", "warning");
@@ -70,9 +68,9 @@ namespace SmartSales_v1
             else
             {
 
-                if (customer.name != "" && customer.address != "" && customer.phone_number != "" && customer.altphone_number != "" && customer.customer_group != ""
+                if (customer.name != "" && customer.address != "" && customer.phone_number != "" && customer.customer_group != ""
                     && customer.name != "Customer Name" && customer.address != "Address" && customer.phone_number != "Phone Number"
-                    && customer.altphone_number != "Alternate Phone Number" && customer.customer_group != "Customer Group")
+                    && customer.customer_group != "Customer Group")
                 {
 
                     int response = addService.addCustomer(customer);
@@ -131,11 +129,95 @@ namespace SmartSales_v1
 
         private void addCustomerGroup_Click(object sender, EventArgs e)
         {
+            app.open(new AddGroup());
+        }
 
+        private void AddCustomer_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+
+     
+        private void customernamefield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(customernamefield, 0, "Customer Name");
+        }
+
+        private void customernamefield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(customernamefield, 1, "Customer Name");
+        }
+
+        private void addressfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(addressfield, 0, "Address");
+
+        }
+
+        private void addressfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(addressfield, 1, "Address");
+        }
+
+        private void phonenumberfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(phonenumberfield, 1, "Phone Number");
+        }
+
+        private void phonenumberfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(phonenumberfield, 0, "Phone Number");
+        }
+
+        private void altphonenumberfield_Enter(object sender, EventArgs e)
+        {
            
-            AddGroup groupAdd = new AddGroup();
-            groupAdd.ShowDialog();
-            this.Close();
+           h.manageHint(altphonenumberfield, 1, "Alternate Phone Number");
+        }
+
+        private void altphonenumberfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(altphonenumberfield, 0, "Alternate Phone Number");
+
+        }
+
+        private void creditlimitfield_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(creditlimitfield, 0, "Credit Limit");
+        }
+
+        private void creditlimitfield_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(creditlimitfield, 1, "Credit Limit");
+        }
+
+        private void customergroupCombobox_Leave(object sender, EventArgs e)
+        {
+            h.manageComboHint(customergroupCombobox, 0, "Customer Group");
+
+        }
+
+        private void customergroupCombobox_Enter(object sender, EventArgs e)
+        {
+            h.manageComboHint(customergroupCombobox, 1, "Customer Group");
+
+        }
+
+        private void creditlimitfield_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
+        }
+
+        private void customergroupCombobox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                addbutton.PerformClick();
         }
     }
 }

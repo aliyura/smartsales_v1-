@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartSales_v1
@@ -23,37 +18,43 @@ namespace SmartSales_v1
         public UpdatePrice()
         {
             InitializeComponent();
-            initializeApp();
         }
 
-        private void initializeApp()
+      
+        private void refreshCurrentProductPrice(string name)
         {
-            //set products
-            DataTable products = getService.getDataFrom(app.objects["products"]);
-            if (products.Rows.Count > 0)
-                foreach (DataRow row in products.Rows)
-                    productNameField.Items.Add(row.Field<string>("name"));
 
+            DataTable data = getService.getDataWithFilter(app.objects["products"], " name ='" + name + "'");
+            if (data.Rows.Count > 0)
+            {
+                int balance = data.Rows[0].Field<int>("price");
+                if (balance == 0)
+                    totalBalanceLabel.Text = "0.00";
+                else
+                    totalBalanceLabel.Text = app.toMoneyOf(balance);
+            }
+            else
+            {
+                totalBalanceLabel.Text = "0.00";
+            }
+            accountBalancePanel.Show();
         }
 
         private void update_Click(object sender, EventArgs e)
         {
             try
             {
-                int price, cost;
-                price = cost =  0;
+                int price;
+                price=0;
 
-                if (priceField.Text != "Price")
+                if (priceField.Text != "New Price")
                     price = int.Parse(priceField.Text);
-                if (costField.Text != "Cost")
-                    cost = int.Parse(costField.Text);
-                
+             
 
                 Product product = new Product()
                 {
                     name=productNameField.Text,
                     price=price,
-                    cost=cost,
                 };
 
 
@@ -62,27 +63,24 @@ namespace SmartSales_v1
                     app.notifyTo(statusLabel, "Product Name required", "warning");
                 }
 
-                else if (priceField.Text == "Price" || priceField.Text == "")
+                else if (priceField.Text == "New Price" || priceField.Text == "")
                 {
                     app.notifyTo(statusLabel, "New Price required", "warning");
-                }
-                else if (costField.Text == "Cost" || costField.Text == "")
-                {
-                    app.notifyTo(statusLabel, "New Cost required", "warning");
                 }
                 else
                 {
 
-                    if ( productNameField.Text != "" && priceField.Text != "" && costField.Text != ""
-                        && productNameField.Text != "Product Name" && priceField.Text != "Price" && costField.Text != "Cost")
+                    if ( productNameField.Text != "" && priceField.Text != ""
+                        && productNameField.Text != "Product Name" && priceField.Text != "New Price")
                     {
 
+                        update.Enabled = false;
                         int response =updateService.updatePrice(product);
+                        update.Enabled = true;
                         if (response > 0)
                         {
-                            productNameField.Text = "Product Name";
-                            priceField.Text = "Price";
-                            costField.Text = "Cost";
+                            priceField.Text = "New Price";
+                            refreshCurrentProductPrice(product.name);
                             app.notifyTo(statusLabel, "Price Updated Successfully", "success");
                         }
 
@@ -131,6 +129,42 @@ namespace SmartSales_v1
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void priceField_Enter(object sender, EventArgs e)
+        {
+            h.manageHint(priceField, 1, "New Price");
+        }
+
+        private void priceField_Leave(object sender, EventArgs e)
+        {
+            h.manageHint(priceField, 0, "New Price");
+        }
+
+        private void productNameField_Enter_1(object sender, EventArgs e)
+        {
+            h.manageHint(productNameField, 1, "Product Name");
+        }
+
+        private void productNameField_Leave(object sender, EventArgs e)
+        {
+
+            h.manageHint(productNameField, 0, "Product Name");
+
+        }
+
+        private void productNameField_TextChanged(object sender, EventArgs e)
+        {
+            statusLabel.Text = "";
+            app.buildDropdown(this, sender, productNamePanel, "products");
+            refreshCurrentProductPrice(productNameField.Text);
+
+        }
+
+        private void priceField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                update.PerformClick();
         }
     }
 }
